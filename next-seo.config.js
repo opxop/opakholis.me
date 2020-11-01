@@ -1,30 +1,31 @@
-const title = 'Opa Kholis Majid – Frontend Developer';
-const description = 'Front-end developer, Flutter enthusiast';
+const title = "Opa Kholis Majid – Frontend developer.";
+const description =
+  "A frontend developer based in Karawang, Indonesia who enjoys building & exploring amazing stuff on web.";
 
 const SEO = {
   title,
   description,
-  canonical: 'https://opakholis.me',
+  canonical: "https://opakholis.me",
   openGraph: {
-    type: 'website',
-    locale: 'id_ID',
-    url: 'https://opakholis.me',
+    type: "website",
+    locale: "id_ID",
+    url: "https://opakholis.me",
     title,
     description,
     images: [
       {
-        url: 'https://opakholis.me/static/images/og.jpg',
+        url: "https://opakholis.me/static/images/og.jpg",
         alt: title,
         width: 1280,
-        height: 720
-      }
-    ]
+        height: 720,
+      },
+    ],
   },
   twitter: {
-    handle: '@opakholis',
-    site: '@opakholis',
-    cardType: 'summary_large_image'
-  }
+    handle: "@opakholis",
+    site: "@opakholis",
+    cardType: "summary_large_image",
+  },
 };
 
 export default SEO;
