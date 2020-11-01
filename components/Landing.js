@@ -1,5 +1,6 @@
 import React from "react";
-import { Flex, Heading, Text, useColorMode } from "@chakra-ui/core";
+import NextLink from "next/link";
+import { Button, Flex, Heading, Text, useColorMode } from "@chakra-ui/core";
 
 import Skill from "./Skill";
 
@@ -26,6 +27,11 @@ const Landing = () => {
         Open-source Software.
       </Text>
       <Skill />
+      <NextLink href="/about" passHref>
+        <Button size="sm" p={[1, 4]} mt={5}>
+          Selengkapnya tentang Opa
+        </Button>
+      </NextLink>
     </Flex>
   );
 };
