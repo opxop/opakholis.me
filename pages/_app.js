@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 import {
   ThemeProvider,
   useColorMode,
@@ -47,6 +48,23 @@ const App = ({ Component, pageProps }) => {
     <ThemeProvider theme={theme}>
       <ColorModeProvider value="light">
         <GlobalStyle>
+          <Head>
+            <meta content="IE=edge" httpEquiv="X-UA-Compatible" />
+            <meta
+              content="width=device-width, initial-scale=1"
+              name="viewport"
+            />
+            <meta content="#ffffff" name="theme-color" />
+            <meta content="#ffffff" name="msapplication-TileColor" />
+            <meta
+              name="msapplication-TileImage"
+              content="/static/favicons/ms-icon-144x144.png"
+            />
+            <meta
+              content="/static/favicons/browserconfig.xml"
+              name="msapplication-config"
+            />
+          </Head>
           <DefaultSeo {...SEO} />
           <Component {...pageProps} />
         </GlobalStyle>
