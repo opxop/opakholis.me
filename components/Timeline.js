@@ -19,7 +19,7 @@ const YearDivider = () => {
     dark: "gray.600",
   };
 
-  return <Divider borderColor={borderColor[colorMode]} my={8} w="100%" />;
+  return <Divider borderColor={borderColor[colorMode]} my={5} w="100%" />;
 };
 
 const TimelineStep = ({ title, children }) => {
@@ -51,7 +51,7 @@ const Timeline = () => {
       justifyContent="flex-start"
       alignItems="flex-start"
       maxWidth="700px"
-      mt={8}
+      mt={10}
     >
       <Heading letterSpacing="tight" mb={4} size="xl" fontWeight="bold">
         Timeline
@@ -91,7 +91,7 @@ const Timeline = () => {
           tema "smart city".
         </TimelineStep>
         <TimelineStep title="Got BNSP Certified 🎉">
-          Sebagai Web Pemrograman
+          Sebagai Pemrograman Web
         </TimelineStep>
       </List>
     </Flex>
