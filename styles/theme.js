@@ -27,7 +27,7 @@ const theme = {
         <g
           fill="none"
           stroke="currentColor"
-          stroke-width="35"
+          strokeWidth="35"
           strokeLinecap="round"
           strokeLinejoin="round"
         >
