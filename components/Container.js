@@ -60,22 +60,22 @@ const Container = ({ children }) => {
         />
         <Box>
           <NextLink href="/" passHref>
-            <Button as="a" variant="ghost" p={[1, 4]}>
+            <Button as="a" variant="ghost" p={[1, 3]} mx={1}>
               Home
             </Button>
           </NextLink>
           <NextLink href="/about" passHref>
-            <Button as="a" variant="ghost" p={[1, 4]}>
+            <Button as="a" variant="ghost" p={[1, 3]} mx={1}>
               About
             </Button>
           </NextLink>
           <NextLink href="/contact" passHref>
-            <Button as="a" variant="ghost" p={[1, 4]}>
+            <Button as="a" variant="ghost" p={[1, 3]} mx={1}>
               Contact
             </Button>
           </NextLink>
           <NextLink href="/blog" passHref>
-            <Button as="a" variant="ghost" p={[1, 4]}>
+            <Button as="a" variant="ghost" p={[1, 3]} mx={1}>
               Blog
             </Button>
           </NextLink>
