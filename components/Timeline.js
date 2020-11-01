@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Divider,
   Flex,
   Heading,
+  Button,
   Icon,
   List,
   Stack,
@@ -44,7 +45,21 @@ const TimelineStep = ({ title, children }) => {
   );
 };
 
+const FullTimeLine = () => (
+  <>
+    <YearDivider />
+    <Heading as="h3" size="lg" fontWeight="bold" mb={4} letterSpacing="tighter">
+      1999
+    </Heading>
+    <List>
+      <TimelineStep title="Say Hello to the World 👶🏼🍼" />
+    </List>
+  </>
+);
+
 const Timeline = () => {
+  const [isShowingFullTimeline, showFullTimeline] = useState(false);
+
   return (
     <Flex
       flexDirection="column"
@@ -96,6 +111,20 @@ const Timeline = () => {
           Sebagai Pemrograman Web
         </TimelineStep>
       </List>
+      {isShowingFullTimeline ? (
+        <FullTimeLine />
+      ) : (
+        <Button
+          my={4}
+          mx="auto"
+          fontWeight="medium"
+          rightIcon="chevron-down"
+          variant="ghost"
+          onClick={() => showFullTimeline(true)}
+        >
+          See More
+        </Button>
+      )}
     </Flex>
   );
 };
