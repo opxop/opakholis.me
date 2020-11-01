@@ -18,8 +18,8 @@ const Landing = () => {
       alignItems="flex-start"
       maxWidth="700px"
     >
-      <Heading letterSpacing="tight" mb={4} as="h1" size="2xl">
-        Halo, Saya Opa Kholis Majid
+      <Heading letterSpacing="tight" mb={4} as="h1" size="xl">
+        👋 Halo, Saya Opa Kholis Majid.
       </Heading>
       <Text color={secondaryTextColor[colorMode]}>
         Seseorang yang meyebut dirinya sebagai Frontend developer😁 - yang mana
@@ -28,7 +28,7 @@ const Landing = () => {
       </Text>
       <Skill />
       <NextLink href="/about" passHref>
-        <Button size="sm" p={[1, 4]} mt={5}>
+        <Button size="sm" p={[4, 4]} mt={5}>
           Selengkapnya tentang Opa
         </Button>
       </NextLink>
