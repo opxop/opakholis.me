@@ -1,7 +1,16 @@
 import React from "react";
 import NextLink from "next/link";
 import styled from "@emotion/styled";
-import { Button, Flex, IconButton, useColorMode, Box } from "@chakra-ui/core";
+import {
+  Button,
+  Flex,
+  IconButton,
+  useColorMode,
+  Box,
+  Stack,
+} from "@chakra-ui/core";
+
+import Footer from "./Footer";
 
 const StickyNav = styled(Flex)`
   position: sticky;
@@ -80,7 +89,17 @@ const Container = ({ children }) => {
         color={primaryTextColor[colorMode]}
         px={8}
       >
-        {children}
+        <Stack
+          as="main"
+          spacing={8}
+          justifyContent="center"
+          alignItems="flex-start"
+          m="0 auto 4rem auto"
+          maxW="700px"
+        >
+          {children}
+        </Stack>
+        <Footer />
       </Flex>
     </>
   );
