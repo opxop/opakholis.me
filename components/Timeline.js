@@ -51,9 +51,8 @@ const Timeline = () => {
       justifyContent="flex-start"
       alignItems="flex-start"
       maxWidth="700px"
-      mt={10}
     >
-      <Heading letterSpacing="tight" mb={4} size="xl" fontWeight="bold">
+      <Heading letterSpacing="tight" mb={4} mt={20} size="xl" fontWeight="bold">
         Timeline
       </Heading>
       <Heading
@@ -67,11 +66,14 @@ const Timeline = () => {
       </Heading>
       <List>
         <TimelineStep title="Landed First Internship 👨🏼‍💻">
-          Merupakan 3 bulan yang sangat berarti. Bersama orang-orang hebat di{" "}
+          Merupakan 3 bulan yang sangat berharga. Bersama orang-orang hebat di{" "}
           <Link href="http://jiwalu.id" isExternal>
             Jiwalu Studio
           </Link>{" "}
           saya banyak belajar hal baru.
+        </TimelineStep>
+        <TimelineStep title="Fallin' in Love with Flutter 🎴">
+          Pada awalnya hanya sekedar mencoba-coba, hingga akhirnya jatuh cinta.
         </TimelineStep>
       </List>
       <YearDivider />
