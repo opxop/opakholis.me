@@ -57,10 +57,6 @@ const App = ({ Component, pageProps }) => {
             <meta content="#ffffff" name="theme-color" />
             <meta content="#ffffff" name="msapplication-TileColor" />
             <meta
-              name="msapplication-TileImage"
-              content="/static/favicons/ms-icon-144x144.png"
-            />
-            <meta
               content="/static/favicons/browserconfig.xml"
               name="msapplication-config"
             />
