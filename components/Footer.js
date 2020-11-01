@@ -55,7 +55,7 @@ const Footer = () => (
           mr={2}
           title="Uses"
         >
-          Built with ❤️ using NextJS
+          Built with ❤️ using NextJS &copy; 2020
         </Link>
       </NextLink>
     </div>
