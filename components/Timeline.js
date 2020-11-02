@@ -25,7 +25,7 @@ const YearDivider = () => {
 
 const TimelineStep = ({ title, children }) => {
   const { colorMode } = useColorMode();
-  const color = {
+  const secondaryTextColor = {
     light: "gray.700",
     dark: "gray.400",
   };
@@ -37,7 +37,7 @@ const TimelineStep = ({ title, children }) => {
           <Icon name="check-circle" mr={2} color="whatsapp.500" />
           <Text fontWeight="medium">{title}</Text>
         </Flex>
-        <Text color={color[colorMode]} ml={6}>
+        <Text color={secondaryTextColor[colorMode]} ml={6}>
           {children}
         </Text>
       </Stack>
