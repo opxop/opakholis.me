@@ -38,8 +38,8 @@ const Error = () => {
             503 – Service Unavailable
           </Heading>
           <Text color={secondaryTextColor[colorMode]} my={4}>
-            Oppss.. Nampaknya halaman yang anda tuju masih dalam tahap
-            pengembangan.
+            Oppss.. Nampaknya halaman yang anda akses sedang dalam tahap
+            pengembangan🥺.
           </Text>
           <NextLink href="/" passHref>
             <Button
