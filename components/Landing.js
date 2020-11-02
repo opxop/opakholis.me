@@ -19,7 +19,7 @@ const Landing = () => {
       maxWidth="700px"
     >
       <Heading letterSpacing="tight" mb={4} as="h1" size="xl">
-        👋 Halo, Saya Opa Kholis Majid.
+        👋 Hi, I'm Opa Kholis Majid.
       </Heading>
       <Text color={secondaryTextColor[colorMode]}>
         Seseorang yang meyebut dirinya sebagai Frontend developer😁 - yang mana
