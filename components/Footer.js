@@ -1,6 +1,5 @@
 import React from "react";
-import NextLink from "next/link";
-import { Flex, IconButton, Link } from "@chakra-ui/core";
+import { Flex, IconButton, Link, Text } from "@chakra-ui/core";
 
 const Footer = () => (
   <Flex align="center" mb={4} direction="column">
@@ -46,19 +45,13 @@ const Footer = () => (
         />
       </Link>
     </div>
-    <div>
-      <NextLink href="/" passHref>
-        <Link
-          fontSize="sm"
-          color="gray.500"
-          minWidth="100px"
-          mr={2}
-          title="Uses"
-        >
-          Built with ❤️ using NextJS &copy; 2020
-        </Link>
-      </NextLink>
-    </div>
+    <Text fontSize="sm" color="gray.500" minWidth="100px" mr={2}>
+      Built with ❤️ using
+      <Link href="https://nextjs.org" title="NextJS" mx={1} isExternal>
+        NextJS
+      </Link>
+      &copy; 2020
+    </Text>
   </Flex>
 );
 
