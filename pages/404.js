@@ -1,59 +1,44 @@
-import React from "react";
-import NextLink from "next/link";
+import React from 'react';
+import NextLink from 'next/link';
 import {
   useColorMode,
   Heading,
   Text,
   Flex,
-  Stack,
   Button,
-} from "@chakra-ui/core";
+  Divider
+} from '@chakra-ui/core';
 
-import Container from "../components/Container";
+import Container from '../components/Container';
 
 const Error = () => {
   const { colorMode } = useColorMode();
   const secondaryTextColor = {
-    light: "gray.700",
-    dark: "gray.400",
+    light: 'gray.700',
+    dark: 'gray.400'
   };
 
   return (
     <Container>
-      <Stack
-        as="main"
-        spacing={8}
+      <Flex
+        flexDirection="column"
         justifyContent="center"
-        alignItems="flex-start"
-        m="0 auto 4rem auto"
+        alignItems="center"
         maxWidth="700px"
       >
-        <Flex
-          flexDirection="column"
-          justifyContent="flex-start"
-          alignItems="flex-start"
-          maxWidth="700px"
-        >
-          <Heading letterSpacing="tight" mb={2} as="h1" size="2xl">
-            503 – Service Unavailable
-          </Heading>
-          <Text color={secondaryTextColor[colorMode]} my={4}>
-            Oppss.. Nampaknya halaman yang anda akses sedang dalam tahap
-            pengembangan🥺.
-          </Text>
-          <NextLink href="/" passHref>
-            <Button
-              as="a"
-              p={[1, 4]}
-              w="250px"
-              fontWeight="bold"
-              m="3rem auto 0"
-            >
-              Kembali ke Home
-            </Button>
-          </NextLink>
-        </Flex>
-      </Stack>
+        <Heading letterSpacing="tight" mb={10} as="h1" size="xl">
+          451 - Unavailable For Legal Reasons
+        </Heading>
+        <Text color={secondaryTextColor[colorMode]} mt={4}>
+          Kenapa harus menampilkan kode error "404" jika saya bisa membuatnya
+          terdengar misterius?
+        </Text>
+        <NextLink href="/" passHref>
+          <Button as="a" p={[1, 4]} w="250px" fontWeight="bold" m="5rem 1rem">
+            Kembali ke Home
+          </Button>
+        </NextLink>
+      </Flex>
     </Container>
   );
 };
