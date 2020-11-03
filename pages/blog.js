@@ -66,7 +66,7 @@ const Blog = () => {
             untuk saya pribadi ketika sedang belajar atau membagikan sesuatu.
             Enjoy your reading!
           </Text>
-          <InputGroup my={4} mr={4} w="100%">
+          <InputGroup my={4} mr={4} width="100%">
             <Input
               aria-label="Cari tulisan"
               onChange={(e) => setSearchValue(e.target.value)}
@@ -82,7 +82,6 @@ const Blog = () => {
           justifyContent="flex-start"
           alignItems="flex-start"
           maxWidth="700px"
-          mt={4}
         >
           {!filteredBlogPosts.length && 'Artikel tidak ditemukan.'}
           {filteredBlogPosts.map((frontMatter) => (
