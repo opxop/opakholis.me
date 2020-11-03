@@ -1,16 +1,16 @@
-import React from "react";
-import NextLink from "next/link";
-import styled from "@emotion/styled";
+import React from 'react';
+import NextLink from 'next/link';
+import styled from '@emotion/styled';
 import {
   Button,
   Flex,
   IconButton,
   useColorMode,
   Box,
-  Stack,
-} from "@chakra-ui/core";
+  Stack
+} from '@chakra-ui/core';
 
-import Footer from "./Footer";
+import Footer from './Footer';
 
 const StickyNav = styled(Flex)`
   position: sticky;
@@ -24,18 +24,18 @@ const Container = ({ children }) => {
   const { colorMode, toggleColorMode } = useColorMode();
 
   const bgColor = {
-    light: "white",
-    dark: "gray.900",
+    light: 'white',
+    dark: 'gray.900'
   };
 
   const primaryTextColor = {
-    light: "black",
-    dark: "white",
+    light: 'black',
+    dark: 'white'
   };
 
   const navBgColor = {
-    light: "rgba(255, 255, 255, 0.8)",
-    dark: "rgba(23, 25, 35, 0.8)",
+    light: 'rgba(255, 255, 255, 0.8)',
+    dark: 'rgba(23, 25, 35, 0.8)'
   };
 
   return (
@@ -55,7 +55,7 @@ const Container = ({ children }) => {
       >
         <IconButton
           aria-label="Toggle dark mode"
-          icon={colorMode === "dark" ? "sun" : "moon"}
+          icon={colorMode === 'dark' ? 'sun' : 'moon'}
           onClick={toggleColorMode}
         />
         <Box>
