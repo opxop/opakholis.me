@@ -1,8 +1,8 @@
-import React from "react";
-import { Flex, IconButton, Link, Text } from "@chakra-ui/core";
+import React from 'react';
+import { Flex, IconButton, Link, Text } from '@chakra-ui/core';
 
 const Footer = () => (
-  <Flex align="center" mb={4} direction="column">
+  <Flex align="center" my={4} direction="column">
     <div>
       <Link href="https://twitter.com/opakholis" title="Twitter" isExternal>
         <IconButton
@@ -45,9 +45,14 @@ const Footer = () => (
         />
       </Link>
     </div>
-    <Text fontSize="sm" color="gray.500" minWidth="100px" mr={2}>
+    <Text fontSize="sm" color="gray.500" minWidth="100px" mt={1}>
       Built with ❤️ using
-      <Link href="https://nextjs.org" title="NextJS" mx={1} isExternal>
+      <Link
+        href="https://nextjs.org"
+        mx={1}
+        _focus={{ border: 'none' }}
+        isExternal
+      >
         NextJS
       </Link>
       &copy; 2020
