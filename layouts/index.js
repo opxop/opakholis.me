@@ -32,9 +32,8 @@ export default function BlogLayout({ children, frontMatter }) {
           justify="space-between"
           align={['initial', 'center']}
           direction={['column', 'row']}
-          mt={2}
+          my={2}
           w="100%"
-          mb={4}
         >
           <Flex align="center">
             <Avatar
@@ -49,6 +48,9 @@ export default function BlogLayout({ children, frontMatter }) {
               {format(parseISO(frontMatter.publishedAt), 'MMMM dd, yyyy')}
             </Text>
           </Flex>
+          <Text fontSize="sm" color="gray.500" mt={[2, 0]}>
+            {frontMatter.readingTime.text}
+          </Text>
         </Flex>
       </Flex>
       {children}
