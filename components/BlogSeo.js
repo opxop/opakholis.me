@@ -13,7 +13,8 @@ const BlogSeo = ({ title, summary, publishedAt, url, image }) => {
       <NextSeo
         title={`${title} - Opa Kholis Majid`}
         description={summary}
-        canonical={{
+        canonical={url}
+        openGraph={{
           type: 'article',
           article: { publishedTime: date },
           url,
