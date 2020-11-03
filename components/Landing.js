@@ -1,14 +1,14 @@
-import React from "react";
-import NextLink from "next/link";
-import { Button, Flex, Heading, Text, useColorMode } from "@chakra-ui/core";
+import React from 'react';
+import NextLink from 'next/link';
+import { Button, Flex, Heading, Text, useColorMode } from '@chakra-ui/core';
 
-import Skill from "./Skill";
+import Skill from './Skill';
 
 const Landing = () => {
   const { colorMode } = useColorMode();
   const secondaryTextColor = {
-    light: "gray.700",
-    dark: "gray.400",
+    light: 'gray.700',
+    dark: 'gray.400'
   };
 
   return (

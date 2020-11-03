@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 import {
   Divider,
   Flex,
@@ -10,14 +10,14 @@ import {
   Text,
   ListItem,
   useColorMode,
-  Link,
-} from "@chakra-ui/core";
+  Link
+} from '@chakra-ui/core';
 
 const YearDivider = () => {
   const { colorMode } = useColorMode();
   const borderColor = {
-    light: "gray.200",
-    dark: "gray.600",
+    light: 'gray.200',
+    dark: 'gray.600'
   };
 
   return <Divider borderColor={borderColor[colorMode]} my={5} w="100%" />;
@@ -26,8 +26,8 @@ const YearDivider = () => {
 const TimelineStep = ({ title, children }) => {
   const { colorMode } = useColorMode();
   const secondaryTextColor = {
-    light: "gray.700",
-    dark: "gray.400",
+    light: 'gray.700',
+    dark: 'gray.400'
   };
 
   return (
@@ -81,10 +81,10 @@ const Timeline = () => {
       </Heading>
       <List>
         <TimelineStep title="Landed First Internship 👨🏼‍💻">
-          Merupakan 3 bulan yang sangat berharga. Bersama orang-orang hebat di{" "}
+          Merupakan 3 bulan yang sangat berharga. Bersama orang-orang hebat di{' '}
           <Link href="http://jiwalu.id" isExternal>
             Jiwalu Studio
-          </Link>{" "}
+          </Link>{' '}
           saya banyak belajar hal baru.
         </TimelineStep>
         <TimelineStep title="Fallin' in Love with Flutter 🎴">

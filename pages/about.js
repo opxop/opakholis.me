@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   List,
   ListItem,
@@ -8,21 +8,21 @@ import {
   useColorMode,
   Box,
   Link,
-  Divider,
-} from "@chakra-ui/core";
-import { NextSeo } from "next-seo";
+  Divider
+} from '@chakra-ui/core';
+import { NextSeo } from 'next-seo';
 
-import Container from "../components/Container";
+import Container from '../components/Container';
 
-const url = "https://opakholis.me/about";
-const title = "About Me - Opa Kholis Majid";
+const url = 'https://opakholis.me/about';
+const title = 'About Me - Opa Kholis Majid';
 
 const About = () => {
   const { colorMode } = useColorMode();
 
   const secondaryTextColor = {
-    light: "gray.700",
-    dark: "gray.400",
+    light: 'gray.700',
+    dark: 'gray.400'
   };
 
   return (
@@ -32,7 +32,7 @@ const About = () => {
         canonical={url}
         openGraph={{
           url,
-          title,
+          title
         }}
       />
       <Container>
@@ -76,14 +76,14 @@ const About = () => {
             </Text>
             <Text color={secondaryTextColor[colorMode]} mb={4}>
               Untuk mengetahui apa yang sedang saya dengarkan, bisa kunjungi
-              akun{" "}
+              akun{' '}
               <Link
                 href="https://open.spotify.com/user/xil3nxol9wadm6lgyw5qv1l2h?si=4xGaa8Y0T3KjpJcaJI7OXQ"
                 color="whatsapp.500"
                 isExternal
               >
                 Spotify
-              </Link>{" "}
+              </Link>{' '}
               saya.
             </Text>
             <Heading letterSpacing="tight" mt={16} mb={4} as="h2" size="xl">

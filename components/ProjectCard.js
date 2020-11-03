@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   Link,
   Text,
@@ -6,25 +6,25 @@ import {
   Icon,
   Stack,
   Heading,
-  useColorMode,
-} from "@chakra-ui/core";
+  useColorMode
+} from '@chakra-ui/core';
 
 const ProjectCard = ({ title, description, href, icon }) => {
   const { colorMode } = useColorMode();
 
   const secondaryTextColor = {
-    light: "gray.700",
-    dark: "gray.400",
+    light: 'gray.700',
+    dark: 'gray.400'
   };
 
   const borderColor = {
-    light: "gray.200",
-    dark: "gray.600",
+    light: 'gray.200',
+    dark: 'gray.600'
   };
 
   const iconColor = {
-    light: "gray.900",
-    dark: "white",
+    light: 'gray.900',
+    dark: 'white'
   };
 
   return (
@@ -32,8 +32,8 @@ const ProjectCard = ({ title, description, href, icon }) => {
       mb={4}
       href={href}
       _hover={{
-        boxShadow: "0px 4px 20px rgba(0,0,0,0.05)",
-        textDecoration: "none",
+        boxShadow: '0px 4px 20px rgba(0,0,0,0.05)',
+        textDecoration: 'none'
       }}
       isExternal
     >

@@ -1,7 +1,7 @@
-import React from "react";
-const { Heading, Flex } = require("@chakra-ui/core");
+import React from 'react';
+const { Heading, Flex } = require('@chakra-ui/core');
 
-import ProjectCard from "./ProjectCard";
+import ProjectCard from './ProjectCard';
 
 const Project = () => {
   return (

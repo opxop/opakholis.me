@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   List,
   ListItem,
@@ -6,14 +6,14 @@ import {
   useColorMode,
   Flex,
   Box,
-  Text,
-} from "@chakra-ui/core";
+  Text
+} from '@chakra-ui/core';
 
 const Skill = () => {
   const { colorMode } = useColorMode();
   const secondaryTextColor = {
-    light: "gray.700",
-    dark: "gray.400",
+    light: 'gray.700',
+    dark: 'gray.400'
   };
 
   return (
