@@ -45,7 +45,7 @@ const Container = ({ children }) => {
         flexDirection="row"
         justifyContent="space-between"
         alignItems="center"
-        maxWidth="900px"
+        maxWidth="770px"
         width="100%"
         bg={navBgColor[colorMode]}
         p={8}
