@@ -11,6 +11,7 @@ import { Global, css } from '@emotion/core';
 import { DefaultSeo } from 'next-seo';
 
 import theme from '../styles/theme';
+import { prismLightTheme, prismDarkTheme } from '../styles/prism';
 import SEO from '../next-seo.config';
 import MDXComponents from '../components/MDXComponents';
 
@@ -22,6 +23,8 @@ const GlobalStyle = ({ children }) => {
       <CSSReset />
       <Global
         styles={css`
+          ${colorMode === 'light' ? prismLightTheme : prismDarkTheme};
+
           ::selection {
             background-color: #47a3f3;
             color: #fefefe;

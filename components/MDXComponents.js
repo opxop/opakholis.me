@@ -105,16 +105,12 @@ const DocsHeading = (props) => (
       },
       '&[id]:before': {
         display: 'block',
-        height: ' 6rem',
-        marginTop: '-6rem',
         visibility: 'hidden',
         content: `""`
       },
       '&[id]:hover a': { opacity: 1 }
     }}
     {...props}
-    mb="1em"
-    mt="2em"
   >
     <Box pointerEvents="auto">
       {props.children}
@@ -147,15 +143,15 @@ const Hr = () => {
     dark: 'gray.600'
   };
 
-  return (
-    <Divider borderColor={borderColor[colorMode]} mt={2} mb={4} w="100%" />
-  );
+  return <Divider borderColor={borderColor[colorMode]} my={4} w="100%" />;
 };
 
 const MDXComponents = {
-  h1: (props) => <Heading as="h1" size="xl" my={2} {...props} />,
-  h2: (props) => <DocsHeading as="h2" fontWeight="bold" size="lg" {...props} />,
+  h1: (props) => <DocsHeading as="h1" size="xl" fontWeight="bold" {...props} />,
+  h2: (props) => <DocsHeading as="h2" size="lg" fontWeight="bold" {...props} />,
   h3: (props) => <DocsHeading as="h3" size="md" fontWeight="bold" {...props} />,
+  h4: (props) => <DocsHeading as="h4" size="s" fontWeight="bold" {...props} />,
+  h5: (props) => <DocsHeading as="h5" size="xs" fontWeight="bold" {...props} />,
   inlineCode: (props) => (
     <Code variantColor="yellow" fontSize="0.84em" {...props} />
   ),
@@ -166,7 +162,7 @@ const MDXComponents = {
   th: THead,
   td: TData,
   a: CustomLink,
-  p: (props) => <Text as="p" mt={2} lineHeight="tall" {...props} />,
+  p: (props) => <Text as="p" lineHeight="tall" {...props} />,
   ul: (props) => <Box as="ul" pt={2} pl={2} ml={2} {...props} />,
   ol: (props) => <Box as="ol" pt={2} pl={2} ml={2} {...props} />,
   li: (props) => <Box as="li" pb={1} {...props} />,
