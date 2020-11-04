@@ -32,14 +32,14 @@ export default function BlogLayout({ children, frontMatter }) {
           justify="space-between"
           align={['initial', 'center']}
           direction={['column', 'row']}
-          my={2}
+          mt={2}
           w="100%"
         >
           <Flex align="center">
             <Avatar
               size="xs"
               name="Opa Kholis Majid"
-              src="https://bit.ly/3oU1igz"
+              src="https://bit.ly/3mQsL14"
               mr={2}
             />
             <Text fontSize="sm" color={secondaryTextColor[colorMode]}>
@@ -48,8 +48,10 @@ export default function BlogLayout({ children, frontMatter }) {
               {format(parseISO(frontMatter.publishedAt), 'MMMM dd, yyyy')}
             </Text>
           </Flex>
-          <Text fontSize="sm" color="gray.500" mt={[2, 0]}>
-            {frontMatter.readingTime.text}
+          <Text fontSize="sm" color="gray.500" mt={[4, 0]}>
+            <span role="img" aria-label="one coffee">
+              ☕ {frontMatter.readingTime.text}
+            </span>
           </Text>
         </Flex>
       </Flex>
