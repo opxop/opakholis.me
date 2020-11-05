@@ -66,7 +66,7 @@ const Container = ({ children }) => {
             <Button
               as="a"
               variant={pathname.startsWith('/blog') ? 'solid' : 'ghost'}
-              p={[1, 3]}
+              p={[2, 4]}
               mx={1}
             >
               Blog
@@ -76,7 +76,7 @@ const Container = ({ children }) => {
             <Button
               as="a"
               variant={pathname.startsWith('/about') ? 'solid' : 'ghost'}
-              p={[1, 3]}
+              p={[2, 4]}
               mx={1}
             >
               About
@@ -86,7 +86,7 @@ const Container = ({ children }) => {
             <Button
               as="a"
               variant={pathname === '/' ? 'solid' : 'ghost'}
-              p={[1, 3]}
+              p={[2, 4]}
               mx={1}
             >
               Home
