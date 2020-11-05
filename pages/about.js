@@ -7,12 +7,12 @@ import {
   Heading,
   useColorMode,
   Box,
-  Link,
   Divider
 } from '@chakra-ui/core';
 import { NextSeo } from 'next-seo';
 
 import Container from '../components/Container';
+import { CustomLink, TextThrough } from '../components/MDXComponents';
 
 const url = 'https://opakholis.me/about';
 const title = 'About Me - Opa Kholis Majid';
@@ -50,14 +50,16 @@ const About = () => {
               Halo! Perkenalkan, saya Opa.
             </Text>
             <Text color={secondaryTextColor[colorMode]}>
-              Ya, sehari-harinya saya dipanggil dengan panggilan "Opa". Nama
-              yang membuat beberapa orang yang baru ditemuinya memasang ekspresi
-              raut wajah keheranan, bahkan tidak sedikit yang penasaran dan
-              menanyakan alasan orang tua saya memberikan anugerah nama
-              tersebut.
+              Ya, sehari-harinya saya dipanggil dengan panggilan "Opa". Sebuah
+              nama yang kadang membuat orang memasang raut wajah keheranan
+              setelah <Text as="s">bertukar nama</Text>
+              &nbsp;mengetahui nama saya ini, bahkan tidak sedikit yang
+              penasaran dan menanyakan alasan orang tua saya memberikan anugerah
+              nama tersebut.
+              <br />
               <br />
               karena saya berusaha menjadi seorang anak yang baik, saya tidak
-              pernah protes akan nama tersebut sampai hari ini.
+              pernah protes sampai hari ini.
             </Text>
             <Divider
               my={4}
@@ -71,21 +73,17 @@ const About = () => {
               Software.
             </Text>
             <Text color={secondaryTextColor[colorMode]} mb={4}>
-              Saat tidak berada depan teks editor, saya menghabiskan waktu luang
-              dengan menonton film, anime, baca buku, juga mendengarkan musik.
-            </Text>
-            <Text color={secondaryTextColor[colorMode]} mb={4}>
-              Untuk mengetahui apa yang sedang saya dengarkan, bisa kunjungi
-              akun{' '}
-              <Link
-                href="https://open.spotify.com/user/xil3nxol9wadm6lgyw5qv1l2h?si=4xGaa8Y0T3KjpJcaJI7OXQ"
-                color="whatsapp.500"
-                isExternal
-              >
+              Saya tidak sepenuhnya mengahabiskan waktu didepan teks editor.
+              Untuk menjernihkan pikiran, saya meluangkan waktu untuk sekedar
+              menonton film, terlebih anime dan dorama; membaca buku untuk
+              menambah insight baru; dan tentu saja mendengarkan musik, semua
+              playlist saya simpan di&nbsp;
+              <CustomLink href="https://open.spotify.com/user/xil3nxol9wadm6lgyw5qv1l2h?si=4xGaa8Y0T3KjpJcaJI7OXQ">
                 Spotify
-              </Link>{' '}
-              saya.
+              </CustomLink>
+              .
             </Text>
+            <Text color={secondaryTextColor[colorMode]} mb={4}></Text>
             <Heading letterSpacing="tight" mt={16} mb={4} as="h2" size="xl">
               Stuff
             </Heading>
@@ -98,7 +96,6 @@ const About = () => {
               <ListItem>Domain : Hostinger</ListItem>
               <ListItem>Blog Engine : Next.js + MDX</ListItem>
               <ListItem>SSL : Let’s Encrypt</ListItem>
-              <ListItem>Mail Service : ProtonMail</ListItem>
               <ListItem>Text Editor : Visual Studio Code</ListItem>
             </List>
           </Box>
