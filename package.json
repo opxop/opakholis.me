@@ -40,13 +40,8 @@
     "remark-slug": "^6.0.0"
   },
   "devDependencies": {
+    "globby": "^11.0.1",
     "prettier": "^2.1.2",
     "rehype": "^11.0.0"
-  },
-  "prettier": {
-    "arrowParens": "always",
-    "singleQuote": true,
-    "tabWidth": 2,
-    "trailingComma": "none"
   }
 }
