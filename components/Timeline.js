@@ -34,7 +34,7 @@ const TimelineStep = ({ title, children }) => {
     <ListItem>
       <Stack ml={2} mb={4}>
         <Flex align="center">
-          <Icon name="check-circle" mr={2} color="whatsapp.500" />
+          <Icon name="check" mr={2} color="whatsapp.500" />
           <Text fontWeight="medium">{title}</Text>
         </Flex>
         <Text color={secondaryTextColor[colorMode]} ml={6}>
