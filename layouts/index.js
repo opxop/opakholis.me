@@ -1,6 +1,13 @@
 import React from 'react';
 import { parseISO, format } from 'date-fns';
-import { useColorMode, Heading, Text, Flex, Avatar } from '@chakra-ui/core';
+import {
+  useColorMode,
+  Heading,
+  Text,
+  Flex,
+  Avatar,
+  Icon
+} from '@chakra-ui/core';
 
 import BlogSeo from '../components/BlogSeo';
 import Container from '../components/Container';
@@ -28,32 +35,13 @@ export default function BlogLayout({ children, frontMatter }) {
         <Heading letterSpacing="tight" mb={2} as="h1" size="2xl">
           {frontMatter.title}
         </Heading>
-        <Flex
-          justify="space-between"
-          align={['initial', 'center']}
-          direction={['column', 'row']}
-          mt={2}
-          w="100%"
-        >
-          <Flex align="center">
-            <Avatar
-              size="xs"
-              name="Opa Kholis Majid"
-              src="https://bit.ly/3mQsL14"
-              mr={2}
-            />
-            <Text fontSize="sm" color={secondaryTextColor[colorMode]}>
-              {frontMatter.by}
-              {'Opa Kholis Majid / '}
-              {format(parseISO(frontMatter.publishedAt), 'MMMM dd, yyyy')}
-            </Text>
-          </Flex>
-          <Text fontSize="sm" color="gray.500" mt={[4, 0]}>
-            <span role="img" aria-label="one coffee">
-              ☕ {frontMatter.readingTime.text}
-            </span>
-          </Text>
-        </Flex>
+        <Text fontSize="sm" color={secondaryTextColor[colorMode]}>
+          <Icon name="date" mx={1} mb={1} />
+          {format(parseISO(frontMatter.publishedAt), 'MMMM dd, yyyy')}
+          {` • `}
+          <Icon name="coffe" mx={1} mb={1} />
+          {frontMatter.readingTime.text}
+        </Text>
       </Flex>
       {children}
     </Container>
