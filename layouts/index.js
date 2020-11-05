@@ -1,13 +1,6 @@
 import React from 'react';
 import { parseISO, format } from 'date-fns';
-import {
-  useColorMode,
-  Heading,
-  Text,
-  Flex,
-  Avatar,
-  Icon
-} from '@chakra-ui/core';
+import { useColorMode, Heading, Text, Flex, Icon } from '@chakra-ui/core';
 
 import BlogSeo from '../components/BlogSeo';
 import Container from '../components/Container';
