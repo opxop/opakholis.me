@@ -1,5 +1,6 @@
 import React from 'react';
 import NextLink from 'next/link';
+import { useRouter } from 'next/router';
 import styled from '@emotion/styled';
 import {
   Button,
@@ -21,6 +22,8 @@ const StickyNav = styled(Flex)`
 `;
 
 const Container = ({ children }) => {
+  const { pathname } = useRouter();
+
   const { colorMode, toggleColorMode } = useColorMode();
 
   const bgColor = {
@@ -60,17 +63,32 @@ const Container = ({ children }) => {
         />
         <Box>
           <NextLink href="/blog" passHref>
-            <Button as="a" variant="ghost" p={[1, 3]} mx={1}>
+            <Button
+              as="a"
+              variant={pathname.startsWith('/blog') ? 'solid' : 'ghost'}
+              p={[1, 3]}
+              mx={1}
+            >
               Blog
             </Button>
           </NextLink>
           <NextLink href="/about" passHref>
-            <Button as="a" variant="ghost" p={[1, 3]} mx={1}>
+            <Button
+              as="a"
+              variant={pathname.startsWith('/about') ? 'solid' : 'ghost'}
+              p={[1, 3]}
+              mx={1}
+            >
               About
             </Button>
           </NextLink>
           <NextLink href="/" passHref>
-            <Button as="a" variant="ghost" p={[1, 3]} mx={1}>
+            <Button
+              as="a"
+              variant={pathname === '/' ? 'solid' : 'ghost'}
+              p={[1, 3]}
+              mx={1}
+            >
               Home
             </Button>
           </NextLink>
