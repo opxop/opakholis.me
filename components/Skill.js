@@ -26,7 +26,7 @@ const Skill = () => {
           <List color={secondaryTextColor[colorMode]}>
             <ListItem>
               <ListIcon icon="chevron-right" />
-              Javascript (ES6+)
+              Javascript
             </ListItem>
           </List>
           <List color={secondaryTextColor[colorMode]}>
