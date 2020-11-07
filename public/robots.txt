@@ -1,0 +1,4 @@
+User-agent: Googlebot-Image
+Dissalow: /static/images/me.jpg
+
+Sitemap: https://opakholis.me/sitemap.xml
