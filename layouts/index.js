@@ -19,6 +19,7 @@ export default function BlogLayout({ children, frontMatter }) {
     <Container>
       <BlogSeo url={`https://opakholis.me/blog/${slug}`} {...frontMatter} />
       <Flex
+        as="article"
         flexDirection="column"
         justifyContent="flex-start"
         alignItems="flex-start"
