@@ -31,7 +31,7 @@ const prismBaseTheme = css`
     padding-bottom: ${theme.space[4]};
     padding-left: ${theme.space[4]};
     padding-right: ${theme.space[4]};
-    margin: ${theme.space[2]} 0;
+    margin: ${theme.space[6]} 0;
     overflow: auto;
     min-width: 100%;
     font-size: 0.9rem;

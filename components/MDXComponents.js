@@ -147,7 +147,7 @@ const Hr = () => {
 };
 
 const MDXComponents = {
-  h1: (props) => <DocsHeading as="h1" size="xl" fontWeight="bold" {...props} />,
+  h1: (props) => <Heading as="h1" size="xl" my={4} {...props} />,
   h2: (props) => <DocsHeading as="h2" size="lg" fontWeight="bold" {...props} />,
   h3: (props) => <DocsHeading as="h3" size="md" fontWeight="bold" {...props} />,
   h4: (props) => <DocsHeading as="h4" size="s" fontWeight="bold" {...props} />,
@@ -162,7 +162,7 @@ const MDXComponents = {
   th: THead,
   td: TData,
   a: CustomLink,
-  p: (props) => <Text as="p" lineHeight="tall" {...props} />,
+  p: (props) => <Text as="p" mt={4} lineHeight="tall" {...props} />,
   ul: (props) => <Box as="ul" pt={2} pl={2} ml={2} {...props} />,
   ol: (props) => <Box as="ol" pt={2} pl={2} ml={2} {...props} />,
   li: (props) => <Box as="li" pb={1} {...props} />,
