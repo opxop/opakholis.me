@@ -42,7 +42,7 @@ const About = () => {
           alignItems="flex-start"
           maxW="700px"
         >
-          <Heading letterSpacing="tight" mb={4} as="h1" size="xl">
+          <Heading letterSpacing="tight" mb={4} as="h1" size="2xl">
             About Me
           </Heading>
           <Box>
