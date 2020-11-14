@@ -39,10 +39,10 @@ const BlogPost = (frontMatter) => {
       >
         <Box display="block" width="100%">
           <Flex
-            width="100%"
+            width={['100%', '100%', '700px']}
             align="flex-start"
             justifyContent="space-between"
-            flexDirection={['column', 'row']}
+            flexDirection={['column', 'column', 'row']}
           >
             <Heading size="md" as="h3" mb={1} fontWeight="medium">
               {title}
@@ -51,8 +51,8 @@ const BlogPost = (frontMatter) => {
               fontSize={['14px', 'normal']}
               color="gray.500"
               minWidth="105px"
-              textAlign={['left', 'right']}
-              mb={[4, 0]}
+              textAlign={['left', 'left', 'right']}
+              mb={[4, 2, 0]}
             >
               {format(parseISO(frontMatter.publishedAt), 'MMMM dd, yyyy')}
             </Text>
