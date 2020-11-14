@@ -41,7 +41,7 @@ export default function BlogLayout({ children, frontMatter }) {
           <Icon name="date" mx={1} mb={1} />
           {format(parseISO(frontMatter.publishedAt), 'MMMM dd, yyyy')}
           {` • `}
-          <Icon name="coffe" mx={1} mb={1} />
+          <Icon name="book" mx={1} mb={1} />
           {frontMatter.readingTime.text}
         </Text>
       </Flex>
