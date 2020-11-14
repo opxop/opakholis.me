@@ -18,7 +18,7 @@ const StickyNav = styled(Flex)`
   z-index: 9;
   top: 0;
   backdrop-filter: saturate(180%) blur(20px);
-  transition: backgroun-color 0.1 ease-in-out;
+  transition: background-color 0.1 ease-in-out;
 `;
 
 const Container = ({ children }) => {
