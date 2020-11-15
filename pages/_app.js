@@ -1,14 +1,14 @@
 import React from 'react';
-import { MDXProvider } from '@mdx-js/react';
 import Head from 'next/head';
+import { MDXProvider } from '@mdx-js/react';
+import { Global, css } from '@emotion/core';
+import { DefaultSeo } from 'next-seo';
 import {
   ThemeProvider,
   useColorMode,
   CSSReset,
   ColorModeProvider
 } from '@chakra-ui/core';
-import { Global, css } from '@emotion/core';
-import { DefaultSeo } from 'next-seo';
 
 import theme from '../styles/theme';
 import { prismLightTheme, prismDarkTheme } from '../styles/prism';
@@ -32,7 +32,7 @@ const GlobalStyle = ({ children }) => {
 
           html {
             min-width: 360px;
-            schroll-behavior: smooth;
+            scroll-behavior: smooth;
           }
 
           #__next {
