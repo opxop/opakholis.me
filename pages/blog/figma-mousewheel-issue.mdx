@@ -1,0 +1,91 @@
+---
+title: 'Mousewheel scrolling in Figma is unbearably slow'
+publishedAt: '2020-11-17'
+summary: 'Mengatasi Figma mouse wheel scrolling yang lambat pada Firefox di Distro Linux'
+image: '/static/images/figma-mousewheel-issue/banner.png'
+category: 'How-To'
+tags:
+  - Figma
+  - Firefox
+  - Linux
+---
+
+![Fix slow Figma mousewheel scrolling in Firefox on Linux](/static/images/figma-mousewheel-issue/banner.png)
+
+Ini ganggu banget sih,
+
+## Solve with extension
+
+Cara paling simple untuk mengatasi masalah ini, bisa dengan install [extention ini](https://addons.mozilla.org/firefox/addon/scroll-figma/). Extention ini juga merupakan
+
+## If you a Greasemonkey user, try this one!
+
+Bagi pengguna Greasemonkey, mungkin lebih berguna jika menggunakan script ini.
+
+```js:figma-mouse-wheel.user.js
+const MULTIPLIER_X = 30;
+const MULTIPLIER_Y = 10;
+
+function speedUp(ev) {
+  if (!ev.isTrusted) return true;
+
+  const { clientX, clientY, screenX, screenY, shiftKey, ctrlKey, altKey } = ev;
+  const newEv = new WheelEvent('wheel', {
+    bubbles: true,
+    cancelable: true,
+    view: window,
+    clientX,
+    clientY,
+    screenX,
+    screenY,
+    ctrlKey,
+    shiftKey,
+    altKey,
+    deltaX: ev.deltaX * MULTIPLIER_X,
+    deltaY: ev.deltaY * MULTIPLIER_Y
+  });
+
+  ev.preventDefault();
+  ev.stopPropagation();
+  ev.target.dispatchEvent(newEv);
+  return false;
+}
+
+function addCanvasEvent() {
+  const canvas = document.querySelector('.view > canvas');
+  if (canvas != null) canvas.addEventListener('wheel', speedUp);
+  else setTimeout(addCanvasEvent, 500);
+}
+addCanvasEvent();
+```
+
+## Poor man with complicated solution
+
+_"Kalo ada yang sulit kenapa harus yang ~~sulit~~ mudah"_. Hmm, gak sedikit emang manusia yang memiliki sifat seperti ini
+
+Oke. Jadi gini kira-kira caranya, ya sebenernya gak terlalu sulit juga sih.
+
+1. Buka `about:config`
+2. Lalu masukan keyword
+
+<!-- ```bash
+mousewheel.with_control.delta_multiplier_y
+``` -->
+
+3. Ubah value dari konfigurasi tersebut, disini saya mengubahnya menjadi 1000
+4. And that's it!
+
+Sayangnya cara ini cuma mengatasi masalah **Ctrl+Mousewheel** (Zoom in/out)
+
+---
+
+### System Summary
+
+- Manjaro Linux
+- Firefox 82.0.3
+
+### Aditional Resource
+
+- [ar-nelson's gist](https://gist.github.com/ar-nelson/9d545c51501ae4527a5c7dd920cab15b)
+- [Figma Spectrum.chat](https://spectrum.chat/figma/general/slow-scroll-on-firefox~aa8657b9-f081-4a27-976c-a980382bec94?m=MTU5NDQ5NzEzNjc2OA==)
+- [Also FIgam Spectrum.chat](https://spectrum.chat/figma/feature-requests/zooming-speed-with-ctrl-mouse-scroll-on-firefox-differs-from-googles-chrome~250fac37-73e9-4319-b38a-297bf4db5843)

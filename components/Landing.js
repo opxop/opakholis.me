@@ -22,7 +22,7 @@ const Landing = () => {
         👋 Hi, I'm Opa Kholis Majid.
       </Heading>
       <Text color={secondaryTextColor[colorMode]}>
-        Seseorang yang menyebut dirinya sebagai Frontend developer - yang mana
+        Seseorang yang menyebut dirinya sebagai Frontend developer — yang mana
         sekarang sedang senang ber-ekplorasi dengan Linux distribution dan
         Open-source Software.
       </Text>
