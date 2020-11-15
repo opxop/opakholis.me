@@ -28,7 +28,7 @@ const BlogSeo = ({ title, summary, publishedAt, url, image }) => {
         dateModified={date}
         datePublished={date}
         description={summary}
-        image={[featuredImage]}
+        images={[featuredImage]}
         publisherLogo="/static/favicons/android-chrome-192x192.png"
         publisherName="Opa Kholis Majid"
         title={title}
