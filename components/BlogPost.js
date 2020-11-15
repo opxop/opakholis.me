@@ -39,7 +39,7 @@ const BlogPost = (frontMatter) => {
       >
         <Box display="block" width="100%">
           <Flex
-            width={['100%', '100%', '700px']}
+            width={['100%', '100%', '668px']}
             align="flex-start"
             justifyContent="space-between"
             flexDirection={['column', 'column', 'row']}
