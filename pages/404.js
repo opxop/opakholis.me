@@ -1,13 +1,6 @@
 import React from 'react';
 import NextLink from 'next/link';
-import {
-  useColorMode,
-  Heading,
-  Text,
-  Flex,
-  Button,
-  Divider
-} from '@chakra-ui/core';
+import { useColorMode, Heading, Text, Flex, Button } from '@chakra-ui/core';
 
 import Container from '../components/Container';
 
