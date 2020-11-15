@@ -35,7 +35,7 @@ const TimelineStep = ({ title, children }) => {
   return (
     <ListItem>
       <Flex mb={4}>
-        <Icon as={FiCheckCircle} mr={3} mt="2px" color="whatsapp.500" />
+        <Icon as={FiCheckCircle} mr={3} mt="3px" color="whatsapp.500" />
         <Stack>
           <Text fontWeight="medium">{title}</Text>
           <Text color={secondaryTextColor[colorMode]}>{children}</Text>
@@ -104,11 +104,11 @@ const Timeline = () => {
       <List>
         <TimelineStep title="3rd Place at Diskominfo Karawang Competition 🎖">
           Berkolaborasi dengan tim sebagai Front-end developer. Menciptakan
-          sebuah inovasi baru dengan membangun sebuah sistem berbasis web dengan
-          tema "smart city".
+          sebuah inovasi baru dengan membangun sebuah sistem "Smart City"
+          berbasis website.
         </TimelineStep>
         <TimelineStep title="Got BNSP Certified 🎉">
-          Sebagai Pemrograman Web
+          Sebagai Web Developer
         </TimelineStep>
       </List>
       {isShowingFullTimeline ? (
