@@ -109,6 +109,7 @@ const Container = ({ children }) => {
           alignItems="flex-start"
           m="0 auto 4rem auto"
           maxW="700px"
+          w="100%"
         >
           {children}
         </Stack>

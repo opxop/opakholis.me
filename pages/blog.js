@@ -133,7 +133,7 @@ const Blog = () => {
               );
             })}
           </Flex>
-          <InputGroup my={4} mr={4} width="100%">
+          <InputGroup mt={4} width="100%">
             <Input
               aria-label="Cari tulisan"
               onChange={(e) => setSearchValue(e.target.value)}
