@@ -8,7 +8,7 @@ import {
   useColorMode,
   Box,
   Divider
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 import { NextSeo } from 'next-seo';
 
 import Container from '../components/Container';

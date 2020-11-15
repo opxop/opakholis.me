@@ -8,7 +8,9 @@ import {
   Icon,
   Box,
   Badge
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
+import { DateIcon } from '../styles/icons/date';
+import { BookIcon } from '../styles/icons/book';
 
 import BlogSeo from '../components/BlogSeo';
 import Container from '../components/Container';
@@ -38,10 +40,10 @@ export default function BlogLayout({ children, frontMatter }) {
           {frontMatter.title}
         </Heading>
         <Text fontSize="sm" color={secondaryTextColor[colorMode]}>
-          <Icon name="date" mx={1} mb={1} />
+          <DateIcon mx={1} mb={1} />
           {format(parseISO(frontMatter.publishedAt), 'MMMM dd, yyyy')}
           {` • `}
-          <Icon name="book" mx={1} mb={1} />
+          <BookIcon mx={1} mb={1} />
           {frontMatter.readingTime.text}
         </Text>
       </Flex>
@@ -57,7 +59,7 @@ export default function BlogLayout({ children, frontMatter }) {
                 mr={2}
                 fontWeight="normal"
                 textTransform="none"
-                variantColor="gray"
+                colorScheme="gray"
               >
                 {topic}
               </Badge>

@@ -7,7 +7,8 @@ import {
   Flex,
   Box,
   Text
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
+import { HiBadgeCheck } from 'react-icons/hi';
 
 const Skill = () => {
   const { colorMode } = useColorMode();
@@ -18,26 +19,26 @@ const Skill = () => {
 
   return (
     <div>
-      <Text color={secondaryTextColor[colorMode]} mt={3} mb={1}>
+      <Text color={secondaryTextColor[colorMode]} mt={4} mb={2}>
         Beberapa teknologi yang saya gunakan :
       </Text>
       <Flex>
         <Box mr={20}>
           <List color={secondaryTextColor[colorMode]}>
             <ListItem>
-              <ListIcon icon="chevron-right" />
+              <ListIcon as={HiBadgeCheck} mb="2px" />
               Javascript
             </ListItem>
           </List>
           <List color={secondaryTextColor[colorMode]}>
             <ListItem>
-              <ListIcon icon="chevron-right" />
+              <ListIcon as={HiBadgeCheck} mb="2px" />
               React
             </ListItem>
           </List>
           <List color={secondaryTextColor[colorMode]}>
             <ListItem>
-              <ListIcon icon="chevron-right" />
+              <ListIcon as={HiBadgeCheck} mb="2px" />
               Node.js
             </ListItem>
           </List>
@@ -45,13 +46,13 @@ const Skill = () => {
         <Box>
           <List color={secondaryTextColor[colorMode]}>
             <ListItem>
-              <ListIcon icon="chevron-right" />
+              <ListIcon as={HiBadgeCheck} mb="2px" />
               Flutter
             </ListItem>
           </List>
           <List color={secondaryTextColor[colorMode]}>
             <ListItem>
-              <ListIcon icon="chevron-right" />
+              <ListIcon as={HiBadgeCheck} mb="2px" />
               Git
             </ListItem>
           </List>

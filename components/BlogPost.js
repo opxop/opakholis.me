@@ -1,7 +1,7 @@
 import React from 'react';
 import NextLink from 'next/link';
 import { parseISO, format } from 'date-fns';
-import { Box, Text, Heading, Link, useColorMode, Flex } from '@chakra-ui/core';
+import { Box, Text, Heading, Link, useColorMode, Flex } from '@chakra-ui/react';
 
 const BlogPost = (frontMatter) => {
   const { title, summary } = frontMatter;

@@ -11,7 +11,9 @@ import {
   ListItem,
   useColorMode,
   Link
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
+import { CgChevronDoubleDown } from 'react-icons/cg';
+import { FiCheckCircle } from 'react-icons/fi';
 
 const YearDivider = () => {
   const { colorMode } = useColorMode();
@@ -32,15 +34,13 @@ const TimelineStep = ({ title, children }) => {
 
   return (
     <ListItem>
-      <Stack ml={2} mb={4}>
-        <Flex align="center">
-          <Icon name="check" mr={2} color="whatsapp.500" />
+      <Flex mb={4}>
+        <Icon as={FiCheckCircle} mr={3} mt="2px" color="whatsapp.500" />
+        <Stack>
           <Text fontWeight="medium">{title}</Text>
-        </Flex>
-        <Text color={secondaryTextColor[colorMode]} ml={6}>
-          {children}
-        </Text>
-      </Stack>
+          <Text color={secondaryTextColor[colorMode]}>{children}</Text>
+        </Stack>
+      </Flex>
     </ListItem>
   );
 };
@@ -118,7 +118,7 @@ const Timeline = () => {
           my={4}
           mx="auto"
           fontWeight="medium"
-          rightIcon="chevron-down"
+          rightIcon={<Icon as={CgChevronDoubleDown} />}
           variant="ghost"
           onClick={() => showFullTimeline(true)}
         >

@@ -1,7 +1,9 @@
 import React from 'react';
-const { Heading, Flex } = require('@chakra-ui/core');
+const { Heading, Flex } = require('@chakra-ui/react');
 
 import ProjectCard from './ProjectCard';
+import { NextJS } from '../styles/icons/nextjs';
+import { Progate } from '../styles/icons/progate';
 
 const Project = () => {
   return (
@@ -18,13 +20,13 @@ const Project = () => {
         title="My Portfolio Website"
         description="NextJS - JAMstack application yang dikostumisasi dengan bantuan Chakra UI. Di-deploy menggunakan Vercel."
         href="https://opakholis.me/"
-        icon="nextjs"
+        icon={<NextJS w={10} h={10} />}
       />
       <ProjectCard
         title="Progate Mini Project"
         description="Sebuah Mini Project dari Komunitas Progate Indonesia. Dibangun menggunakan Tailwind CSS, Google API, dan Github Pages."
         href="https://opxop.github.io/Progate-Mini-Projects"
-        icon="progate"
+        icon={<Progate w={10} h={10} />}
       />
     </Flex>
   );

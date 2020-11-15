@@ -1,23 +1,36 @@
 import React from 'react';
-import { Flex, IconButton, Link, Text } from '@chakra-ui/core';
+import { Flex, IconButton, Link, Text } from '@chakra-ui/react';
+import { FiGithub, FiTwitter, FiLinkedin, FiMail } from 'react-icons/fi';
 
 const Footer = () => (
   <Flex align="center" my={4} direction="column">
     <div>
-      <Link href="https://twitter.com/opakholis" title="Twitter" isExternal>
+      <Link
+        href="https://twitter.com/opakholis"
+        title="Twitter"
+        _focus={{ boxShadow: 'none' }}
+        isExternal
+      >
         <IconButton
+          as={FiTwitter}
           aria-label="Twitter"
-          icon="twitter"
           size="lg"
+          p={4}
           color="gray.500"
           variant="ghost"
         />
       </Link>
-      <Link href="https://github.com/opxop" title="Github" isExternal>
+      <Link
+        href="https://github.com/opxop"
+        title="Github"
+        _focus={{ boxShadow: 'none' }}
+        isExternal
+      >
         <IconButton
+          as={FiGithub}
           aria-label="Github"
-          icon="github"
           size="lg"
+          p={4}
           color="gray.500"
           variant="ghost"
         />
@@ -25,21 +38,29 @@ const Footer = () => (
       <Link
         href="https://www.linkedin.com/in/opakholis"
         title="LinkedIn"
+        _focus={{ boxShadow: 'none' }}
         isExternal
       >
         <IconButton
+          as={FiLinkedin}
           aria-label="LinkedIn"
-          icon="linkedin"
           size="lg"
+          p={4}
           color="gray.500"
           variant="ghost"
         />
       </Link>
-      <Link href="mailto:hello@opakholis.me" title="Email" isExternal>
+      <Link
+        href="mailto:hello@opakholis.me"
+        title="Email"
+        _focus={{ boxShadow: 'none' }}
+        isExternal
+      >
         <IconButton
+          as={FiMail}
           aria-label="Email"
-          icon="mail"
           size="lg"
+          p={4}
           color="gray.500"
           variant="ghost"
         />
