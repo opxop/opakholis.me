@@ -1,6 +1,6 @@
 import React from 'react';
 import { Flex, IconButton, Link, Text } from '@chakra-ui/react';
-import { FiGithub, FiTwitter, FiLinkedin, FiMail } from 'react-icons/fi';
+import { FiGithub, FiTwitter, FiFacebook, FiMail } from 'react-icons/fi';
 
 const Footer = () => (
   <Flex align="center" my={4} direction="column">
@@ -14,8 +14,8 @@ const Footer = () => (
         <IconButton
           as={FiTwitter}
           aria-label="Twitter"
-          size="lg"
-          p={4}
+          size="md"
+          p="0.7em"
           color="gray.500"
           variant="ghost"
         />
@@ -29,23 +29,23 @@ const Footer = () => (
         <IconButton
           as={FiGithub}
           aria-label="Github"
-          size="lg"
-          p={4}
+          size="md"
+          p="0.7em"
           color="gray.500"
           variant="ghost"
         />
       </Link>
       <Link
-        href="https://www.linkedin.com/in/opakholis"
-        title="LinkedIn"
+        href="https://www.facebook.com/opakholis"
+        title="Facebook"
         _focus={{ boxShadow: 'none' }}
         isExternal
       >
         <IconButton
-          as={FiLinkedin}
-          aria-label="LinkedIn"
-          size="lg"
-          p={4}
+          as={FiFacebook}
+          aria-label="Facebook"
+          size="md"
+          p="0.7em"
           color="gray.500"
           variant="ghost"
         />
@@ -59,14 +59,14 @@ const Footer = () => (
         <IconButton
           as={FiMail}
           aria-label="Email"
-          size="lg"
-          p={4}
+          size="md"
+          p="0.7em"
           color="gray.500"
           variant="ghost"
         />
       </Link>
     </div>
-    <Text fontSize="sm" color="gray.500" minWidth="100px" mt={1}>
+    <Text fontSize="sm" color="gray.500" minWidth="100px" mt={2}>
       Built with ❤️ using
       <Link
         href="https://nextjs.org"
