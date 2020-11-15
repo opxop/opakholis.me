@@ -79,10 +79,11 @@ const Quote = (props) => {
   return (
     <Alert
       mt={4}
-      w="98%"
+      w="100%"
       bg={bgColor[colorMode]}
       variant="left-accent"
       status="info"
+      borderRadius={4}
       css={{
         '> *:first-of-type': {
           marginTop: 0,
