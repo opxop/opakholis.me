@@ -54,7 +54,7 @@ const App = ({ Component, pageProps }) => {
         <ColorModeProvider
           options={{
             useSystsemColorMode: true,
-            initialColorMode: 'light'
+            initialColorMode: 'dark'
           }}
         >
           <NextNprogress
