@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+import NextNprogress from 'nextjs-progressbar';
 import { MDXProvider } from '@mdx-js/react';
 import { Global, css } from '@emotion/react';
 import { DefaultSeo } from 'next-seo';
@@ -56,6 +57,13 @@ const App = ({ Component, pageProps }) => {
             initialColorMode: 'light'
           }}
         >
+          <NextNprogress
+            color="-webkit-linear-gradient(to right, #4568dc, #b06ab3)" /* Chrome 10-25, Safari 5.1-6 */
+            color="linear-gradient(to right, #4568dc, #b06ab3)" /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            startPosition={0.3}
+            stopDelayMs={200}
+            height="2"
+          />
           <GlobalStyle>
             <Head>
               <meta content="IE=edge" httpEquiv="X-UA-Compatible" />
