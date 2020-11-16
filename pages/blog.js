@@ -103,7 +103,7 @@ const Blog = () => {
             Blog
           </Heading>
           <Text color={secondaryTextColor[colorMode]} mb={4}>
-            Halaman ini berisi tulisan yang juga merupakan sebagai dokumentasi
+            Halaman ini berisi tulisan, opini dan juga merupakan dokumentasi
             untuk saya pribadi ketika sedang belajar atau membagikan sesuatu.
             Enjoy your reading!
           </Text>
