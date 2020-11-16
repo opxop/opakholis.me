@@ -1,7 +1,7 @@
 ---
 title: 'Mousewheel scrolling in Figma is unbearably slow'
-publishedAt: '2020-11-17'
-summary: 'Mengatasi Figma mouse wheel scrolling yang lambat pada Firefox di Distro Linux'
+publishedAt: '2020-11-16'
+summary: 'Minor bug yang menurunkan produktivitas mendesain'
 image: '/static/images/figma-mousewheel-issue/banner.png'
 category: 'How-To'
 tags:
@@ -10,17 +10,23 @@ tags:
   - Linux
 ---
 
-![Fix slow Figma mousewheel scrolling in Firefox on Linux](/static/images/figma-mousewheel-issue/banner.png)
+![Feature image : Mousewheel scrolling in Figma is unbearably slow](/static/images/figma-mousewheel-issue/banner.png)
 
-Ini ganggu banget sih,
+Karena saya menjadikan [Firefox](https://www.mozilla.org) sebagai _daily browser_ pada setup kerja saya, jelas masalah ini sangat mengganggu sekali. Terutama ketika _project_ desain yang saya kerjakan sudah cukup komplek.
+
+Oleh karena itu, dengan tulisan ini semoga bisa membantu memecahkan masalah ["scrolling Figma yang lambat pada Firefox (Linux)"](https://opakholis.me/blog/figma-mousewheel-issue) bagi kamu yang mengalami masalah sama seperti saya.
 
 ## Solve with extension
 
-Cara paling simple untuk mengatasi masalah ini, bisa dengan install [extention ini](https://addons.mozilla.org/firefox/addon/scroll-figma/). Extention ini juga merupakan
+Solusi paling simple untuk mengatasi masalah ini bisa dengan meng-install [extension ini](https://addons.mozilla.org/firefox/addon/scroll-figma/).
+
+![Scroll Figma Addon](/static/images/figma-mousewheel-issue/scroll-figma.png)
+
+Tenang aja walaupun rating + penggunanya terbilang sedikit, namun extension ini terbilang sangat bagus. Bahkan dibuat Open Source oleh pembuatnya. Untuk melihat sumber kodenya, kamu bisa berkunjung ke [Repository Github ini](https://github.com/800147/scroll-figma).
 
 ## If you a Greasemonkey user, try this one!
 
-Bagi pengguna Greasemonkey, mungkin lebih berguna jika menggunakan script ini.
+Bagi pengguna [Greasemonkey](https://addons.mozilla.org/firefox/addon/greasemonkey/), mungkin akan lebih berguna jika menggunakan script berikut. Saya asumsikan sudah paham bagaimana cara menggunakan extension satu ini.
 
 ```js:figma-mouse-wheel.user.js
 const MULTIPLIER_X = 30;
@@ -61,21 +67,21 @@ addCanvasEvent();
 
 ## Poor man with complicated solution
 
-_"Kalo ada yang sulit kenapa harus yang ~~sulit~~ mudah"_. Hmm, gak sedikit emang manusia yang memiliki sifat seperti ini
+> _"Kalo ada yang susah kenapa harus yang mudah"_
 
-Oke. Jadi gini kira-kira caranya, ya sebenernya gak terlalu sulit juga sih.
+Hmm, begitulah yang terjadi pada penyelesaian masalah kali ini.
 
-1. Buka `about:config`
-2. Lalu masukan keyword
+Perlu diketahui cara ini hanya mengatasi masalah Zoom in/out (**Ctrl+Mousewheel**). Jadi bagi yang memiliki masalah vertical (**Shift+Mousewheel**) dan horizontal scrolling (**Mousewheel**) sebaiknya menggunakan 2 cara di atas.
 
-<!-- ```bash
+Oke. jadi gini kira-kira caranya, ya sebenernya gak terlalu susah juga sih.
+
+Pertama buka `about:config`, tau caranya kan? tinggal ketik di _Address bar_, lalu masukan keyword berikut:
+
+```bash
 mousewheel.with_control.delta_multiplier_y
-``` -->
+```
 
-3. Ubah value dari konfigurasi tersebut, disini saya mengubahnya menjadi 1000
-4. And that's it!
-
-Sayangnya cara ini cuma mengatasi masalah **Ctrl+Mousewheel** (Zoom in/out)
+Setelahnya tinggal ubah _value_ dari konfigurasi tersebut, disini saya mengubahnya menjadi 1000. And that's it!
 
 ---
 
