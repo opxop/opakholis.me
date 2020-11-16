@@ -9,9 +9,12 @@ import {
   Stack,
   Text,
   ListItem,
-  useColorMode,
-  Link
+  useColorMode
 } from '@chakra-ui/react';
+
+import { CustomLink } from '../components/MDXComponents';
+
+// icons
 import { CgChevronDoubleDown } from 'react-icons/cg';
 import { FiCheckCircle } from 'react-icons/fi';
 
@@ -82,9 +85,7 @@ const Timeline = () => {
       <List>
         <TimelineStep title="Landed First Internship 👨🏼‍💻">
           Merupakan 3 bulan yang sangat berharga. Bersama orang-orang hebat di{' '}
-          <Link href="http://jiwalu.id" isExternal>
-            Jiwalu Studio
-          </Link>{' '}
+          <CustomLink href="http://jiwalu.id">Jiwalu Studio </CustomLink>
           saya banyak belajar hal baru.
         </TimelineStep>
         <TimelineStep title="Fallin' in Love with Flutter 🎴">

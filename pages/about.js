@@ -12,7 +12,7 @@ import {
 import { NextSeo } from 'next-seo';
 
 import Container from '../components/Container';
-import { CustomLink, TextThrough } from '../components/MDXComponents';
+import { CustomLink } from '../components/MDXComponents';
 
 const url = 'https://opakholis.me/about';
 const title = 'About Me - Opa Kholis Majid';
