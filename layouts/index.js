@@ -5,7 +5,6 @@ import {
   Heading,
   Text,
   Flex,
-  Icon,
   Box,
   Badge
 } from '@chakra-ui/react';
