@@ -1,45 +1,66 @@
 import React from 'react';
-import { Flex, IconButton, Link, Text } from '@chakra-ui/core';
+import { Flex, IconButton, Link, Text } from '@chakra-ui/react';
+import { FiGithub, FiTwitter, FiFacebook, FiMail } from 'react-icons/fi';
 
 const Footer = () => (
   <Flex align="center" my={4} direction="column">
     <div>
-      <Link href="https://twitter.com/opakholis" title="Twitter" isExternal>
+      <Link
+        href="https://twitter.com/opakholis"
+        title="Twitter"
+        _focus={{ boxShadow: 'none' }}
+        isExternal
+      >
         <IconButton
+          as={FiTwitter}
           aria-label="Twitter"
-          icon="twitter"
-          size="lg"
-          color="gray.500"
-          variant="ghost"
-        />
-      </Link>
-      <Link href="https://github.com/opxop" title="Github" isExternal>
-        <IconButton
-          aria-label="Github"
-          icon="github"
-          size="lg"
+          size="md"
+          p="0.7em"
           color="gray.500"
           variant="ghost"
         />
       </Link>
       <Link
-        href="https://www.linkedin.com/in/opakholis"
-        title="LinkedIn"
+        href="https://github.com/opxop"
+        title="Github"
+        _focus={{ boxShadow: 'none' }}
         isExternal
       >
         <IconButton
-          aria-label="LinkedIn"
-          icon="linkedin"
-          size="lg"
+          as={FiGithub}
+          aria-label="Github"
+          size="md"
+          p="0.7em"
           color="gray.500"
           variant="ghost"
         />
       </Link>
-      <Link href="mailto:hello@opakholis.me" title="Email" isExternal>
+      <Link
+        href="https://www.facebook.com/opakholis"
+        title="Facebook"
+        _focus={{ boxShadow: 'none' }}
+        isExternal
+      >
         <IconButton
+          as={FiFacebook}
+          aria-label="Facebook"
+          size="md"
+          p="0.7em"
+          color="gray.500"
+          variant="ghost"
+        />
+      </Link>
+      <Link
+        href="mailto:hello@opakholis.me"
+        title="Email"
+        _focus={{ boxShadow: 'none' }}
+        isExternal
+      >
+        <IconButton
+          as={FiMail}
           aria-label="Email"
-          icon="mail"
-          size="lg"
+          size="md"
+          p="0.7em"
           color="gray.500"
           variant="ghost"
         />

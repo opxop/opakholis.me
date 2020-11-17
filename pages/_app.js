@@ -2,14 +2,13 @@ import React from 'react';
 import Head from 'next/head';
 import NextNprogress from 'nextjs-progressbar';
 import { MDXProvider } from '@mdx-js/react';
-import { Global, css } from '@emotion/core';
+import { Global, css } from '@emotion/react';
 import { DefaultSeo } from 'next-seo';
 import {
-  ThemeProvider,
+  ChakraProvider,
   useColorMode,
-  CSSReset,
   ColorModeProvider
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 
 import theme from '../styles/theme';
 import { prismLightTheme, prismDarkTheme } from '../styles/prism';
@@ -21,7 +20,6 @@ const GlobalStyle = ({ children }) => {
 
   return (
     <>
-      <CSSReset />
       <Global
         styles={css`
           ${colorMode === 'light' ? prismLightTheme : prismDarkTheme};
@@ -51,7 +49,7 @@ const GlobalStyle = ({ children }) => {
 
 const App = ({ Component, pageProps }) => {
   return (
-    <ThemeProvider theme={theme}>
+    <ChakraProvider theme={theme}>
       <MDXProvider components={MDXComponents}>
         <ColorModeProvider value="light">
           <NextNprogress
@@ -79,7 +77,7 @@ const App = ({ Component, pageProps }) => {
           </GlobalStyle>
         </ColorModeProvider>
       </MDXProvider>
-    </ThemeProvider>
+    </ChakraProvider>
   );
 };
 

@@ -9,9 +9,14 @@ import {
   Stack,
   Text,
   ListItem,
-  useColorMode,
-  Link
-} from '@chakra-ui/core';
+  useColorMode
+} from '@chakra-ui/react';
+
+import { CustomLink } from '../components/MDXComponents';
+
+// icons
+import { CgChevronDoubleDown } from 'react-icons/cg';
+import { FiCheckCircle } from 'react-icons/fi';
 
 const YearDivider = () => {
   const { colorMode } = useColorMode();
@@ -32,15 +37,13 @@ const TimelineStep = ({ title, children }) => {
 
   return (
     <ListItem>
-      <Stack ml={2} mb={4}>
-        <Flex align="center">
-          <Icon name="check" mr={2} color="whatsapp.500" />
+      <Flex mb={4}>
+        <Icon as={FiCheckCircle} mr={3} mt="3px" color="whatsapp.500" />
+        <Stack>
           <Text fontWeight="medium">{title}</Text>
-        </Flex>
-        <Text color={secondaryTextColor[colorMode]} ml={6}>
-          {children}
-        </Text>
-      </Stack>
+          <Text color={secondaryTextColor[colorMode]}>{children}</Text>
+        </Stack>
+      </Flex>
     </ListItem>
   );
 };
@@ -82,9 +85,7 @@ const Timeline = () => {
       <List>
         <TimelineStep title="Landed First Internship 👨🏼‍💻">
           Merupakan 3 bulan yang sangat berharga. Bersama orang-orang hebat di{' '}
-          <Link href="http://jiwalu.id" isExternal>
-            Jiwalu Studio
-          </Link>{' '}
+          <CustomLink href="http://jiwalu.id">Jiwalu Studio </CustomLink>
           saya banyak belajar hal baru.
         </TimelineStep>
         <TimelineStep title="Fallin' in Love with Flutter 🎴">
@@ -118,7 +119,7 @@ const Timeline = () => {
           my={4}
           mx="auto"
           fontWeight="medium"
-          rightIcon="chevron-down"
+          rightIcon={<Icon as={CgChevronDoubleDown} />}
           variant="ghost"
           onClick={() => showFullTimeline(true)}
         >
