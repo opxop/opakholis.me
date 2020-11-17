@@ -140,7 +140,7 @@ const Blog = () => {
               );
             })}
           </Flex>
-          <InputGroup mt={4} width="100%">
+          <InputGroup mt={6} width="100%">
             <Input
               variant="filled"
               aria-label="Cari tulisan"

@@ -52,7 +52,7 @@ const BlogPost = (frontMatter) => {
               color="gray.500"
               minWidth="105px"
               textAlign={['left', 'left', 'right']}
-              mb={[4, 2, 0]}
+              mb={[3, 2, 0]}
             >
               {format(parseISO(frontMatter.publishedAt), 'MMMM dd, yyyy')}
             </Text>

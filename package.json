@@ -13,7 +13,7 @@
     "url": "git+https://github.com/opxop/opakholis.me.git"
   },
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 3001",
     "build": "next build",
     "start": "next start",
     "prettier": "prettier --write \"**/*.{html,js,json,md,mdx,yml}\""

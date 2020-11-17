@@ -104,12 +104,12 @@ const Timeline = () => {
       </Heading>
       <List>
         <TimelineStep title="3rd Place at Diskominfo Karawang Competition 🎖">
-          Berkolaborasi dengan tim sebagai Front-end developer. Menciptakan
+          Berkolaborasi dengan tim sebagai Frontend developer. Menciptakan
           sebuah inovasi baru dengan membangun sebuah sistem "Smart City"
           berbasis website.
         </TimelineStep>
         <TimelineStep title="Got BNSP Certified 🎉">
-          Sebagai Web Developer
+          Sebagai Web developer
         </TimelineStep>
       </List>
       {isShowingFullTimeline ? (

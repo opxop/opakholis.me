@@ -73,17 +73,17 @@ const Quote = (props) => {
   const { colorMode } = useColorMode();
   const bgColor = {
     light: 'blue.50',
-    dark: 'blue.900'
+    dark: 'gray.800'
   };
 
   return (
     <Alert
       mt={4}
       w="100%"
+      borderRadius="md"
       bg={bgColor[colorMode]}
       variant="left-accent"
       status="info"
-      borderRadius={4}
       css={{
         '> *:first-of-type': {
           marginTop: 0,
