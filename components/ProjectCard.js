@@ -3,11 +3,11 @@ import {
   Link,
   Text,
   Flex,
-  Icon,
   Stack,
   Heading,
-  useColorMode
-} from '@chakra-ui/core';
+  useColorMode,
+  HStack
+} from '@chakra-ui/react';
 
 const ProjectCard = ({ title, description, href, icon }) => {
   const { colorMode } = useColorMode();

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { FiSearch } from 'react-icons/fi';
 import { NextSeo } from 'next-seo';
 import {
   useColorMode,
@@ -9,8 +10,8 @@ import {
   InputGroup,
   InputRightElement,
   Icon,
-  PseudoBox
-} from '@chakra-ui/core';
+  Box
+} from '@chakra-ui/react';
 
 import Container from '../components/Container';
 import BlogPost from '../components/BlogPost';
@@ -26,9 +27,20 @@ const Blog = () => {
   const [selectedTopics, setSelectedTopics] = useState([]);
 
   const { colorMode } = useColorMode();
+
+  const primaryTextColor = {
+    light: 'black',
+    dark: 'white'
+  };
+
   const secondaryTextColor = {
     light: 'gray.700',
     dark: 'gray.400'
+  };
+
+  const iconColor = {
+    light: 'gray.400',
+    dark: 'gray.600'
   };
 
   const topicsBg = {
@@ -39,11 +51,6 @@ const Blog = () => {
   const topicsBgActive = {
     light: '#ceedff',
     dark: '#3a6aa8'
-  };
-
-  const topicsColor = {
-    light: 'black',
-    dark: 'white'
   };
 
   const filteredBlogPosts = blogPosts
@@ -114,7 +121,7 @@ const Blog = () => {
                   ? topicsBg[colorMode]
                   : topicsBgActive[colorMode];
               return (
-                <PseudoBox
+                <Box
                   key={topic}
                   as="button"
                   p={2}
@@ -122,25 +129,26 @@ const Blog = () => {
                   rounded="md"
                   fontSize="sm"
                   bg={bgColor}
-                  color={topicsColor[colorMode]}
+                  color={primaryTextColor[colorMode]}
                   _hover={{ bg: topicsBgActive[colorMode] }}
                   _active={{ bg: topicsBgActive[colorMode] }}
-                  _selected={{ bg: topicsBgActive[colorMode] }}
+                  _selected={{ g: topicsBgActive[colorMode] }}
                   onClick={() => toggleSelectedTopics(topic)}
                 >
                   {topic}
-                </PseudoBox>
+                </Box>
               );
             })}
           </Flex>
           <InputGroup mt={6} width="100%">
             <Input
+              variant="filled"
               aria-label="Cari tulisan"
               onChange={(e) => setSearchValue(e.target.value)}
               placeholder="Cari tulisan.."
             />
             <InputRightElement>
-              <Icon name="search" color="gray.300" />
+              <Icon as={FiSearch} color={iconColor[colorMode]} />
             </InputRightElement>
           </InputGroup>
         </Flex>

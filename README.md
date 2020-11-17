@@ -10,9 +10,9 @@
 - [x] Portfolio / Timeline list
 - [x] Blog
   - [x] Post (MDX)
-  - [x] Search bars
   - [ ] Tag
-  - [ ] Search by topic (tag)
+  - [x] Search bars
+  - [x] Search by topic
 - [x] Dark mode
 - [ ] Comment System
 - [x] SEO optimized
