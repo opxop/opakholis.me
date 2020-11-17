@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+import NextNprogress from 'nextjs-progressbar';
 import { MDXProvider } from '@mdx-js/react';
 import { Global, css } from '@emotion/core';
 import { DefaultSeo } from 'next-seo';
@@ -53,6 +54,12 @@ const App = ({ Component, pageProps }) => {
     <ThemeProvider theme={theme}>
       <MDXProvider components={MDXComponents}>
         <ColorModeProvider value="light">
+          <NextNprogress
+            color="linear-gradient(to right, #4568dc, #b06ab3)"
+            startPosition={0.3}
+            stopDelayMs={200}
+            height="2"
+          />
           <GlobalStyle>
             <Head>
               <meta content="IE=edge" httpEquiv="X-UA-Compatible" />

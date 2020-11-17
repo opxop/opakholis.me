@@ -96,7 +96,7 @@ const Blog = () => {
             Blog
           </Heading>
           <Text color={secondaryTextColor[colorMode]} mb={4}>
-            Halaman ini berisi tulisan yang juga merupakan sebagai dokumentasi
+            Halaman ini berisi tulisan, opini dan juga merupakan dokumentasi
             untuk saya pribadi ketika sedang belajar atau membagikan sesuatu.
             Enjoy your reading!
           </Text>
@@ -133,7 +133,7 @@ const Blog = () => {
               );
             })}
           </Flex>
-          <InputGroup mt={4} width="100%">
+          <InputGroup mt={6} width="100%">
             <Input
               aria-label="Cari tulisan"
               onChange={(e) => setSearchValue(e.target.value)}

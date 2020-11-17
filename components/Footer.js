@@ -45,7 +45,7 @@ const Footer = () => (
         />
       </Link>
     </div>
-    <Text fontSize="sm" color="gray.500" minWidth="100px" mt={1}>
+    <Text fontSize="sm" color="gray.500" minWidth="100px" mt={2}>
       Built with ❤️ using
       <Link
         href="https://nextjs.org"

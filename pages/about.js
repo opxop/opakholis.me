@@ -12,7 +12,7 @@ import {
 import { NextSeo } from 'next-seo';
 
 import Container from '../components/Container';
-import { CustomLink, TextThrough } from '../components/MDXComponents';
+import { CustomLink } from '../components/MDXComponents';
 
 const url = 'https://opakholis.me/about';
 const title = 'About Me - Opa Kholis Majid';
@@ -73,17 +73,19 @@ const About = () => {
               Software.
             </Text>
             <Text color={secondaryTextColor[colorMode]} mb={4}>
-              Saya tidak sepenuhnya mengahabiskan waktu didepan teks editor.
+              Saya tidak sepenuhnya mengahabiskan waktu di depan teks editor.
               Untuk menjernihkan pikiran, saya meluangkan waktu untuk sekedar
-              menonton film, terlebih anime dan dorama; membaca buku untuk
-              menambah insight baru; dan tentu saja mendengarkan musik, semua
-              playlist saya simpan di&nbsp;
+              mendengarkan musik; menonton film, terlebih anime dan dorama; atau
+              bahkan membaca buku untuk menambah insight baru?.
+            </Text>
+            <Text color={secondaryTextColor[colorMode]} mb={4}>
+              Untuk mengetahui apa saja yang saya dengarkan, bisa kunjungi
+              akun&nbsp;
               <CustomLink href="https://open.spotify.com/user/xil3nxol9wadm6lgyw5qv1l2h?si=4xGaa8Y0T3KjpJcaJI7OXQ">
                 Spotify
               </CustomLink>
-              .
+              &nbsp;saya.
             </Text>
-            <Text color={secondaryTextColor[colorMode]} mb={4}></Text>
             <Heading letterSpacing="tight" mt={16} mb={4} as="h2" size="xl">
               Stuff
             </Heading>

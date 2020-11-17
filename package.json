@@ -13,7 +13,7 @@
     "url": "git+https://github.com/opxop/opakholis.me.git"
   },
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 3001",
     "build": "next build",
     "start": "next start",
     "prettier": "prettier --write \"**/*.{html,js,json,md,mdx,yml}\""
@@ -31,6 +31,7 @@
     "next-google-fonts": "^1.2.1",
     "next-mdx-enhanced": "^5.0.0",
     "next-seo": "^4.15.0",
+    "nextjs-progressbar": "^0.0.7",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "reading-time": "^1.2.0",
