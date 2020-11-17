@@ -9,14 +9,9 @@ import {
   Stack,
   Text,
   ListItem,
-  useColorMode
-} from '@chakra-ui/react';
-
-import { CustomLink } from '../components/MDXComponents';
-
-// icons
-import { CgChevronDoubleDown } from 'react-icons/cg';
-import { FiCheckCircle } from 'react-icons/fi';
+  useColorMode,
+  Link
+} from '@chakra-ui/core';
 
 const YearDivider = () => {
   const { colorMode } = useColorMode();
@@ -37,13 +32,15 @@ const TimelineStep = ({ title, children }) => {
 
   return (
     <ListItem>
-      <Flex mb={4}>
-        <Icon as={FiCheckCircle} mr={3} mt="3px" color="whatsapp.500" />
-        <Stack>
+      <Stack ml={2} mb={4}>
+        <Flex align="center">
+          <Icon name="check" mr={2} color="whatsapp.500" />
           <Text fontWeight="medium">{title}</Text>
-          <Text color={secondaryTextColor[colorMode]}>{children}</Text>
-        </Stack>
-      </Flex>
+        </Flex>
+        <Text color={secondaryTextColor[colorMode]} ml={6}>
+          {children}
+        </Text>
+      </Stack>
     </ListItem>
   );
 };
@@ -85,7 +82,9 @@ const Timeline = () => {
       <List>
         <TimelineStep title="Landed First Internship 👨🏼‍💻">
           Merupakan 3 bulan yang sangat berharga. Bersama orang-orang hebat di{' '}
-          <CustomLink href="http://jiwalu.id">Jiwalu Studio </CustomLink>
+          <Link href="http://jiwalu.id" isExternal>
+            Jiwalu Studio
+          </Link>{' '}
           saya banyak belajar hal baru.
         </TimelineStep>
         <TimelineStep title="Fallin' in Love with Flutter 🎴">
@@ -104,12 +103,12 @@ const Timeline = () => {
       </Heading>
       <List>
         <TimelineStep title="3rd Place at Diskominfo Karawang Competition 🎖">
-          Berkolaborasi dengan tim sebagai Front-end developer. Menciptakan
+          Berkolaborasi dengan tim sebagai Frontend developer. Menciptakan
           sebuah inovasi baru dengan membangun sebuah sistem "Smart City"
           berbasis website.
         </TimelineStep>
         <TimelineStep title="Got BNSP Certified 🎉">
-          Sebagai Web Developer
+          Sebagai Web developer
         </TimelineStep>
       </List>
       {isShowingFullTimeline ? (
@@ -119,7 +118,7 @@ const Timeline = () => {
           my={4}
           mx="auto"
           fontWeight="medium"
-          rightIcon={<Icon as={CgChevronDoubleDown} />}
+          rightIcon="chevron-down"
           variant="ghost"
           onClick={() => showFullTimeline(true)}
         >

@@ -8,7 +8,7 @@ import {
   useColorMode,
   Box,
   Divider
-} from '@chakra-ui/react';
+} from '@chakra-ui/core';
 import { NextSeo } from 'next-seo';
 
 import Container from '../components/Container';
@@ -86,7 +86,6 @@ const About = () => {
               </CustomLink>
               &nbsp;saya.
             </Text>
-            <Text color={secondaryTextColor[colorMode]} mb={4}></Text>
             <Heading letterSpacing="tight" mt={16} mb={4} as="h2" size="xl">
               Stuff
             </Heading>

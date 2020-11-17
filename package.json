@@ -13,20 +13,19 @@
     "url": "git+https://github.com/opxop/opakholis.me.git"
   },
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 3001",
     "build": "next build",
     "start": "next start",
     "prettier": "prettier --write \"**/*.{html,js,json,md,mdx,yml}\""
   },
   "dependencies": {
-    "@chakra-ui/icons": "^1.0.0",
-    "@chakra-ui/react": "^1.0.0",
-    "@emotion/react": "^11.0.0",
-    "@emotion/styled": "^11.0.0",
+    "@chakra-ui/core": "^0.8.0",
+    "@emotion/core": "^10.0.35",
+    "@emotion/styled": "^10.0.27",
     "@mdx-js/react": "^1.6.19",
     "babel-plugin-import-glob-array": "^0.2.0",
     "date-fns": "^2.16.1",
-    "framer-motion": "^2.9.4",
+    "emotion-theming": "^10.0.27",
     "mdx-prism": "^0.3.1",
     "next": "10.0.0",
     "next-google-fonts": "^1.2.1",
@@ -35,7 +34,6 @@
     "nextjs-progressbar": "^0.0.7",
     "react": "17.0.1",
     "react-dom": "17.0.1",
-    "react-icons": "^3.11.0",
     "reading-time": "^1.2.0",
     "remark-autolink-headings": "^6.0.1",
     "remark-code-titles": "^0.1.1",

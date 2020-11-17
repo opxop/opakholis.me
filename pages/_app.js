@@ -2,13 +2,14 @@ import React from 'react';
 import Head from 'next/head';
 import NextNprogress from 'nextjs-progressbar';
 import { MDXProvider } from '@mdx-js/react';
-import { Global, css } from '@emotion/react';
+import { Global, css } from '@emotion/core';
 import { DefaultSeo } from 'next-seo';
 import {
-  ChakraProvider,
+  ThemeProvider,
   useColorMode,
+  CSSReset,
   ColorModeProvider
-} from '@chakra-ui/react';
+} from '@chakra-ui/core';
 
 import theme from '../styles/theme';
 import { prismLightTheme, prismDarkTheme } from '../styles/prism';
@@ -20,6 +21,7 @@ const GlobalStyle = ({ children }) => {
 
   return (
     <>
+      <CSSReset />
       <Global
         styles={css`
           ${colorMode === 'light' ? prismLightTheme : prismDarkTheme};
@@ -49,17 +51,11 @@ const GlobalStyle = ({ children }) => {
 
 const App = ({ Component, pageProps }) => {
   return (
-    <ChakraProvider theme={theme}>
+    <ThemeProvider theme={theme}>
       <MDXProvider components={MDXComponents}>
-        <ColorModeProvider
-          options={{
-            useSystsemColorMode: true,
-            initialColorMode: 'dark'
-          }}
-        >
+        <ColorModeProvider value="light">
           <NextNprogress
-            color="-webkit-linear-gradient(to right, #4568dc, #b06ab3)" /* Chrome 10-25, Safari 5.1-6 */
-            color="linear-gradient(to right, #4568dc, #b06ab3)" /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            color="linear-gradient(to right, #4568dc, #b06ab3)"
             startPosition={0.3}
             stopDelayMs={200}
             height="2"
@@ -83,7 +79,7 @@ const App = ({ Component, pageProps }) => {
           </GlobalStyle>
         </ColorModeProvider>
       </MDXProvider>
-    </ChakraProvider>
+    </ThemeProvider>
   );
 };
 

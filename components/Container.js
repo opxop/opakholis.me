@@ -2,16 +2,14 @@ import React from 'react';
 import NextLink from 'next/link';
 import { useRouter } from 'next/router';
 import styled from '@emotion/styled';
-import { BiMoon, BiSun } from 'react-icons/bi';
 import {
   Button,
   Flex,
   IconButton,
   useColorMode,
   Box,
-  Stack,
-  Icon
-} from '@chakra-ui/react';
+  Stack
+} from '@chakra-ui/core';
 
 import Footer from './Footer';
 
@@ -60,18 +58,14 @@ const Container = ({ children }) => {
       >
         <IconButton
           aria-label="Toggle dark mode"
-          icon={
-            colorMode === 'dark' ? <Icon as={BiSun} /> : <Icon as={BiMoon} />
-          }
+          icon={colorMode === 'dark' ? 'sun' : 'moon'}
           onClick={toggleColorMode}
-          color={primaryTextColor[colorMode]}
         />
         <Box>
           <NextLink href="/blog" passHref>
             <Button
               as="a"
               variant={pathname.startsWith('/blog') ? 'solid' : 'ghost'}
-              color={primaryTextColor[colorMode]}
               p={[2, 4]}
               mx={1}
             >
@@ -82,7 +76,6 @@ const Container = ({ children }) => {
             <Button
               as="a"
               variant={pathname.startsWith('/about') ? 'solid' : 'ghost'}
-              color={primaryTextColor[colorMode]}
               p={[2, 4]}
               mx={1}
             >
@@ -93,7 +86,6 @@ const Container = ({ children }) => {
             <Button
               as="a"
               variant={pathname === '/' ? 'solid' : 'ghost'}
-              color={primaryTextColor[colorMode]}
               p={[2, 4]}
               mx={1}
             >

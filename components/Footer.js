@@ -1,66 +1,45 @@
 import React from 'react';
-import { Flex, IconButton, Link, Text } from '@chakra-ui/react';
-import { FiGithub, FiTwitter, FiFacebook, FiMail } from 'react-icons/fi';
+import { Flex, IconButton, Link, Text } from '@chakra-ui/core';
 
 const Footer = () => (
   <Flex align="center" my={4} direction="column">
     <div>
-      <Link
-        href="https://twitter.com/opakholis"
-        title="Twitter"
-        _focus={{ boxShadow: 'none' }}
-        isExternal
-      >
+      <Link href="https://twitter.com/opakholis" title="Twitter" isExternal>
         <IconButton
-          as={FiTwitter}
           aria-label="Twitter"
-          size="md"
-          p="0.7em"
+          icon="twitter"
+          size="lg"
           color="gray.500"
           variant="ghost"
         />
       </Link>
-      <Link
-        href="https://github.com/opxop"
-        title="Github"
-        _focus={{ boxShadow: 'none' }}
-        isExternal
-      >
+      <Link href="https://github.com/opxop" title="Github" isExternal>
         <IconButton
-          as={FiGithub}
           aria-label="Github"
-          size="md"
-          p="0.7em"
+          icon="github"
+          size="lg"
           color="gray.500"
           variant="ghost"
         />
       </Link>
       <Link
-        href="https://www.facebook.com/opakholis"
-        title="Facebook"
-        _focus={{ boxShadow: 'none' }}
+        href="https://www.linkedin.com/in/opakholis"
+        title="LinkedIn"
         isExternal
       >
         <IconButton
-          as={FiFacebook}
-          aria-label="Facebook"
-          size="md"
-          p="0.7em"
+          aria-label="LinkedIn"
+          icon="linkedin"
+          size="lg"
           color="gray.500"
           variant="ghost"
         />
       </Link>
-      <Link
-        href="mailto:hello@opakholis.me"
-        title="Email"
-        _focus={{ boxShadow: 'none' }}
-        isExternal
-      >
+      <Link href="mailto:hello@opakholis.me" title="Email" isExternal>
         <IconButton
-          as={FiMail}
           aria-label="Email"
-          size="md"
-          p="0.7em"
+          icon="mail"
+          size="lg"
           color="gray.500"
           variant="ghost"
         />

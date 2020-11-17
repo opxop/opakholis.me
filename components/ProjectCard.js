@@ -3,11 +3,11 @@ import {
   Link,
   Text,
   Flex,
+  Icon,
   Stack,
   Heading,
-  useColorMode,
-  HStack
-} from '@chakra-ui/react';
+  useColorMode
+} from '@chakra-ui/core';
 
 const ProjectCard = ({ title, description, href, icon }) => {
   const { colorMode } = useColorMode();
@@ -28,9 +28,8 @@ const ProjectCard = ({ title, description, href, icon }) => {
   };
 
   return (
-    <Stack w="100%" maxW="770px">
+    <Stack w="100%" maxW="770px" mb={4}>
       <Link
-        mb={4}
         href={href}
         _hover={{
           boxShadow: '0px 4px 20px rgba(0,0,0,0.05)',
@@ -45,19 +44,20 @@ const ProjectCard = ({ title, description, href, icon }) => {
           borderRadius={4}
           p={4}
         >
-          <HStack
+          <Icon
             aria-label="Project"
+            name={icon}
             color={iconColor[colorMode]}
+            size="34px"
             ml={2}
             mr={4}
-          >
-            {icon}
-          </HStack>
+          />
           <Stack>
             <Heading
               as="h4"
               size="md"
               fontWeight="bold"
+              mb={4}
               letterSpacing="tighter"
             >
               {title}

@@ -1,8 +1,7 @@
 import React from 'react';
-import { List, ListItem, ListIcon, useColorMode } from '@chakra-ui/react';
-import { HiBadgeCheck } from 'react-icons/hi';
+import { List, ListItem, ListIcon, useColorMode } from '@chakra-ui/core';
 
-const ListSkill = ({ name }) => {
+const ListTech = ({ name }) => {
   const { colorMode } = useColorMode();
   const secondaryTextColor = {
     light: 'gray.700',
@@ -11,11 +10,11 @@ const ListSkill = ({ name }) => {
   return (
     <List color={secondaryTextColor[colorMode]}>
       <ListItem>
-        <ListIcon as={HiBadgeCheck} mb="2px" />
+        <ListIcon icon="chevron-right" />
         {name}
       </ListItem>
     </List>
   );
 };
 
-export default ListSkill;
+export default ListTech;

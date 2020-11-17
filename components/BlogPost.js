@@ -1,7 +1,7 @@
 import React from 'react';
 import NextLink from 'next/link';
 import { parseISO, format } from 'date-fns';
-import { Box, Text, Heading, Link, useColorMode, Flex } from '@chakra-ui/react';
+import { Box, Text, Heading, Link, useColorMode, Flex } from '@chakra-ui/core';
 
 const BlogPost = (frontMatter) => {
   const { title, summary } = frontMatter;
@@ -52,7 +52,7 @@ const BlogPost = (frontMatter) => {
               color="gray.500"
               minWidth="105px"
               textAlign={['left', 'left', 'right']}
-              mb={[4, 2, 0]}
+              mb={[3, 2, 0]}
             >
               {format(parseISO(frontMatter.publishedAt), 'MMMM dd, yyyy')}
             </Text>
