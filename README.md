@@ -1,4 +1,4 @@
-# 💻 Opa Kholis Majid Home Page
+# 🏠  My home in the another world
 
 > My Personal Home Page, Blog, Portfolio built with Next.JS : https://opakholis.me
 
