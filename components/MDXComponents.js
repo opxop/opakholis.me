@@ -1,3 +1,4 @@
+import React from 'react';
 import {
   Box,
   Callout,
@@ -6,11 +7,14 @@ import {
   Kbd,
   Link,
   PseudoBox,
+  Image,
   Text,
   Divider,
   useColorMode
 } from '@chakra-ui/core';
 import NextLink from 'next/link';
+import Zoom from 'react-medium-image-zoom';
+import 'react-medium-image-zoom/dist/styles.css';
 
 const Table = (props) => (
   <Box w="full">
@@ -151,6 +155,28 @@ const Hr = () => {
   return <Divider borderColor={borderColor[colorMode]} my={4} w="100%" />;
 };
 
+const FeaturedImage = (props) => {
+  const { colorMode } = useColorMode();
+  const overlayBgColorStart = {
+    light: 'rgba(255, 255, 255, 0.1)',
+    dark: 'rgba(23, 25, 35, 0.1)'
+  };
+  const overlayBgColorEnd = {
+    light: 'rgba(255, 255, 255, 0.95)',
+    dark: 'rgba(23, 25, 35, 0.95)'
+  };
+
+  return (
+    <Zoom
+      overlayBgColorStart={overlayBgColorStart[colorMode]}
+      overlayBgColorEnd={overlayBgColorEnd[colorMode]}
+      zoomMargin={50}
+    >
+      <Image rounded="sm" {...props} src={props.src} fallbackSrc={props.src} />
+    </Zoom>
+  );
+};
+
 const MDXComponents = {
   h1: (props) => <DocsHeading as="h1" size="xl" my={4} {...props} />,
   h2: (props) => <DocsHeading as="h2" size="lg" fontWeight="bold" {...props} />,
@@ -171,7 +197,8 @@ const MDXComponents = {
   ul: (props) => <Box as="ul" pt={2} pl={4} ml={2} {...props} />,
   ol: (props) => <Box as="ol" pt={2} pl={4} ml={2} {...props} />,
   li: (props) => <Box as="li" pb={1} {...props} />,
-  blockquote: Quote
+  blockquote: Quote,
+  img: FeaturedImage
 };
 
 export { CustomLink };
