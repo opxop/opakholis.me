@@ -12,10 +12,10 @@
   - [x] Post (MDX)
   - [x] Search bars
   - [ ] Tag
-  - [ ] Search by topic (tag)
+  - [X] Search by topics
 - [x] Dark mode
 - [ ] Comment System
-- [x] SEO optimized
+- [ ] SEO optimized
 - [ ] ~~Twitter/Youtube/etc Embed~~
 - [ ] Whats next ?
 
