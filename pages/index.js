@@ -63,13 +63,7 @@ const Index = () => {
         alignItems="flex-start"
         maxWidth="700px"
       >
-        <Heading
-          letterSpacing="tight"
-          mb={4}
-          mt={16}
-          size="xl"
-          fontWeight={700}
-        >
+        <Heading letterSpacing="tight" mb={4} mt={8} size="xl" fontWeight={700}>
           Projects
         </Heading>
         <ProjectCard

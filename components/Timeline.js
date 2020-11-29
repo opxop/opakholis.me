@@ -67,7 +67,7 @@ const Timeline = () => {
       alignItems="flex-start"
       maxWidth="700px"
     >
-      <Heading letterSpacing="tight" mb={4} mt={16} size="xl" fontWeight="bold">
+      <Heading letterSpacing="tight" mb={4} mt={8} size="xl" fontWeight="bold">
         Timeline
       </Heading>
       <Heading
