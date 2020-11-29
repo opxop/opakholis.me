@@ -36,6 +36,11 @@ const Blog = () => {
     dark: 'rgba(255,255,255,0.08)'
   };
 
+  const topicsBgHover = {
+    light: 'gray.300',
+    dark: 'gray.700'
+  };
+
   const topicsBgActive = {
     light: '#ceedff',
     dark: '#3a6aa8'
@@ -123,8 +128,11 @@ const Blog = () => {
                   fontSize="sm"
                   bg={bgColor}
                   color={topicsColor[colorMode]}
-                  _hover={{ bg: topicsBgActive[colorMode] }}
+                  _hover={{ bg: topicsBgHover[colorMode] }}
                   _active={{ bg: topicsBgActive[colorMode] }}
+                  _focus={{
+                    boxShadow: '0 0 0 3px rgba(66,153,225,0.6)'
+                  }}
                   _selected={{ bg: topicsBgActive[colorMode] }}
                   onClick={() => toggleSelectedTopics(topic)}
                 >
