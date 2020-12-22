@@ -16,6 +16,7 @@
 - [x] Dark mode
 - [ ] Comment System
 - [ ] SEO optimized
+- [ ] PWA
 - [ ] ~~Twitter/Youtube/etc Embed~~
 - [ ] Whats next ?
 
