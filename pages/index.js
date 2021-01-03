@@ -1,16 +1,9 @@
 import React from 'react';
 import NextLink from 'next/link';
-import {
-  Box,
-  Button,
-  Flex,
-  Heading,
-  Text,
-  useColorMode
-} from '@chakra-ui/core';
+import { Button, Flex, Heading, Text, useColorMode } from '@chakra-ui/core';
 
 import Container from '../components/Container';
-import ListTech from '../components/ListTech';
+
 import ProjectCard from '../components/ProjectCard';
 import Timeline from '../components/Timeline';
 
@@ -36,20 +29,6 @@ const Index = () => {
           sekarang sedang senang ber-ekplorasi dengan Linux distribution dan
           Open-source Software.
         </Text>
-        <Text color={secondaryTextColor[colorMode]} my={2}>
-          Beberapa teknologi yang saya gunakan :
-        </Text>
-        <Flex>
-          <Box mr={20}>
-            <ListTech name="Javascript" />
-            <ListTech name="React" />
-            <ListTech name="Node.js" />
-          </Box>
-          <Box>
-            <ListTech name="Flutter" />
-            <ListTech name="Git" />
-          </Box>
-        </Flex>
         <NextLink href="/about" passHref>
           <Button size="sm" p={[4, 4]} mt={5}>
             Selengkapnya tentang Opa
