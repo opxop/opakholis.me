@@ -48,11 +48,18 @@ const TimelineStep = ({ title, children }) => {
 const FullTimeLine = () => (
   <>
     <YearDivider />
-    <Heading as="h3" size="lg" fontWeight="bold" mb={4} letterSpacing="tighter">
-      1999
+    <Heading as="h3" size="lg" fontWeight="bold" mb={4} letterSpacing="lighter">
+      2019
     </Heading>
     <List>
-      <TimelineStep title="Say Hello to the World 👶🏼🍼" />
+      <TimelineStep title="3rd Place at Diskominfo Karawang Competition 🎖">
+        Berkolaborasi dengan tim sebagai Frontend developer. Menciptakan sebuah
+        inovasi baru dengan membangun sebuah sistem "Smart City" berbasis
+        website.
+      </TimelineStep>
+      <TimelineStep title="Got BNSP Certified 🎉">
+        Sebagai Web developer
+      </TimelineStep>
     </List>
   </>
 );
@@ -89,26 +96,6 @@ const Timeline = () => {
         </TimelineStep>
         <TimelineStep title="Fallin' in Love with Flutter 🎴">
           Pada awalnya hanya sekedar mencoba-coba, hingga akhirnya jatuh cinta.
-        </TimelineStep>
-      </List>
-      <YearDivider />
-      <Heading
-        as="h3"
-        size="lg"
-        fontWeight="bold"
-        mb={4}
-        letterSpacing="lighter"
-      >
-        2019
-      </Heading>
-      <List>
-        <TimelineStep title="3rd Place at Diskominfo Karawang Competition 🎖">
-          Berkolaborasi dengan tim sebagai Frontend developer. Menciptakan
-          sebuah inovasi baru dengan membangun sebuah sistem "Smart City"
-          berbasis website.
-        </TimelineStep>
-        <TimelineStep title="Got BNSP Certified 🎉">
-          Sebagai Web developer
         </TimelineStep>
       </List>
       {isShowingFullTimeline ? (
