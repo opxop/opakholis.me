@@ -1,13 +1,9 @@
-import React from 'react';
 import NextLink from 'next/link';
 import { parseISO, format } from 'date-fns';
-import { Box, Text, Heading, Link, useColorMode, Flex } from '@chakra-ui/core';
+import { Box, Text, Heading, Link, useColorMode, Flex } from '@chakra-ui/react';
 
-const BlogPost = (frontMatter) => {
-  const { title, summary } = frontMatter;
-
+const BlogPost = ({ title, summary, slug, publishedAt }) => {
   const { colorMode } = useColorMode();
-
   const secondaryTextColor = {
     light: 'gray.700',
     dark: 'gray.400'
@@ -18,12 +14,8 @@ const BlogPost = (frontMatter) => {
     dark: 'gray.800'
   };
 
-  const slug = frontMatter.__resourcePath
-    .replace('blog/', '')
-    .replace('.mdx', '');
-
   return (
-    <NextLink href={`blog/${slug}`} passHref>
+    <NextLink href={`/blog/${slug}`}>
       <Link
         p="14px"
         border="2px solid transparent"
@@ -33,6 +25,10 @@ const BlogPost = (frontMatter) => {
           borderRadius: 'sm'
         }}
         _focus={{
+          border: '2px dashed',
+          borderColor: 'gray.600'
+        }}
+        _active={{
           border: '2px dashed',
           borderColor: 'gray.600'
         }}
@@ -54,7 +50,7 @@ const BlogPost = (frontMatter) => {
               textAlign={['left', 'left', 'right']}
               mb={[3, 2, 0]}
             >
-              {format(parseISO(frontMatter.publishedAt), 'MMMM dd, yyyy')}
+              {format(parseISO(publishedAt), 'MMMM dd, yyyy')}
             </Text>
           </Flex>
           <Text color={secondaryTextColor[colorMode]}>{summary}</Text>

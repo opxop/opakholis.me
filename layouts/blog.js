@@ -1,22 +1,18 @@
-import React from 'react';
 import { parseISO, format } from 'date-fns';
 import {
   useColorMode,
   Heading,
   Text,
   Flex,
-  Icon,
   Box,
   Badge
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 
-import BlogSeo from '../components/BlogSeo';
-import Container from '../components/Container';
+import BlogSeo from '@/components/BlogSeo';
+import Container from '@/components/Container';
+import { DateIcon, TimeIcon } from '@/styles/icons';
 
 export default function BlogLayout({ children, frontMatter }) {
-  const slug = frontMatter.__resourcePath
-    .replace('blog/', '')
-    .replace('.mdx', '');
   const { colorMode } = useColorMode();
   const secondaryTextColor = {
     light: 'gray.700',
@@ -25,7 +21,7 @@ export default function BlogLayout({ children, frontMatter }) {
 
   return (
     <Container>
-      <BlogSeo url={`https://opakholis.me/blog/${slug}`} {...frontMatter} />
+      <BlogSeo url={frontMatter.slug} {...frontMatter} />
       <Flex
         as="article"
         flexDirection="column"
@@ -38,10 +34,10 @@ export default function BlogLayout({ children, frontMatter }) {
           {frontMatter.title}
         </Heading>
         <Text fontSize="sm" color={secondaryTextColor[colorMode]}>
-          <Icon name="date" mx={1} mb={1} />
+          <DateIcon mx={1} mb={1} />
           {format(parseISO(frontMatter.publishedAt), 'MMMM dd, yyyy')}
           {` • `}
-          <Icon name="book" mx={1} mb={1} />
+          <TimeIcon mx={1} mb={1} />
           {frontMatter.readingTime.text}
         </Text>
       </Flex>
@@ -57,7 +53,7 @@ export default function BlogLayout({ children, frontMatter }) {
                 mr={2}
                 fontWeight="normal"
                 textTransform="none"
-                variantColor="gray"
+                colorScheme="gray"
               >
                 {topic}
               </Badge>

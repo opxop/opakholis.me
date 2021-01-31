@@ -1,41 +1,38 @@
-import React from 'react';
-import Head from 'next/head';
-import NextNprogress from 'nextjs-progressbar';
-import { MDXProvider } from '@mdx-js/react';
-import { Global, css } from '@emotion/core';
+import dynamic from 'next/dynamic';
 import { DefaultSeo } from 'next-seo';
-import {
-  ThemeProvider,
-  useColorMode,
-  CSSReset,
-  ColorModeProvider
-} from '@chakra-ui/core';
+import { MDXProvider } from '@mdx-js/react';
+import { ChakraProvider, useColorMode } from '@chakra-ui/react';
+import { Global, css } from '@emotion/react';
+import NextNprogress from 'nextjs-progressbar';
 
-import theme from '../styles/theme';
-import { prismLightTheme, prismDarkTheme } from '../styles/prism';
 import SEO from '../next-seo.config';
-import MDXComponents from '../components/MDXComponents';
+import themes from '@/styles/theme';
+import MDXComponents from '@/components/MDXComponents';
+import { prismDarkTheme, prismLightTheme } from '@/styles/prism';
+
+const AnimatedCursor = dynamic(
+  () => import('../node_modules/react-animated-cursor'),
+  {
+    ssr: false
+  }
+);
 
 const GlobalStyle = ({ children }) => {
   const { colorMode } = useColorMode();
 
   return (
     <>
-      <CSSReset />
       <Global
         styles={css`
           ${colorMode === 'light' ? prismLightTheme : prismDarkTheme};
-
           ::selection {
             background-color: #47a3f3;
             color: #fefefe;
           }
-
           html {
             min-width: 360px;
             scroll-behavior: smooth;
           }
-
           #__next {
             display: flex;
             flex-direction: column;
@@ -51,35 +48,20 @@ const GlobalStyle = ({ children }) => {
 
 const App = ({ Component, pageProps }) => {
   return (
-    <ThemeProvider theme={theme}>
+    <ChakraProvider theme={themes}>
       <MDXProvider components={MDXComponents}>
-        <ColorModeProvider value="light">
-          <NextNprogress
-            color="linear-gradient(to right, #4568dc, #b06ab3)"
-            startPosition={0.3}
-            stopDelayMs={200}
-            height="2"
-          />
-          <GlobalStyle>
-            <Head>
-              <meta content="IE=edge" httpEquiv="X-UA-Compatible" />
-              <meta
-                content="width=device-width, initial-scale=1"
-                name="viewport"
-              />
-              <meta content="#ffffff" name="theme-color" />
-              <meta content="#171923" name="msapplication-TileColor" />
-              <meta
-                content="/static/favicons/browserconfig.xml"
-                name="msapplication-config"
-              />
-            </Head>
-            <DefaultSeo {...SEO} />
-            <Component {...pageProps} />
-          </GlobalStyle>
-        </ColorModeProvider>
+        <AnimatedCursor />
+        <NextNprogress
+          color="linear-gradient(to right, #4568dc, #b06ab3)"
+          startPosition={0.3}
+          stopDelayMs={200}
+          height="4"
+        />
+        <GlobalStyle />
+        <DefaultSeo {...SEO} />
+        <Component {...pageProps} />
       </MDXProvider>
-    </ThemeProvider>
+    </ChakraProvider>
   );
 };
 

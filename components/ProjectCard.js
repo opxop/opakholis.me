@@ -1,15 +1,13 @@
-import React from 'react';
 import {
   Link,
   Text,
   Flex,
-  Icon,
   Stack,
   Heading,
   useColorMode
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 
-const ProjectCard = ({ title, description, href, icon }) => {
+const ProjectCard = ({ title, description, href, children }) => {
   const { colorMode } = useColorMode();
 
   const secondaryTextColor = {
@@ -44,20 +42,13 @@ const ProjectCard = ({ title, description, href, icon }) => {
           borderRadius={4}
           p={4}
         >
-          <Icon
-            aria-label="Project"
-            name={icon}
-            color={iconColor[colorMode]}
-            size="34px"
-            ml={2}
-            mr={4}
-          />
+          {children}
           <Stack>
             <Heading
               as="h4"
               size="md"
               fontWeight="bold"
-              mb={4}
+              mb={1}
               letterSpacing="tighter"
             >
               {title}

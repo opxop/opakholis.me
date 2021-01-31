@@ -1,8 +1,7 @@
-import React from 'react';
 import NextLink from 'next/link';
-import { useColorMode, Heading, Text, Flex, Button } from '@chakra-ui/core';
+import { useColorMode, Heading, Text, Flex, Button } from '@chakra-ui/react';
 
-import Container from '../components/Container';
+import Container from '@/components/Container';
 
 const Error = () => {
   const { colorMode } = useColorMode();

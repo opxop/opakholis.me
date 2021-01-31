@@ -1,18 +1,15 @@
-import React from 'react';
+import { NextSeo } from 'next-seo';
 import {
-  List,
-  ListItem,
   Text,
   Flex,
   Heading,
   useColorMode,
   Box,
   Divider
-} from '@chakra-ui/core';
-import { NextSeo } from 'next-seo';
+} from '@chakra-ui/react';
 
-import Container from '../components/Container';
-import { CustomLink } from '../components/MDXComponents';
+import Container from '@/components/Container';
+import { CustomLink } from '@/components/MDXComponents';
 
 const url = 'https://opakholis.me/about';
 const title = 'About Me - Opa Kholis Majid';
@@ -86,20 +83,6 @@ const About = () => {
               </CustomLink>
               &nbsp;saya.
             </Text>
-            <Heading letterSpacing="tight" mt={16} mb={4} as="h2" size="xl">
-              Stuff
-            </Heading>
-            <List
-              styleType="disc"
-              spacing={2}
-              color={secondaryTextColor[colorMode]}
-            >
-              <ListItem>OS : Manjaro Linux + Openbox WM</ListItem>
-              <ListItem>Domain : Hostinger</ListItem>
-              <ListItem>Blog Engine : Next.js + MDX</ListItem>
-              <ListItem>SSL : Let’s Encrypt</ListItem>
-              <ListItem>Text Editor : Visual Studio Code</ListItem>
-            </List>
           </Box>
         </Flex>
       </Container>

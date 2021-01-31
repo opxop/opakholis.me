@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import { NextSeo } from 'next-seo';
 import {
   useColorMode,
@@ -8,23 +7,19 @@ import {
   Input,
   InputGroup,
   InputRightElement,
-  Icon,
-  PseudoBox
-} from '@chakra-ui/core';
+  Box
+} from '@chakra-ui/react';
 
-import Container from '../components/Container';
-import BlogPost from '../components/BlogPost';
-
-import { frontMatter as blogPosts } from './blog/**/*.mdx';
+import Container from '@/components/Container';
+import BlogPost from '@/components/BlogPost';
+import { getAllFilesFrontMatter } from 'lib/mdx';
+import { Search2Icon } from '@chakra-ui/icons';
 
 const url = 'https://opakholis.me/blog';
 const title = 'Blog - Opa Kholis Majid';
 const description = 'Thoughts on the programming, tech, and my personal life.';
 
-const Blog = () => {
-  const [searchValue, setSearchValue] = useState('');
-  const [selectedTopics, setSelectedTopics] = useState([]);
-
+export default function Blog({ posts }) {
   const { colorMode } = useColorMode();
   const secondaryTextColor = {
     light: 'gray.700',
@@ -51,7 +46,9 @@ const Blog = () => {
     dark: 'white'
   };
 
-  const filteredBlogPosts = blogPosts
+  const [searchValue, setSearchValue] = useState('');
+  const [selectedTopics, setSelectedTopics] = useState([]);
+  const filteredBlogPosts = posts
     .sort(
       (a, b) =>
         Number(new Date(b.publishedAt)) - Number(new Date(a.publishedAt))
@@ -67,7 +64,7 @@ const Blog = () => {
         frontMatter.summary.toLowerCase().includes(searchValue.toLowerCase())
     );
 
-  const topics = [...new Set(blogPosts.map((post) => post.category))];
+  const topics = [...new Set(posts.map((post) => post.category))];
 
   const toggleSelectedTopics = (topic) => {
     const topicIndex = selectedTopics.indexOf(topic);
@@ -119,7 +116,7 @@ const Blog = () => {
                   ? topicsBg[colorMode]
                   : topicsBgActive[colorMode];
               return (
-                <PseudoBox
+                <Box
                   key={topic}
                   as="button"
                   p={2}
@@ -137,7 +134,7 @@ const Blog = () => {
                   onClick={() => toggleSelectedTopics(topic)}
                 >
                   {topic}
-                </PseudoBox>
+                </Box>
               );
             })}
           </Flex>
@@ -148,7 +145,7 @@ const Blog = () => {
               placeholder="Cari tulisan.."
             />
             <InputRightElement>
-              <Icon name="search" color="gray.300" />
+              <Search2Icon color="gray.300" />
             </InputRightElement>
           </InputGroup>
         </Flex>
@@ -166,6 +163,10 @@ const Blog = () => {
       </Container>
     </>
   );
-};
+}
 
-export default Blog;
+export async function getStaticProps() {
+  const posts = await getAllFilesFrontMatter('blog');
+
+  return { props: { posts } };
+}

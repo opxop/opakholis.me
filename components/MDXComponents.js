@@ -1,57 +1,15 @@
-import React from 'react';
 import {
+  Alert,
+  Image,
   Box,
-  Callout,
   Code,
   Heading,
-  Kbd,
-  Link,
-  PseudoBox,
-  Image,
   Text,
-  Divider,
+  Link,
   useColorMode
-} from '@chakra-ui/core';
-import NextLink from 'next/link';
+} from '@chakra-ui/react';
 import Zoom from 'react-medium-image-zoom';
 import 'react-medium-image-zoom/dist/styles.css';
-
-const Table = (props) => (
-  <Box w="full">
-    <Box as="table" textAlign="left" mt="32px" w="full" {...props} />
-  </Box>
-);
-
-const THead = (props) => {
-  const { colorMode } = useColorMode();
-  const bg = {
-    light: 'blue.50',
-    dark: 'whiteAlpha.100'
-  };
-
-  return (
-    <Box
-      as="th"
-      bg={bg[colorMode]}
-      fontWeight="semibold"
-      p={2}
-      fontSize="sm"
-      {...props}
-    />
-  );
-};
-
-const TData = (props) => (
-  <Box
-    as="td"
-    p={2}
-    borderTopWidth="1px"
-    borderColor="inherit"
-    fontSize="sm"
-    whiteSpace="normal"
-    {...props}
-  />
-);
 
 const CustomLink = (props) => {
   const { colorMode } = useColorMode();
@@ -73,6 +31,49 @@ const CustomLink = (props) => {
 
   return <Link color={color[colorMode]} isExternal {...props} />;
 };
+const DocsHeading = (props) => (
+  <Heading
+    css={{
+      scrollMarginTop: '100px',
+      scrollSnapMargin: '100px', // Safari
+      '&[id]': {
+        pointerEvents: 'none'
+      },
+      '&[id]:before': {
+        display: 'block',
+        height: ' 6rem',
+        marginTop: '-5rem',
+        visibility: 'hidden',
+        content: `""`
+      },
+      '&[id]:hover a': { opacity: 1 }
+    }}
+    {...props}
+  >
+    {' '}
+    <Box pointerEvents="auto">
+      {props.children}
+      {props.id && (
+        <Box
+          aria-label="anchor"
+          as="a"
+          color="purple.500"
+          fontWeight="normal"
+          outline="none"
+          _focus={{
+            opacity: 1,
+            boxShadow: 'outline'
+          }}
+          opacity="0"
+          ml="0.5rem"
+          href={`#${props.id}`}
+        >
+          #
+        </Box>
+      )}
+    </Box>
+  </Heading>
+);
 
 const Quote = (props) => {
   const { colorMode } = useColorMode();
@@ -82,7 +83,7 @@ const Quote = (props) => {
   };
 
   return (
-    <Callout
+    <Alert
       mt={4}
       w="100%"
       borderRadius="md"
@@ -100,62 +101,7 @@ const Quote = (props) => {
   );
 };
 
-const DocsHeading = (props) => (
-  <Heading
-    css={{
-      scrollMarginTop: '100px',
-      scrollSnapMargin: '100px', // Safari
-      '&[id]': {
-        pointerEvents: 'none'
-      },
-      '&[id]:before': {
-        display: 'block',
-        height: ' 6rem',
-        marginTop: '-6rem',
-        visibility: 'hidden',
-        content: `""`
-      },
-      '&[id]:hover a': { opacity: 1 }
-    }}
-    {...props}
-    mb="1em"
-    mt="2em"
-  >
-    <Box pointerEvents="auto">
-      {props.children}
-      {props.id && (
-        <PseudoBox
-          aria-label="anchor"
-          as="a"
-          color="blue.500"
-          fontWeight="normal"
-          outline="none"
-          _focus={{
-            opacity: 1,
-            boxShadow: 'outline'
-          }}
-          opacity="0"
-          ml="0.375rem"
-          href={`#${props.id}`}
-        >
-          #
-        </PseudoBox>
-      )}
-    </Box>
-  </Heading>
-);
-
-const Hr = () => {
-  const { colorMode } = useColorMode();
-  const borderColor = {
-    light: 'gray.200',
-    dark: 'gray.600'
-  };
-
-  return <Divider borderColor={borderColor[colorMode]} my={4} w="100%" />;
-};
-
-const FeaturedImage = (props) => {
+const ImageZoom = (props) => {
   const { colorMode } = useColorMode();
   const overlayBgColorStart = {
     light: 'rgba(255, 255, 255, 0.1)',
@@ -172,33 +118,48 @@ const FeaturedImage = (props) => {
       overlayBgColorEnd={overlayBgColorEnd[colorMode]}
       zoomMargin={50}
     >
-      <Image rounded="sm" {...props} src={props.src} fallbackSrc={props.src} />
+      <Image
+        rounded="sm"
+        {...props}
+        src={props.src}
+        alt={props.alt}
+        fallbackSrc={props.src}
+      />
     </Zoom>
   );
 };
 
 const MDXComponents = {
-  h1: (props) => <DocsHeading as="h1" size="xl" my={4} {...props} />,
-  h2: (props) => <DocsHeading as="h2" size="lg" fontWeight="bold" {...props} />,
-  h3: (props) => <DocsHeading as="h3" size="md" fontWeight="bold" {...props} />,
-  h4: (props) => <DocsHeading as="h4" size="s" fontWeight="bold" {...props} />,
-  h5: (props) => <DocsHeading as="h5" size="xs" fontWeight="bold" {...props} />,
-  inlineCode: (props) => (
-    <Code variantColor="yellow" fontSize="0.84em" {...props} />
+  h1: (props) => <DocsHeading as="h1" size="xl" mb={-4} {...props} />,
+  h2: (props) => (
+    <DocsHeading as="h2" size="lg" mb={-4} fontWeight="bold" {...props} />
   ),
-  kbd: Kbd,
-  br: (props) => <Box height="24px" {...props} />,
-  hr: Hr,
-  table: Table,
-  th: THead,
-  td: TData,
+  h3: (props) => (
+    <DocsHeading as="h3" size="md" mb={-4} fontWeight="bold" {...props} />
+  ),
+  h4: (props) => (
+    <DocsHeading as="h4" size="s" mb={-4} fontWeight="bold" {...props} />
+  ),
+  h5: (props) => (
+    <DocsHeading as="h5" size="xs" mb={-4} fontWeight="bold" {...props} />
+  ),
+  img: ImageZoom,
   a: CustomLink,
-  p: (props) => <Text as="p" mt={4} lineHeight="tall" {...props} />,
+  br: (props) => <Box height="24px" {...props} />,
+  p: (props) => <Text as="p" lineHeight="tall" {...props} />,
   ul: (props) => <Box as="ul" pt={2} pl={4} ml={2} {...props} />,
   ol: (props) => <Box as="ol" pt={2} pl={4} ml={2} {...props} />,
   li: (props) => <Box as="li" pb={1} {...props} />,
   blockquote: Quote,
-  img: FeaturedImage
+  inlineCode: (props) => (
+    <Code
+      colorScheme="yellow"
+      fontSize="0.84em"
+      px={2}
+      borderRadius="md"
+      {...props}
+    />
+  )
 };
 
 export { CustomLink };
