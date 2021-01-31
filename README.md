@@ -1,4 +1,4 @@
-# 🏠  My home in the another world
+# 🏠 My home in the another world
 
 > My Personal Home Page, Blog, Portfolio built with Next.JS : https://opakholis.me
 
@@ -12,7 +12,7 @@
   - [x] Post (MDX)
   - [x] Search bars
   - [ ] Tag
-  - [X] Search by topics
+  - [x] Search by topics
 - [x] Dark mode
 - [ ] Comment System
 - [ ] SEO optimized
@@ -37,9 +37,9 @@ You can start editing the page by modifying `pages/index.js`. The page auto-upda
 
 - [Next.js](https://nextjs.org/)
 - [Vercel](https://vercel.com)
-- [MDX](https://github.com/hashicorp/next-mdx-enhanced)
+- [MDX](https://mdxjs.com/)
 - [Chakra UI](https://chakra-ui.com/)
 
 ## Inspiration
 
-Thank you to [Lee Robinson](https://twitter.com/leeerob/) for open sourcing his [blog](https://github.com/leerob/leerob.io) that helped me put together Next.js, MDX and Chakra UI.
+Thank you to [Lee Robinson](https://twitter.com/leeerob/) for open sourcing his [blog](https://github.com/leerob/leerob.io).
