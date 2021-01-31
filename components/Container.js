@@ -1,4 +1,3 @@
-import React from 'react';
 import NextLink from 'next/link';
 import { useRouter } from 'next/router';
 import styled from '@emotion/styled';
@@ -9,7 +8,8 @@ import {
   useColorMode,
   Box,
   Stack
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
+import { MoonIcon, SunIcon } from '@chakra-ui/icons';
 
 import Footer from './Footer';
 
@@ -43,6 +43,7 @@ const Container = ({ children }) => {
 
   return (
     <>
+      <Box h="6px" bgGradient="linear(to-l, #4568dc, #b06ab3)" />
       <StickyNav
         as="nav"
         flexDirection="row"
@@ -58,7 +59,7 @@ const Container = ({ children }) => {
       >
         <IconButton
           aria-label="Toggle dark mode"
-          icon={colorMode === 'dark' ? 'sun' : 'moon'}
+          icon={colorMode === 'dark' ? <SunIcon /> : <MoonIcon />}
           onClick={toggleColorMode}
         />
         <Box>

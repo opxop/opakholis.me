@@ -1,11 +1,10 @@
-import React from 'react';
 import NextLink from 'next/link';
-import { Button, Flex, Heading, Text, useColorMode } from '@chakra-ui/core';
+import { Button, Flex, Heading, Text, useColorMode } from '@chakra-ui/react';
 
-import Container from '../components/Container';
-
-import ProjectCard from '../components/ProjectCard';
-import Timeline from '../components/Timeline';
+import Container from '@/components/Container';
+import ProjectCard from '@/components/ProjectCard';
+import Timeline from '@/components/Timeline';
+import { NextjsIcon, ProgateIcon } from '@/styles/icons';
 
 const Index = () => {
   const { colorMode } = useColorMode();
@@ -49,14 +48,16 @@ const Index = () => {
           title="My Portfolio Website"
           description="NextJS - JAMstack application yang dikostumisasi dengan bantuan Chakra UI."
           href="https://opakholis.me/"
-          icon="nextjs"
-        />
+        >
+          <NextjsIcon boxSize={12} mr={4} />
+        </ProjectCard>
         <ProjectCard
           title="Progate Mini Project"
           description="Kumpulan Mini Project dari Komunitas Progate Indonesia."
           href="https://opxop.github.io/Progate-Mini-Projects"
-          icon="progate"
-        />
+        >
+          <ProgateIcon boxSize={12} mr={4} />
+        </ProjectCard>
       </Flex>
       <Timeline />
     </Container>

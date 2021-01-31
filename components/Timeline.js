@@ -1,17 +1,18 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import {
   Divider,
   Flex,
   Heading,
   Button,
-  Icon,
   List,
   Stack,
   Text,
   ListItem,
   useColorMode,
   Link
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
+import { ChevronDownIcon } from '@chakra-ui/icons';
+import { CheckIcon } from '@/styles/icons';
 
 const YearDivider = () => {
   const { colorMode } = useColorMode();
@@ -34,10 +35,10 @@ const TimelineStep = ({ title, children }) => {
     <ListItem>
       <Stack ml={2} mb={4}>
         <Flex align="center">
-          <Icon name="check" mr={2} color="whatsapp.500" />
+          <CheckIcon mr={2} color="whatsapp.500" />
           <Text fontWeight="medium">{title}</Text>
         </Flex>
-        <Text color={secondaryTextColor[colorMode]} ml={6}>
+        <Text color={secondaryTextColor[colorMode]} pl={6}>
           {children}
         </Text>
       </Stack>
@@ -52,7 +53,7 @@ const FullTimeLine = () => (
       2019
     </Heading>
     <List>
-      <TimelineStep title="3rd Place at Diskominfo Karawang Competition 🎖">
+      <TimelineStep title="3rd Place at Diskominfo Karawang Competition 🏅">
         Berkolaborasi dengan tim sebagai Frontend developer. Menciptakan sebuah
         inovasi baru dengan membangun sebuah sistem "Smart City" berbasis
         website.
@@ -105,11 +106,11 @@ const Timeline = () => {
           my={4}
           mx="auto"
           fontWeight="medium"
-          rightIcon="chevron-down"
           variant="ghost"
           onClick={() => showFullTimeline(true)}
         >
           See More
+          <ChevronDownIcon ml={2} />
         </Button>
       )}
     </Flex>

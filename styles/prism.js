@@ -1,5 +1,5 @@
-import { css } from '@emotion/core';
-import { theme } from '@chakra-ui/core';
+import { css } from '@emotion/react';
+import { theme } from '@chakra-ui/react';
 
 const prismBaseTheme = css`
   code {
@@ -31,7 +31,7 @@ const prismBaseTheme = css`
     padding-bottom: ${theme.space[4]};
     padding-left: ${theme.space[4]};
     padding-right: ${theme.space[4]};
-    margin: ${theme.space[6]} 0;
+    margin: 0;
     overflow: auto;
     min-width: 100%;
     font-size: 0.9rem;
@@ -131,7 +131,7 @@ const prismBaseTheme = css`
     border-top-right-radius: ${theme.radii.lg};
     font-size: 0.8rem;
     font-weight: 600;
-    margin-bottom: 0;
+    margin-bottom: -2rem;
     width: 100%;
 
     + pre {

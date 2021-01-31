@@ -1,10 +1,10 @@
 import { NextSeo } from 'next-seo';
-import { Heading, Flex, Text, useColorMode } from '@chakra-ui/core';
+import { Heading, Flex, Text, useColorMode } from '@chakra-ui/react';
 
-import Container from '../components/Container';
-import { CustomLink } from '../components/MDXComponents';
+import Container from '@/components/Container';
+import { CustomLink } from '@/components/MDXComponents';
 
-export default function UseLayout({ children }) {
+export default function UsesLayout({ children }) {
   const { colorMode } = useColorMode();
   const textColor = {
     light: 'gray.700',
@@ -39,8 +39,8 @@ export default function UseLayout({ children }) {
         <Flex mt={2} w="100%">
           <Text mt={2} color={textColor[colorMode]}>
             Here you can find some info, about what I use on everyday basis -
-            software, hardware and some personal gear. Heavily inspired by{' '}
-            <CustomLink href="https://uses.tech">uses.tech</CustomLink>
+            software, hardware and some personal gear. Heavily inspired by&nbsp;
+            <CustomLink href="https://uses.tech">Uses.tech</CustomLink>
           </Text>
         </Flex>
       </Flex>
