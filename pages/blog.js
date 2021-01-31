@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { NextSeo } from 'next-seo';
 import {
   useColorMode,
