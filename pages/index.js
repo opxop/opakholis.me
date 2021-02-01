@@ -29,7 +29,7 @@ const Index = () => {
           Open-source Software.
         </Text>
         <NextLink href="/about" passHref>
-          <Button size="sm" p={[4, 4]} mt={5}>
+          <Button size="sm" p={5} mt={5}>
             Selengkapnya tentang Opa
           </Button>
         </NextLink>
