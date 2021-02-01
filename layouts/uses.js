@@ -15,16 +15,15 @@ export default function UsesLayout({ children }) {
     <Container>
       <NextSeo
         title="Uses - Opa Kholis Majid"
-        description="Thoughts on the programming, tech, and my personal life."
+        description="What i use… and why?"
         canonical="https://opakholis.me/uses"
         openGraph={{
           url: 'https://opakholis.me/uses',
           title: 'Uses - Opa Kholis Majid',
-          description:
-            'Thoughts on the programming, tech, and my personal life.'
+          description: 'What i use… and why?'
         }}
       />
-
+      2
       <Flex
         as="article"
         flexDirection="column"
@@ -34,13 +33,16 @@ export default function UsesLayout({ children }) {
         w="100%"
       >
         <Heading letterSpacing="tight" mb={2} as="h1" size="2xl">
-          My Setup
+          What I Use
         </Heading>
         <Flex mt={2} w="100%">
           <Text mt={2} color={textColor[colorMode]}>
-            Here you can find some info, about what I use on everyday basis -
-            software, hardware and some personal gear. Heavily inspired by&nbsp;
-            <CustomLink href="https://uses.tech">Uses.tech</CustomLink>
+            This page is inspired by&nbsp;
+            <CustomLink href="https://wesbos.com/">Wes Bos</CustomLink>&nbsp;and
+            listed&nbsp;
+            <CustomLink href="https://uses.tech">uses.tech</CustomLink>, here
+            you can find some info, about what I use on everyday basis -
+            software, hardware and some personal gear.
           </Text>
         </Flex>
       </Flex>
