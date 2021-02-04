@@ -1,6 +1,4 @@
-import dynamic from 'next/dynamic';
 import { DefaultSeo } from 'next-seo';
-import { MDXProvider } from '@mdx-js/react';
 import { ChakraProvider, useColorMode } from '@chakra-ui/react';
 import { Global, css } from '@emotion/react';
 import NextNprogress from 'nextjs-progressbar';
@@ -8,14 +6,9 @@ import NextNprogress from 'nextjs-progressbar';
 import SEO from '../next-seo.config';
 import themes from '@/styles/theme';
 import MDXComponents from '@/components/MDXComponents';
+import { MDXProvider } from '@mdx-js/react';
 import { prismDarkTheme, prismLightTheme } from '@/styles/prism';
-
-const AnimatedCursor = dynamic(
-  () => import('../node_modules/react-animated-cursor'),
-  {
-    ssr: false
-  }
-);
+import 'focus-visible/dist/focus-visible';
 
 const GlobalStyle = ({ children }) => {
   const { colorMode } = useColorMode();
@@ -50,7 +43,6 @@ const App = ({ Component, pageProps }) => {
   return (
     <ChakraProvider theme={themes}>
       <MDXProvider components={MDXComponents}>
-        <AnimatedCursor />
         <NextNprogress
           color="linear-gradient(to right, #4568dc, #b06ab3)"
           startPosition={0.3}
