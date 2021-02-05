@@ -1,36 +1,23 @@
 import {
+  Box,
   Link,
   Text,
   Flex,
   Stack,
   Heading,
-  useColorMode
+  useColorModeValue
 } from '@chakra-ui/react';
 
 const ProjectCard = ({ title, description, href, children }) => {
-  const { colorMode } = useColorMode();
-
-  const secondaryTextColor = {
-    light: 'gray.700',
-    dark: 'gray.400'
-  };
-
-  const borderColor = {
-    light: 'gray.200',
-    dark: 'gray.600'
-  };
-
-  const iconColor = {
-    light: 'gray.900',
-    dark: 'white'
-  };
+  const secondaryText = useColorModeValue('gray.700', 'gray.400');
+  const borderCard = useColorModeValue('gray.200', 'gray.600');
+  const backgroundCard = useColorModeValue('gray.100', 'gray.800');
 
   return (
-    <Stack w="100%" maxW="770px" mb={4}>
+    <Box my={5}>
       <Link
         href={href}
         _hover={{
-          boxShadow: '0px 4px 20px rgba(0,0,0,0.05)',
           textDecoration: 'none'
         }}
         isExternal
@@ -38,28 +25,26 @@ const ProjectCard = ({ title, description, href, children }) => {
         <Flex
           align="center"
           border="1px solid"
-          borderColor={borderColor[colorMode]}
+          borderColor={borderCard}
           borderRadius={4}
+          transition=".5s ease-in-out"
+          _hover={{
+            background: `${backgroundCard}`
+          }}
           p={4}
         >
           {children}
           <Stack>
-            <Heading
-              as="h4"
-              size="md"
-              fontWeight="bold"
-              mb={1}
-              letterSpacing="tighter"
-            >
+            <Heading as="h4" fontSize="xl" letterSpacing="tighter">
               {title}
             </Heading>
-            <Text lineHeight="1.3" color={secondaryTextColor[colorMode]}>
+            <Text lineHeight="1.3" color={secondaryText}>
               {description}
             </Text>
           </Stack>
         </Flex>
       </Link>
-    </Stack>
+    </Box>
   );
 };
 

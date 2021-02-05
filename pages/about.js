@@ -3,9 +3,9 @@ import {
   Text,
   Flex,
   Heading,
-  useColorMode,
   Box,
-  Divider
+  Divider,
+  useColorModeValue
 } from '@chakra-ui/react';
 
 import Container from '@/components/Container';
@@ -15,76 +15,50 @@ const url = 'https://opakholis.me/about';
 const title = 'About Me - Opa Kholis Majid';
 
 const About = () => {
-  const { colorMode } = useColorMode();
-
-  const secondaryTextColor = {
-    light: 'gray.700',
-    dark: 'gray.400'
-  };
+  const secondaryText = useColorModeValue('gray.700', 'gray.400');
 
   return (
     <>
-      <NextSeo
-        title={title}
-        canonical={url}
-        openGraph={{
-          url,
-          title
-        }}
-      />
+      <NextSeo title={title} canonical={url} openGraph={{ url, title }} />
       <Container>
-        <Flex
-          flexDirection="column"
-          justifyContent="flex-start"
-          alignItems="flex-start"
-          maxW="700px"
-        >
-          <Heading letterSpacing="tight" mb={4} as="h1" size="2xl">
-            About Me
+        <Box py={5}>
+          <Heading as="h1" fontSize="5xl" letterSpacing="tight" my={5}>
+            About Me.
           </Heading>
           <Box>
-            <Text color={secondaryTextColor[colorMode]} mb={4}>
-              Halo! Perkenalkan, saya Opa.
-            </Text>
-            <Text color={secondaryTextColor[colorMode]}>
-              Ya, sehari-harinya saya dipanggil dengan panggilan "Opa". Sebuah
-              nama yang kadang membuat orang memasang raut wajah keheranan
-              setelah <Text as="s">bertukar nama</Text>
-              &nbsp;mengetahui nama saya ini, bahkan tidak sedikit yang
-              penasaran dan menanyakan alasan orang tua saya memberikan anugerah
-              nama tersebut.
+            <Text color={secondaryText}>Halo! Perkenalkan, saya Opa.</Text>
+            <Text color={secondaryText} py={3}>
+              Nama yang unik, bukan? HaHaHa 😒
               <br />
-              <br />
-              karena saya berusaha menjadi seorang anak yang baik, saya tidak
-              pernah protes sampai hari ini.
+              Saya adalah seorang Frontend developer — (anggap saja begitu) —
+              yang mana sekarang sedang senang ber-eksplorasi dengan Linux
+              distribution dan Open-source Software, ya meskipun sampai saat ini
+              belum pernah berkonstribusi didalamnya. ~hiks.
             </Text>
-            <Divider
-              my={4}
-              border="1px"
-              width="20px"
-              borderColor={secondaryTextColor[colorMode]}
-            />
-            <Text color={secondaryTextColor[colorMode]} mb={4}>
-              Saya adalah seorang Frontend developer yang mana sekarang sedang
-              senang ber-ekplorasi dengan Linux distribution dan Open-source
-              Software.
+            <Text color={secondaryText} py={3}>
+              Terlepas dari ketertarikan pada OSS, kesibukan saya yang
+              sebenarnya adalah mengembangkan skill programming. Dengan
+              menggunakan stack dari bahasa javascript modern yaitu NodeJs dan
+              library React, kadang juga khilaf dengan berkecimpung pada mobile
+              development dengan menggunakan Framework Flutter, ~ehhe.
             </Text>
-            <Text color={secondaryTextColor[colorMode]} mb={4}>
-              Saya tidak sepenuhnya mengahabiskan waktu di depan teks editor.
-              Untuk menjernihkan pikiran, saya meluangkan waktu untuk sekedar
-              mendengarkan musik; menonton film, terlebih anime dan dorama; atau
-              bahkan membaca buku untuk menambah insight baru?.
+            <Text color={secondaryText} py={3}>
+              Karena saya manusia sosial, jadi gak sepenuhnya saya mengahabiskan
+              waktu di depan teks editor. Dan untuk mengistirahatkan otak, saya
+              meluangkan waktu untuk sekedar mendengarkan musik; menonton film,
+              terlebih jejepangan🥴; atau bahkan membaca buku-buku untuk
+              menambah insight baru(?). "sosial dimananya ha?"
             </Text>
-            <Text color={secondaryTextColor[colorMode]} mb={4}>
-              Untuk mengetahui apa saja yang saya dengarkan, bisa kunjungi
-              akun&nbsp;
-              <CustomLink href="https://open.spotify.com/user/xil3nxol9wadm6lgyw5qv1l2h?si=4xGaa8Y0T3KjpJcaJI7OXQ">
-                Spotify
-              </CustomLink>
-              &nbsp;saya.
+
+            <Text color={secondaryText} py={3}>
+              Saya akui, saya gak begitu pandai dalam menulis. Ya, saya cupu.
+              Tapi saya ingin situs ini berguna, khususnya bagi saya pribadi
+              dengan mendokumentasikan segala sesuatu yang sedang dan/atau telah
+              saya pelajari — (semoga gak malas-malasan supaya kedepannya situs
+              ini gak gersang).
             </Text>
           </Box>
-        </Flex>
+        </Box>
       </Container>
     </>
   );

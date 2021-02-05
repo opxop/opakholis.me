@@ -1,44 +1,37 @@
 import { useState } from 'react';
 import {
-  Divider,
+  Box,
   Flex,
-  Heading,
-  Button,
   List,
-  Stack,
   Text,
+  Stack,
+  Button,
+  Divider,
+  Heading,
   ListItem,
-  useColorMode,
-  Link
+  useColorModeValue
 } from '@chakra-ui/react';
 import { ChevronDownIcon } from '@chakra-ui/icons';
 import { CheckIcon } from '@/styles/icons';
+import { CustomLink } from './MDXComponents';
 
 const YearDivider = () => {
-  const { colorMode } = useColorMode();
-  const borderColor = {
-    light: 'gray.200',
-    dark: 'gray.600'
-  };
-
-  return <Divider borderColor={borderColor[colorMode]} my={5} w="100%" />;
+  const border = useColorModeValue('gray.200', 'gray.600');
+  return <Divider borderColor={border} my={5} w="100%" />;
 };
 
 const TimelineStep = ({ title, children }) => {
-  const { colorMode } = useColorMode();
-  const secondaryTextColor = {
-    light: 'gray.700',
-    dark: 'gray.400'
-  };
-
+  const secondaryText = useColorModeValue('gray.700', 'gray.400');
   return (
     <ListItem>
       <Stack ml={2} mb={4}>
-        <Flex align="center">
-          <CheckIcon mr={2} color="whatsapp.500" />
-          <Text fontWeight="medium">{title}</Text>
+        <Flex alignContent="flex-start">
+          <CheckIcon mr={2} mt={1} color="whatsapp.500" />
+          <Heading as="h4" fontSize="lg" fontWeight="medium">
+            {title}
+          </Heading>
         </Flex>
-        <Text color={secondaryTextColor[colorMode]} pl={6}>
+        <Text color={secondaryText} pl={6}>
           {children}
         </Text>
       </Stack>
@@ -49,7 +42,7 @@ const TimelineStep = ({ title, children }) => {
 const FullTimeLine = () => (
   <>
     <YearDivider />
-    <Heading as="h3" size="lg" fontWeight="bold" mb={4} letterSpacing="lighter">
+    <Heading as="h3" fontSize="2xl" mb={4} letterSpacing="lighter">
       2019
     </Heading>
     <List>
@@ -69,31 +62,17 @@ const Timeline = () => {
   const [isShowingFullTimeline, showFullTimeline] = useState(false);
 
   return (
-    <Flex
-      flexDirection="column"
-      justifyContent="flex-start"
-      alignItems="flex-start"
-      maxWidth="700px"
-    >
-      <Heading letterSpacing="tight" mb={4} mt={8} size="xl" fontWeight="bold">
+    <Box py={5}>
+      <Heading as="h2" fontSize="4xl" letterSpacing="tight" mb={2}>
         Timeline
       </Heading>
-      <Heading
-        as="h3"
-        size="lg"
-        fontWeight="bold"
-        mb={4}
-        letterSpacing="lighter"
-      >
+      <Heading as="h3" fontSize="2xl" mb={4} letterSpacing="lighter">
         2020
       </Heading>
       <List>
         <TimelineStep title="Landed First Internship 👨🏼‍💻">
-          Merupakan 3 bulan yang sangat berharga. Bersama orang-orang hebat di{' '}
-          <Link href="http://jiwalu.id" isExternal>
-            Jiwalu Studio
-          </Link>{' '}
-          saya banyak belajar hal baru.
+          Merupakan 3 bulan yang sangat berharga. Bersama orang-orang hebat
+          di&nbsp;<CustomLink href="http://jiwalu.id">Jiwalu Studio</CustomLink>
         </TimelineStep>
         <TimelineStep title="Fallin' in Love with Flutter 🎴">
           Pada awalnya hanya sekedar mencoba-coba, hingga akhirnya jatuh cinta.
@@ -103,17 +82,18 @@ const Timeline = () => {
         <FullTimeLine />
       ) : (
         <Button
+          display="block"
           my={4}
           mx="auto"
           fontWeight="medium"
           variant="ghost"
           onClick={() => showFullTimeline(true)}
+          rightIcon={<ChevronDownIcon />}
         >
           See More
-          <ChevronDownIcon ml={2} />
         </Button>
       )}
-    </Flex>
+    </Box>
   );
 };
 

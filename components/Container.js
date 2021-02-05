@@ -1,61 +1,39 @@
 import NextLink from 'next/link';
 import { useRouter } from 'next/router';
-import styled from '@emotion/styled';
 import {
-  Button,
+  Box,
   Flex,
+  Button,
   IconButton,
   useColorMode,
-  Box,
-  Stack
+  useColorModeValue
 } from '@chakra-ui/react';
 import { MoonIcon, SunIcon } from '@chakra-ui/icons';
 
 import Footer from './Footer';
 
-const StickyNav = styled(Flex)`
-  position: sticky;
-  z-index: 9;
-  top: 0;
-  backdrop-filter: saturate(180%) blur(20px);
-  transition: background-color 0.1 ease-in-out;
-`;
-
 const Container = ({ children }) => {
   const { pathname } = useRouter();
 
   const { colorMode, toggleColorMode } = useColorMode();
-
-  const bgColor = {
-    light: 'white',
-    dark: 'gray.900'
-  };
-
-  const primaryTextColor = {
-    light: 'black',
-    dark: 'white'
-  };
-
-  const navBgColor = {
-    light: 'rgba(255, 255, 255, 0.8)',
-    dark: 'rgba(23, 25, 35, 0.8)'
-  };
+  const backgroundNavbar = useColorModeValue('white', 'gray.900');
 
   return (
     <>
       <Box h="6px" bgGradient="linear(to-l, #4568dc, #b06ab3)" />
-      <StickyNav
+      <Flex
         as="nav"
-        flexDirection="row"
+        pos="sticky"
+        top="0"
+        zIndex="9"
         justifyContent="space-between"
         alignItems="center"
-        maxWidth="770px"
+        maxWidth="780px"
         width="100%"
-        bg={navBgColor[colorMode]}
+        bg={backgroundNavbar}
         p={8}
-        mt={[0, 8]}
-        mb={8}
         mx="auto"
+        my={[0, 8]}
       >
         <IconButton
           aria-label="Toggle dark mode"
@@ -94,28 +72,11 @@ const Container = ({ children }) => {
             </Button>
           </NextLink>
         </Box>
-      </StickyNav>
-      <Flex
-        as="main"
-        justifyContent="center"
-        flexDirection="column"
-        bg={bgColor[colorMode]}
-        color={primaryTextColor[colorMode]}
-        px={8}
-      >
-        <Stack
-          as="main"
-          spacing={8}
-          justifyContent="center"
-          alignItems="flex-start"
-          m="0 auto 4rem auto"
-          maxW="700px"
-          w="100%"
-        >
-          {children}
-        </Stack>
-        <Footer />
       </Flex>
+      <Box as="main" maxW="768px" w="100%" px={8} mx="auto">
+        {children}
+      </Box>
+      <Footer />
     </>
   );
 };

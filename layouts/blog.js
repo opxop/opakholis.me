@@ -1,61 +1,46 @@
 import { parseISO, format } from 'date-fns';
-import {
-  useColorMode,
-  Heading,
-  Text,
-  Flex,
-  Box,
-  Badge
-} from '@chakra-ui/react';
+import { Heading, Text, Box, Badge, useColorModeValue } from '@chakra-ui/react';
 
 import BlogSeo from '@/components/BlogSeo';
 import Container from '@/components/Container';
 import { DateIcon, TimeIcon } from '@/styles/icons';
 
 export default function BlogLayout({ children, frontMatter }) {
-  const { colorMode } = useColorMode();
-  const secondaryTextColor = {
-    light: 'gray.700',
-    dark: 'gray.400'
-  };
+  const secondaryText = useColorModeValue('gray.700', 'gray.400');
+  const bg = useColorModeValue('gray.200', 'gray.700');
 
   return (
     <Container>
       <BlogSeo url={frontMatter.slug} {...frontMatter} />
-      <Flex
-        as="article"
-        flexDirection="column"
-        justifyContent="flex-start"
-        alignItems="flex-start"
-        maxWidth="700px"
-        w="100%"
-      >
-        <Heading letterSpacing="tight" mb={1} as="h1" size="2xl">
+      <Box pb={5}>
+        <Heading as="h1" fontSize="5xl" letterSpacing="tight" mb={4}>
           {frontMatter.title}
         </Heading>
-        <Text fontSize="sm" color={secondaryTextColor[colorMode]}>
+        <Text color={secondaryText}>
           <DateIcon mx={1} mb={1} />
           {format(parseISO(frontMatter.publishedAt), 'MMMM dd, yyyy')}
           {` • `}
           <TimeIcon mx={1} mb={1} />
           {frontMatter.readingTime.text}
         </Text>
-      </Flex>
+      </Box>
       {frontMatter.tags && (
-        <Box mt={-4}>
+        <Box>
           {frontMatter.tags.map((topic, i) => {
             return (
               <Badge
                 key={i}
-                rounded="md"
-                px={2}
-                py={1}
-                mr={2}
+                rounded="sm"
+                p={(2, '5px')}
+                mr={3}
+                mb={3}
                 fontWeight="normal"
-                textTransform="none"
-                colorScheme="gray"
+                textTransform="lowercase"
+                variant="outline"
+                transition=".5s ease-in-out"
+                _hover={{ bg: `${bg}`, cursor: 'pointer' }}
               >
-                {topic}
+                #{topic}
               </Badge>
             );
           })}

@@ -1,15 +1,11 @@
 import { NextSeo } from 'next-seo';
-import { Heading, Flex, Text, useColorMode } from '@chakra-ui/react';
+import { Heading, Text, Box, useColorModeValue } from '@chakra-ui/react';
 
 import Container from '@/components/Container';
 import { CustomLink } from '@/components/MDXComponents';
 
 export default function UsesLayout({ children }) {
-  const { colorMode } = useColorMode();
-  const textColor = {
-    light: 'gray.700',
-    dark: 'gray.400'
-  };
+  const secondaryText = useColorModeValue('gray.700', 'gray.400');
 
   return (
     <Container>
@@ -23,30 +19,28 @@ export default function UsesLayout({ children }) {
           description: 'What i use… and why?'
         }}
       />
-      2
-      <Flex
-        as="article"
-        flexDirection="column"
-        justifyContent="flex-start"
-        alignItems="flex-start"
-        maxWidth="700px"
-        w="100%"
-      >
-        <Heading letterSpacing="tight" mb={2} as="h1" size="2xl">
-          What I Use
+      <Box mb={5}>
+        <Heading as="h1" fontSize="5xl" letterSpacing="tight" my={5}>
+          What I Use.
         </Heading>
-        <Flex mt={2} w="100%">
-          <Text mt={2} color={textColor[colorMode]}>
-            This page is inspired by&nbsp;
-            <CustomLink href="https://wesbos.com/">Wes Bos</CustomLink>&nbsp;and
-            listed&nbsp;
-            <CustomLink href="https://uses.tech">uses.tech</CustomLink>, here
-            you can find some info, about what I use on everyday basis -
-            software, hardware and some personal gear.
-          </Text>
-        </Flex>
-      </Flex>
+        <Text color={secondaryText}>
+          Although no one cares to ask me what I use 😂 but, here is a list of
+          stuff that fits my daily routine and requirement.
+        </Text>
+      </Box>
       {children}
+      <Text
+        color={secondaryText}
+        mt={4}
+        textAlign="right"
+        fontSize="sm"
+        fontStyle="italic"
+      >
+        "This page is inspired by&nbsp;
+        <CustomLink href="https://wesbos.com/">Wes Bos</CustomLink>&nbsp;and
+        listed on&nbsp;
+        <CustomLink href="https://uses.tech">uses.tech</CustomLink>"
+      </Text>
     </Container>
   );
 }

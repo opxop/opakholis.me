@@ -1,5 +1,11 @@
-import NextLink from 'next/link';
-import { Button, Flex, Heading, Text, useColorMode } from '@chakra-ui/react';
+import Link from 'next/link';
+import {
+  Button,
+  Heading,
+  Box,
+  Text,
+  useColorModeValue
+} from '@chakra-ui/react';
 
 import Container from '@/components/Container';
 import ProjectCard from '@/components/ProjectCard';
@@ -7,41 +13,27 @@ import Timeline from '@/components/Timeline';
 import { NextjsIcon, ProgateIcon } from '@/styles/icons';
 
 const Index = () => {
-  const { colorMode } = useColorMode();
-  const secondaryTextColor = {
-    light: 'gray.700',
-    dark: 'gray.400'
-  };
+  const secondaryText = useColorModeValue('gray.700', 'gray.400');
   return (
     <Container>
-      <Flex
-        flexDirection="column"
-        justifyContent="flex-start"
-        alignItems="flex-start"
-        maxWidth="700px"
-      >
-        <Heading letterSpacing="tight" mb={4} as="h1" size="xl">
-          👋 Hi, I'm Opa Kholis Majid.
+      <Box py={5}>
+        <Heading as="h1" fontSize="5xl" letterSpacing="tight" my={5}>
+          Hi, I'm Opa Kholis Majid.
         </Heading>
-        <Text color={secondaryTextColor[colorMode]}>
-          Seseorang yang menyebut dirinya sebagai Frontend developer - yang mana
-          sekarang sedang senang ber-ekplorasi dengan Linux distribution dan
+        <Text color={secondaryText}>
+          Seseorang yang menyebut dirinya sebagai Frontend developer — yang mana
+          sekarang sedang senang ber-eksplorasi dengan Linux distribution dan
           Open-source Software.
         </Text>
-        <NextLink href="/about" passHref>
-          <Button size="sm" p={5} mt={5}>
+        <Link href="/about" passHref>
+          <Button as="a" fontSize="sm" p={5} my={5}>
             Selengkapnya tentang Opa
           </Button>
-        </NextLink>
-      </Flex>
-      {/* Project section */}
-      <Flex
-        flexDirection="column"
-        justifyContent="flex-start"
-        alignItems="flex-start"
-        maxWidth="700px"
-      >
-        <Heading letterSpacing="tight" mb={4} mt={8} size="xl" fontWeight={700}>
+        </Link>
+      </Box>
+
+      <Box py={5}>
+        <Heading as="h2" fontSize="4xl" letterSpacing="tight" mb={5}>
           Projects
         </Heading>
         <ProjectCard
@@ -58,7 +50,7 @@ const Index = () => {
         >
           <ProgateIcon boxSize={12} mr={4} />
         </ProjectCard>
-      </Flex>
+      </Box>
       <Timeline />
     </Container>
   );

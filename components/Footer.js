@@ -1,4 +1,10 @@
-import { Flex, IconButton, Link, useColorMode } from '@chakra-ui/react';
+import {
+  Box,
+  Flex,
+  Link,
+  IconButton,
+  useColorModeValue
+} from '@chakra-ui/react';
 
 import {
   GithubIcon,
@@ -8,15 +14,10 @@ import {
 } from '@/styles/icons';
 
 const Footer = () => {
-  const { colorMode } = useColorMode();
-
-  const secondaryTextColor = {
-    light: 'gray.700',
-    dark: 'gray.400'
-  };
+  const secondaryText = useColorModeValue('gray.700', 'gray.400');
   return (
-    <Flex align="center" my={4} direction="column">
-      <div>
+    <Box as="footer" mb={5} mt={10}>
+      <Flex justifyContent="center" alignItems="center">
         <Link href="https://twitter.com/opakholis" isExternal>
           <IconButton
             aria-label="Github"
@@ -53,16 +54,17 @@ const Footer = () => {
             variant="ghost"
           />
         </Link>
-      </div>
-      <Flex>
-        <Link mx={2} color={secondaryTextColor[colorMode]} href="/uses">
+      </Flex>
+
+      <Flex justifyContent="center" alignItems="center">
+        <Link mx={2} color={secondaryText} href="/uses">
           /uses
         </Link>
-        <Link mx={2} color={secondaryTextColor[colorMode]} href="/now">
+        <Link mx={2} color={secondaryText} href="/now">
           /now
         </Link>
       </Flex>
-    </Flex>
+    </Box>
   );
 };
 

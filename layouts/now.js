@@ -1,15 +1,11 @@
 import { NextSeo } from 'next-seo';
-import { Heading, Flex, Text, useColorMode, Box } from '@chakra-ui/react';
+import { Box, Text, Heading, useColorModeValue } from '@chakra-ui/react';
 
 import Container from '@/components/Container';
 import { CustomLink } from '@/components/MDXComponents';
 
 export default function UsesLayout({ children }) {
-  const { colorMode } = useColorMode();
-  const textColor = {
-    light: 'gray.700',
-    dark: 'gray.400'
-  };
+  const secondaryText = useColorModeValue('gray.700', 'gray.400');
 
   return (
     <Container>
@@ -24,28 +20,28 @@ export default function UsesLayout({ children }) {
         }}
       />
 
-      <Flex
-        as="article"
-        flexDirection="column"
-        justifyContent="flex-start"
-        alignItems="flex-start"
-        maxWidth="700px"
-        w="100%"
-      >
-        <Heading letterSpacing="tight" mb={2} as="h1" size="2xl">
-          NowNowNow
+      <Box mb={5}>
+        <Heading as="h1" fontSize="5xl" letterSpacing="tight" my={5}>
+          Now.
         </Heading>
-        <Flex mt={2} w="100%">
-          <Text mt={2} color={textColor[colorMode]}>
-            This page is inspired by&nbsp;
-            <CustomLink href="https://sivers.org/">Derek Sivers</CustomLink> and
-            listed on&nbsp;
-            <CustomLink href="https://nownownow.com/about">now page</CustomLink>
-            , here’s what I’m up to these days. &nbsp;
-          </Text>
-        </Flex>
-      </Flex>
+        <Text color={secondaryText}>
+          Here are some of the things I am spending my time on right now
+        </Text>
+      </Box>
       {children}
+      <Text
+        color={secondaryText}
+        mt={4}
+        textAlign="right"
+        fontSize="sm"
+        fontStyle="italic"
+      >
+        This page is inspired by&nbsp;
+        <CustomLink href="https://sivers.org/">Derek Sivers</CustomLink>&nbsp;
+        as&nbsp;
+        <CustomLink href="https://nownownow.com/about">/now page </CustomLink>
+        &nbsp;movement.
+      </Text>
     </Container>
   );
 }
