@@ -1,7 +1,7 @@
 import hydrate from 'next-mdx-remote/hydrate';
 
 import { getFileBySlug } from '@/lib/mdx';
-import UsesLayout from '@/layouts/now';
+import NowLayout from '@/layouts/now';
 import MDXComponents from '@/components/MDXComponents';
 
 export default function Now({ mdxSource, frontMatter }) {
@@ -9,7 +9,7 @@ export default function Now({ mdxSource, frontMatter }) {
     components: MDXComponents
   });
 
-  return <UsesLayout frontMatter={frontMatter}>{content}</UsesLayout>;
+  return <NowLayout frontMatter={frontMatter}>{content}</NowLayout>;
 }
 
 export async function getStaticProps() {
