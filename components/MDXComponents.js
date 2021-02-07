@@ -5,11 +5,13 @@ import {
   Text,
   Link,
   Alert,
+  Stack,
   Image,
-  Divider,
   Heading,
   useColorModeValue
 } from '@chakra-ui/react';
+
+import CardBook from '@/components/CardBook';
 import Zoom from 'react-medium-image-zoom';
 import 'react-medium-image-zoom/dist/styles.css';
 
@@ -48,7 +50,7 @@ const DocsHeading = (props) => (
     }}
     {...props}
     mb="0.8em"
-    mt="1.5em"
+    mt="2em"
   >
     {' '}
     <Box pointerEvents="auto">
@@ -76,16 +78,16 @@ const DocsHeading = (props) => (
 );
 
 const Quote = (props) => {
-  const bg = useColorModeValue('blue.50', 'gray.800');
-
+  const color = useColorModeValue('gray.300', 'gray.700');
   return (
     <Alert
-      mt={4}
+      mt={6}
       w="100%"
-      borderRadius="md"
-      bg={bg}
+      bg="transparent"
       variant="left-accent"
-      status="info"
+      // status="error"
+      borderLeft="4px"
+      borderLeftColor={color}
       css={{
         '> *:first-of-type': {
           margin: ['2', '0', '2', '10']
@@ -96,9 +98,13 @@ const Quote = (props) => {
   );
 };
 
-const Hr = () => {
-  const border = useColorModeValue('gray.200', 'gray.600');
-  return <Divider borderColor={border} my={4} w="100%" />;
+const Tick = () => {
+  const color = useColorModeValue('gray.300', 'gray.700');
+  return (
+    <Text textAlign="center" fontSize="5xl" color={color}>
+      ,,
+    </Text>
+  );
 };
 
 const ImageZoom = (props) => {
@@ -128,13 +134,26 @@ const ImageZoom = (props) => {
   );
 };
 
+const Wrapper = (props) => {
+  return (
+    <Stack
+      direction={['column', 'row']}
+      justifyContent="center"
+      alignItems="center"
+      spacing={8}
+      mt={5}
+      {...props}
+    />
+  );
+};
+
 const MDXComponents = {
   h1: (props) => <DocsHeading as="h1" fontSize="4xl" {...props} />,
   h2: (props) => <DocsHeading as="h2" fontSize="3xl" {...props} />,
   h3: (props) => <DocsHeading as="h3" fontSize="2xl" {...props} />,
   h4: (props) => <DocsHeading as="h4" fontSize="xl" {...props} />,
   h5: (props) => <DocsHeading as="h5" fontSize="lg" {...props} />,
-  p: (props) => <Text as="p" my={4} lineHeight="tall" {...props} />,
+  p: (props) => <Text as="p" mt={5} lineHeight="tall" {...props} />,
   ol: (props) => <Box as="ol" pt={2} pl={4} ml={2} {...props} />,
   ul: (props) => <Box as="ul" pt={2} pl={4} ml={2} {...props} />,
   li: (props) => <Box as="li" pb={1} {...props} />,
@@ -143,7 +162,7 @@ const MDXComponents = {
   a: CustomLink,
   blockquote: Quote,
   kbd: Kbd,
-  hr: Hr,
+  hr: Tick,
   inlineCode: (props) => (
     <Code
       colorScheme="yellow"
@@ -152,7 +171,9 @@ const MDXComponents = {
       borderRadius="md"
       {...props}
     />
-  )
+  ),
+  Wrapper,
+  CardBook
 };
 
 export { CustomLink };
