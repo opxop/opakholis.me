@@ -1,15 +1,7 @@
 import { NextSeo } from 'next-seo';
-import {
-  Text,
-  Flex,
-  Heading,
-  Box,
-  Divider,
-  useColorModeValue
-} from '@chakra-ui/react';
+import { Text, Heading, Box, useColorModeValue } from '@chakra-ui/react';
 
 import Container from '@/components/Container';
-import { CustomLink } from '@/components/MDXComponents';
 
 const url = 'https://opakholis.me/about';
 const title = 'About Me - Opa Kholis Majid';
