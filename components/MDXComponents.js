@@ -124,6 +124,9 @@ const ImageZoom = (props) => {
       zoomMargin={50}
     >
       <Image
+        w={1200}
+        h={300}
+        objectFit="cover"
         rounded="sm"
         {...props}
         src={props.src}
@@ -138,9 +141,9 @@ const Wrapper = (props) => {
   return (
     <Stack
       direction={['column', 'row']}
+      wrap="wrap"
       justifyContent="center"
       alignItems="center"
-      spacing={8}
       mt={5}
       {...props}
     />
