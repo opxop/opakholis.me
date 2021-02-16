@@ -40,9 +40,11 @@
     "reading-time": "^1.2.0",
     "remark-autolink-headings": "^6.0.1",
     "remark-code-titles": "^0.1.1",
-    "remark-slug": "^6.0.0"
+    "remark-slug": "^6.0.0",
+    "remark-unwrap-images": "^2.0.0"
   },
   "devDependencies": {
+    "@fec/remark-a11y-emoji": "^3.0.0",
     "globby": "^11.0.1",
     "prettier": "^2.1.2",
     "rehype": "^11.0.0",

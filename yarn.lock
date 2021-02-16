@@ -1612,6 +1612,15 @@
   resolved "https://registry.yarnpkg.com/@emotion/weak-memoize/-/weak-memoize-0.2.5.tgz#8eed982e2ee6f7f4e44c253e12962980791efd46"
   integrity sha512-6U71C2Wp7r5XtFtQzYrW5iKFT67OixrSxjI4MptCHzdSVlgabczzqLe0ZSgnub/5Kp4hSbpDB1tMytZY9pwxxA==
 
+"@fec/remark-a11y-emoji@^3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@fec/remark-a11y-emoji/-/remark-a11y-emoji-3.0.0.tgz#671a73f78ec72ad843cabaa79353a0d1de158b2f"
+  integrity sha512-zhiVTbNA16jqc4A0D87+PWE+JOJFvYg6HoYqTwh/u62ytNiwLcsd46hqMLBIdN/G1qQ+lO4zgii5a/u81qdQaQ==
+  dependencies:
+    emoji-regex "^9.2.0"
+    gemoji "^6.1.0"
+    mdast-util-find-and-replace "^1.0.0"
+
 "@hapi/accept@5.0.1":
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/@hapi/accept/-/accept-5.0.1.tgz#068553e867f0f63225a506ed74e899441af53e10"
@@ -2734,6 +2743,11 @@ elliptic@^6.5.3:
   resolved "https://registry.yarnpkg.com/emoji-regex/-/emoji-regex-6.1.1.tgz#c6cd0ec1b0642e2a3c67a1137efc5e796da4f88e"
   integrity sha1-xs0OwbBkLio8Z6ETfvxeeW2k+I4=
 
+emoji-regex@^9.2.0:
+  version "9.2.1"
+  resolved "https://registry.yarnpkg.com/emoji-regex/-/emoji-regex-9.2.1.tgz#c9b25604256bb3428964bead3ab63069d736f7ee"
+  integrity sha512-117l1H6U4X3Krn+MrzYrL57d5H7siRHWraBs7s+LjRuFK7Fe7hJqnJ0skWlinqsycVLU5YAo6L8CsEYQ0V5prg==
+
 emojis-list@^2.0.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/emojis-list/-/emojis-list-2.1.0.tgz#4daa4d9db00f9819880c79fa457ae5b09a1fd389"
@@ -2961,6 +2975,11 @@ gauge@~2.7.3:
     string-width "^1.0.1"
     strip-ansi "^3.0.1"
     wide-align "^1.1.0"
+
+gemoji@^6.1.0:
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/gemoji/-/gemoji-6.1.0.tgz#268fbb0c81d1a8c32a4bcc39bdfdd66080ba7ce9"
+  integrity sha512-MOlX3doQ1fsfzxQX8Y+u6bC5Ssc1pBUBIPVyrS69EzKt+5LIZAOm0G5XGVNhwXFgkBF3r+Yk88ONyrFHo8iNFA==
 
 gensync@^1.0.0-beta.1:
   version "1.0.0-beta.2"
@@ -3615,6 +3634,15 @@ mdast-util-definitions@^4.0.0:
   integrity sha512-k8AJ6aNnUkB7IE+5azR9h81O5EQ/cTDXtWdMq9Kk5KcEW/8ritU5CeLg/9HhOC++nALHBlaogJ5jz0Ybk3kPMQ==
   dependencies:
     unist-util-visit "^2.0.0"
+
+mdast-util-find-and-replace@^1.0.0:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/mdast-util-find-and-replace/-/mdast-util-find-and-replace-1.1.1.tgz#b7db1e873f96f66588c321f1363069abf607d1b5"
+  integrity sha512-9cKl33Y21lyckGzpSmEQnIDjEfeeWelN5s1kUW1LwdB0Fkuq2u+4GdqcGEygYxJE8GVqCl0741bYXHgamfWAZA==
+  dependencies:
+    escape-string-regexp "^4.0.0"
+    unist-util-is "^4.0.0"
+    unist-util-visit-parents "^3.0.0"
 
 mdast-util-to-hast@10.0.1:
   version "10.0.1"
@@ -4588,6 +4616,14 @@ remark-squeeze-paragraphs@4.0.0:
   integrity sha512-8qRqmL9F4nuLPIgl92XUuxI3pFxize+F1H0e/W3llTk0UsjJaj01+RrirkMw7P21RKe4X6goQhYRSvNWX+70Rw==
   dependencies:
     mdast-squeeze-paragraphs "^4.0.0"
+
+remark-unwrap-images@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/remark-unwrap-images/-/remark-unwrap-images-2.0.0.tgz#65134065e3605c64a37d22ab665058fc5286920f"
+  integrity sha512-uehiJU5U1ZNQxTKUlAKOQhVyFsc+9WWvamkuoF3ILdMpASHwA1JbzTOZcRWv+annYfDWuPSuoZAWdt1r0SlrfQ==
+  dependencies:
+    hast-util-whitespace "^1.0.0"
+    unist-util-visit "^2.0.0"
 
 repeat-string@^1.5.4:
   version "1.6.1"
