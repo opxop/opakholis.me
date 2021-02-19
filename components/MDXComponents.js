@@ -16,20 +16,39 @@ import Zoom from 'react-medium-image-zoom';
 import 'react-medium-image-zoom/dist/styles.css';
 
 const CustomLink = (props) => {
-  const color = useColorModeValue('hsl(208, 99%, 44%)', 'hsl(208, 95%, 68%)');
-
   const href = props.href;
   const isInternalLink = href && (href.startsWith('/') || href.startsWith('#'));
 
   if (isInternalLink) {
     return (
       <NextLink href={href} passHref>
-        <Link color={color} {...props} />
+        <Link
+          textDecor="underline"
+          _hover={{
+            textDecor: 'none',
+            borderBottom: '3px solid',
+            borderImage: 'linear-gradient(to left, #7928CA, #FF0080) 1',
+            transition: 'border-image 5s ease-in-out'
+          }}
+          {...props}
+        />
       </NextLink>
     );
   }
 
-  return <Link color={color} isExternal {...props} />;
+  return (
+    <Link
+      textDecor="underline"
+      _hover={{
+        textDecor: 'none',
+        borderBottom: '3px solid',
+        borderImage: 'linear-gradient(to left, #7928CA, #FF0080) 1',
+        transition: 'border-image 5s ease-in-out'
+      }}
+      isExternal
+      {...props}
+    />
+  );
 };
 const DocsHeading = (props) => (
   <Heading
