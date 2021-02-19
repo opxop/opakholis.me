@@ -11,6 +11,7 @@ import {
 import { MoonIcon, SunIcon } from '@chakra-ui/icons';
 
 import Footer from './Footer';
+import NowPlaying from './NowPlaying';
 
 const Container = ({ children }) => {
   const { pathname } = useRouter();
@@ -20,7 +21,7 @@ const Container = ({ children }) => {
 
   return (
     <>
-      <Box h="6px" bgGradient="linear(to-l, #4568dc, #b06ab3)" />
+      <Box h="6px" bgGradient="linear(to-l, #7928CA, #FF0080)" />
       <Flex
         as="nav"
         pos="sticky"
@@ -75,6 +76,7 @@ const Container = ({ children }) => {
       </Flex>
       <Box as="main" maxW="768px" w="100%" px={8} mx="auto">
         {children}
+        <NowPlaying />
       </Box>
       <Footer />
     </>

@@ -41,7 +41,8 @@
     "remark-autolink-headings": "^6.0.1",
     "remark-code-titles": "^0.1.1",
     "remark-slug": "^6.0.0",
-    "remark-unwrap-images": "^2.0.0"
+    "remark-unwrap-images": "^2.0.0",
+    "swr": "^0.4.2"
   },
   "devDependencies": {
     "@fec/remark-a11y-emoji": "^3.0.0",
