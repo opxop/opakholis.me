@@ -16,7 +16,7 @@ import {
 const Footer = () => {
   const secondaryText = useColorModeValue('gray.700', 'gray.400');
   return (
-    <Box as="footer" mb={5} mt={10}>
+    <Box as="footer" mb={5} mt={2}>
       <Flex justifyContent="center" alignItems="center">
         <Link href="https://twitter.com/opakholis" isExternal>
           <IconButton
