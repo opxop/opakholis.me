@@ -8,7 +8,6 @@ const title = 'About Me - Opa Kholis Majid';
 
 const About = () => {
   const secondaryText = useColorModeValue('gray.700', 'gray.400');
-
   return (
     <>
       <NextSeo title={title} canonical={url} openGraph={{ url, title }} />
@@ -18,33 +17,39 @@ const About = () => {
             About Me.
           </Heading>
           <Box>
-            <Text color={secondaryText}>Halo! Perkenalkan, saya Opa.</Text>
-            <Text color={secondaryText} py={3}>
-              Saya adalah seorang Frontend developer (anggap saja begitu) yang
-              mana sekarang sedang senang ber-eksplorasi dengan Linux
-              distribution dan Open-source Software.
+            <Text color={secondaryText} lineHeight="tall">
+              Halo! Perkenalkan, saya Opa.
             </Text>
-            <Text color={secondaryText} py={3}>
-              Terlepas dari ketertarikan pada OSS, kesibukan saya sebenarnya
-              adalah mengembangkan skill programming. Dengan menggunakan stack
-              dari bahasa javascript modern yaitu NodeJs dan library React,
-              kadang juga khilaf dengan berkecimpung pada mobile development
-              dengan menggunakan Framework Flutter, ~ehhe.
+            <Text color={secondaryText} lineHeight="tall" py={3}>
+              Seorang Frontend developer (anggap saja begitu) yang mana sekarang
+              sedang senang ber-eksplorasi dengan Linux distribution dan
+              Open-source Software.
             </Text>
-            <Text color={secondaryText} py={3}>
+            <Text color={secondaryText} lineHeight="tall" py={3}>
+              Terlepas dari OSS, ketertarikan utama saya adalah segala sesuatu
+              yang berhubungan dengan <s>ngodomf</s> ngoding. Saat ini saya
+              menggunakan NodeJs dan library React sebagai stack-nya, kadang
+              juga khilaf dengan berkecimpung pada mobile development dengan
+              menggunakan Framework Flutter, ~ehhe.
+            </Text>
+            <Text color={secondaryText} lineHeight="tall" py={3}>
               Karena saya manusia sosial, jadi gak sepenuhnya saya mengahabiskan
               waktu di depan teks editor. Dan untuk mengistirahatkan otak, saya
               meluangkan waktu untuk sekedar mendengarkan musik, menonton
               film—terlebih jejepangan—atau bahkan membaca buku untuk menambah
-              insight baru(?). "sosial dimananya ha?"
+              <i> insight</i> baru. "sosial dimananya ha?"
             </Text>
 
-            <Text color={secondaryText} py={3}>
-              Dan dengan adanya situs ini, saya harap dapat menjadi acuan bagi
-              saya dalam pengembangan diri—menjadi lebih baik—dengan
+            <Text color={secondaryText} lineHeight="tall" py={3}>
+              Dan dengan adanya situs ini, saya harap dapat menjadi jejak bagi
+              saya pribadi dalam mengembangkan diri—menjadi lebih baik—dengan
               mendokumentasikan segala sesuatu yang sedang dan/atau telah saya
-              pelajari (semoga gak malas-malasan supaya kedepannya situs ini
-              tetap hidup).
+              pelajari{' '}
+              <i>
+                (semoga gak malas-malasan supaya kedepannya situs ini tetap
+                hidup)
+              </i>
+              .
             </Text>
           </Box>
         </Box>

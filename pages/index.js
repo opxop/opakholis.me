@@ -20,7 +20,7 @@ const Index = () => {
         <Heading as="h1" fontSize="5xl" letterSpacing="tight" my={5}>
           Hi, I'm Opa Kholis Majid.
         </Heading>
-        <Text color={secondaryText}>
+        <Text color={secondaryText} lineHeight="tall">
           Seseorang yang menyebut dirinya sebagai Frontend developer — yang mana
           sekarang sedang senang ber-eksplorasi dengan Linux distribution dan
           Open-source Software.

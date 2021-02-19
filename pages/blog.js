@@ -50,9 +50,9 @@ export default function Blog({ posts }) {
       <Container>
         <Box py={5}>
           <Heading as="h1" fontSize="5xl" letterSpacing="tight" my={5}>
-            Blog
+            Blog.
           </Heading>
-          <Text color={secondaryText}>
+          <Text color={secondaryText} lineHeight="tall">
             Halaman ini berisi tulisan, opini dan juga merupakan dokumentasi
             untuk saya pribadi ketika sedang belajar atau membagikan sesuatu.
             Enjoy your reading!
