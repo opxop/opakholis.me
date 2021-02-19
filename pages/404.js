@@ -1,38 +1,54 @@
 import NextLink from 'next/link';
-import { useColorMode, Heading, Text, Flex, Button } from '@chakra-ui/react';
+import { NextSeo } from 'next-seo';
+import {
+  Box,
+  Flex,
+  Text,
+  Button,
+  Heading,
+  useColorModeValue
+} from '@chakra-ui/react';
 
 import Container from '@/components/Container';
 
-const Error = () => {
-  const { colorMode } = useColorMode();
-  const secondaryTextColor = {
-    light: 'gray.700',
-    dark: 'gray.400'
-  };
+const title = '404 - Opa Kholis Majid';
 
+export default function Error() {
+  const secondaryText = useColorModeValue('gray.700', 'gray.400');
   return (
-    <Container>
-      <Flex
-        flexDirection="column"
-        justifyContent="center"
-        alignItems="center"
-        maxWidth="700px"
-      >
-        <Heading letterSpacing="tight" mb={10} as="h1" size="xl">
-          451 - Unavailable For Legal Reasons
-        </Heading>
-        <Text color={secondaryTextColor[colorMode]} mt={4}>
-          Kenapa harus menampilkan kode error "404" jika saya bisa membuatnya
-          terdengar misterius?
-        </Text>
-        <NextLink href="/" passHref>
-          <Button as="a" p={[1, 4]} w="250px" fontWeight="bold" m="5rem 1rem">
-            Kembali ke Home
-          </Button>
-        </NextLink>
-      </Flex>
-    </Container>
-  );
-};
+    <>
+      <NextSeo
+        title={title}
+        openGraph={{
+          title
+        }}
+      />
 
-export default Error;
+      <Container>
+        <Box py={5}>
+          <Heading
+            letterSpacing="tight"
+            mb={4}
+            as="h1"
+            fontSize={['4xl', '5xl']}
+          >
+            451 - Unavailable For Legal Reasons
+          </Heading>
+          <Text color={secondaryText} lineHeight="tall" mt={4} mb={8}>
+            Why show a generic 404 when I can make it sound mysterious? It seems
+            you've found something that used to exist, or you spelled something
+            wrong. I'm guessing you spelled something wrong. Can you double
+            check that URL?
+          </Text>
+          <Flex mt={2} mb={6} justifyContent="center">
+            <NextLink href="/" passHref>
+              <Button as="a" p={[5, 6]} fontWeight="bold">
+                Kembali ke Home
+              </Button>
+            </NextLink>
+          </Flex>
+        </Box>
+      </Container>
+    </>
+  );
+}
