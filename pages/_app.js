@@ -19,7 +19,7 @@ const GlobalStyle = ({ children }) => {
         styles={css`
           ${colorMode === 'light' ? prismLightTheme : prismDarkTheme};
           ::selection {
-            background-color: #47a3f3;
+            background-color: #7928ca;
             color: #fefefe;
           }
           html {
@@ -44,7 +44,7 @@ const App = ({ Component, pageProps }) => {
     <ChakraProvider theme={themes}>
       <MDXProvider components={MDXComponents}>
         <NextNprogress
-          color="linear-gradient(to right, #4568dc, #b06ab3)"
+          color="linear-gradient(to right, #7928CA, #FF0080)"
           startPosition={0.3}
           stopDelayMs={200}
           height="4"
