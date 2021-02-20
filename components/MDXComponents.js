@@ -144,7 +144,7 @@ const ImageZoom = (props) => {
     >
       <Image
         w={1200}
-        h={300}
+        h={[165, 250, 300]}
         objectFit="cover"
         rounded="sm"
         {...props}
