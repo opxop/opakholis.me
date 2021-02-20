@@ -6,7 +6,8 @@ import {
   Image,
   Stack,
   Skeleton,
-  useColorModeValue
+  useColorModeValue,
+  SkeletonText
 } from '@chakra-ui/react';
 
 import fetcher from '@/lib/fetcher';
@@ -26,7 +27,7 @@ const NowPlaying = () => {
         borderRadius={8}
         borderColor={borderColor}
         p={2}
-        w="320px"
+        w="300px"
       >
         <Skeleton isLoaded={data}>
           <Image
@@ -37,35 +38,42 @@ const NowPlaying = () => {
             src={data?.albumImageUrl || '/static/images/placeholder.jpg'}
           />
         </Skeleton>
-        <Stack
-          spacing={0}
-          justifyContent="center"
-          alignItems="flex-start"
-          display="flex"
-          flexDirection="column"
+        <SkeletonText
+          isLoaded={data}
+          noOfLines={2}
+          spacing={4}
           ml={4}
+          w="160px"
         >
-          <Link
-            fontWeight="medium"
-            maxWidth="190px"
-            whiteSpace="nowrap"
-            overflow="hidden"
-            textOverflow="ellipsis"
-            href={data?.songUrl}
-            isExternal
+          <Stack
+            spacing={0}
+            justifyContent="center"
+            alignItems="flex-start"
+            display="flex"
+            flexDirection="column"
           >
-            {data && (data?.title || 'Not Playing')}
-          </Link>
-          <Text
-            color="gray.500"
-            maxWidth="190px"
-            whiteSpace="nowrap"
-            overflow="hidden"
-            textOverflow="ellipsis"
-          >
-            {data && (data?.artist || 'Spotify')}
-          </Text>
-        </Stack>
+            <Link
+              fontWeight="medium"
+              maxWidth="190px"
+              whiteSpace="nowrap"
+              overflow="hidden"
+              textOverflow="ellipsis"
+              href={data?.songUrl}
+              isExternal
+            >
+              {data && (data?.title || 'Not Playing')}
+            </Link>
+            <Text
+              color="gray.500"
+              maxWidth="190px"
+              whiteSpace="nowrap"
+              overflow="hidden"
+              textOverflow="ellipsis"
+            >
+              {data && (data?.artist || 'Spotify')}
+            </Text>
+          </Stack>
+        </SkeletonText>
         <SpotifyIcon ml="auto" mt={1} />
       </Box>
     </Box>
