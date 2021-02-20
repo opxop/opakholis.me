@@ -25,7 +25,7 @@ export default function UsesLayout({ children }) {
           description: 'What i use… and why?'
         }}
       />
-      <Box mb={5}>
+      <Box pb={5} pt={2}>
         <Heading as="h1" fontSize="5xl" letterSpacing="tight" my={5}>
           What I Use.
         </Heading>

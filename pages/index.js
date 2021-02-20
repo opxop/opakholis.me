@@ -16,7 +16,7 @@ const Index = () => {
   const secondaryText = useColorModeValue('gray.700', 'gray.400');
   return (
     <Container>
-      <Box py={5}>
+      <Box pb={5} pt={2}>
         <Heading as="h1" fontSize="5xl" letterSpacing="tight" my={5}>
           Hi, I'm Opa Kholis Majid.
         </Heading>
@@ -26,7 +26,7 @@ const Index = () => {
           Open-source Software.
         </Text>
         <Link href="/about" passHref>
-          <Button as="a" fontSize="sm" p={5} my={5}>
+          <Button as="a" fontSize="sm" p={[6, 5]} my={5}>
             Selengkapnya tentang Opa
           </Button>
         </Link>

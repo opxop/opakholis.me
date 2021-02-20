@@ -12,7 +12,7 @@ const About = () => {
     <>
       <NextSeo title={title} canonical={url} openGraph={{ url, title }} />
       <Container>
-        <Box py={5}>
+        <Box pb={5} pt={2}>
           <Heading as="h1" fontSize="5xl" letterSpacing="tight" my={5}>
             About Me.
           </Heading>

@@ -25,7 +25,7 @@ export default function Error() {
       />
 
       <Container>
-        <Box py={5}>
+        <Box pb={5} pt={2}>
           <Heading
             letterSpacing="tight"
             mb={4}
