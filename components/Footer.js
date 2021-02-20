@@ -45,7 +45,7 @@ const Footer = () => {
             variant="ghost"
           />
         </Link>
-        <Link href="mailto:hello@opakholis.me" isExternal>
+        <Link href="mailto:hi@opakholis.me" isExternal>
           <IconButton
             aria-label="Email"
             icon={<MailIcon boxSize={5} />}
