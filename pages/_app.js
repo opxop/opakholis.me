@@ -9,6 +9,7 @@ import MDXComponents from '@/components/MDXComponents';
 import { MDXProvider } from '@mdx-js/react';
 import { prismDarkTheme, prismLightTheme } from '@/styles/prism';
 import 'focus-visible/dist/focus-visible';
+import Fonts from '@/styles/font-face';
 
 const GlobalStyle = ({ children }) => {
   const { colorMode } = useColorMode();
@@ -42,6 +43,7 @@ const GlobalStyle = ({ children }) => {
 const App = ({ Component, pageProps }) => {
   return (
     <ChakraProvider theme={themes}>
+      <Fonts />
       <MDXProvider components={MDXComponents}>
         <NextNprogress
           color="linear-gradient(to right, #7928CA, #FF0080)"
