@@ -5,13 +5,11 @@ import {
   Text,
   Link,
   Alert,
-  Stack,
   Image,
   Heading,
   useColorModeValue
 } from '@chakra-ui/react';
 
-import CardBook from '@/components/CardBook';
 import Zoom from 'react-medium-image-zoom';
 import 'react-medium-image-zoom/dist/styles.css';
 
@@ -156,19 +154,6 @@ const ImageZoom = (props) => {
   );
 };
 
-const Wrapper = (props) => {
-  return (
-    <Stack
-      direction={['column', 'row']}
-      wrap="wrap"
-      justifyContent="center"
-      alignItems="center"
-      mt={5}
-      {...props}
-    />
-  );
-};
-
 const MDXComponents = {
   h1: (props) => <DocsHeading as="h1" fontSize="4xl" {...props} />,
   h2: (props) => <DocsHeading as="h2" fontSize="3xl" {...props} />,
@@ -193,9 +178,7 @@ const MDXComponents = {
       borderRadius="md"
       {...props}
     />
-  ),
-  Wrapper,
-  CardBook
+  )
 };
 
 export { CustomLink };
