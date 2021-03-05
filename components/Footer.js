@@ -7,10 +7,10 @@ import {
 } from '@chakra-ui/react';
 
 import {
+  MailIcon,
   GithubIcon,
   TwitterIcon,
-  LinkedinIcon,
-  MailIcon
+  LinkedinIcon
 } from '@/styles/icons';
 
 const Footer = () => {

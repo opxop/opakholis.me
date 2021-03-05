@@ -1,7 +1,8 @@
+import { NextSeo } from 'next-seo';
+import { Box, Heading, Text, useColorModeValue } from '@chakra-ui/react';
+
 import Container from '@/components/Container';
 import { CustomLink } from '@/components/MDXComponents';
-import { Box, Heading, Text, useColorModeValue } from '@chakra-ui/react';
-import { NextSeo } from 'next-seo';
 
 const url = 'https://opakholis.me/contact';
 const title = 'Mari Ngobrol! — Opa Kholis Majid';

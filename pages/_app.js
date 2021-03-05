@@ -1,15 +1,17 @@
+import 'focus-visible/dist/focus-visible';
+
 import { ChakraProvider, useColorMode } from '@chakra-ui/react';
 import { Global, css } from '@emotion/react';
+import { MDXProvider } from '@mdx-js/react';
 import { DefaultSeo } from 'next-seo';
 import NextNprogress from 'nextjs-progressbar';
 
-import SEO from '../next-seo.config';
+import MDXComponents from '@/components/MDXComponents';
 import Fonts from '@/styles/font-face';
 import themes from '@/styles/theme';
-import MDXComponents from '@/components/MDXComponents';
-import { MDXProvider } from '@mdx-js/react';
 import { prismDarkTheme, prismLightTheme } from '@/styles/prism';
-import 'focus-visible/dist/focus-visible';
+
+import SEO from '../next-seo.config';
 
 const GlobalStyle = ({ children }) => {
   const { colorMode } = useColorMode();

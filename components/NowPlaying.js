@@ -6,8 +6,8 @@ import {
   Image,
   Stack,
   Skeleton,
-  useColorModeValue,
-  SkeletonText
+  SkeletonText,
+  useColorModeValue
 } from '@chakra-ui/react';
 
 import fetcher from '@/lib/fetcher';
