@@ -1,8 +1,14 @@
 import Container from '@/components/Container';
 import ProjectCard from '@/components/ProjectCard';
 import Timeline from '@/components/Timeline';
-import {ReactIcon} from '@/styles/icons';
-import {Box, Button, Heading, Text, useColorModeValue} from '@chakra-ui/react';
+import { ReactIcon } from '@/styles/icons';
+import {
+  Box,
+  Button,
+  Heading,
+  Text,
+  useColorModeValue
+} from '@chakra-ui/react';
 import Link from 'next/link';
 
 const Index = () => {
