@@ -17,8 +17,9 @@ import { Search2Icon } from '@chakra-ui/icons';
 import { getAllFilesFrontMatter } from 'lib/mdx';
 
 const url = 'https://opakholis.me/blog';
-const title = 'Blog - Opa Kholis Majid';
-const description = 'Thoughts on the programming, tech, and my personal life.';
+const title = 'Tulisan Opa Kholis Majid';
+const description =
+  'Halaman ini berisi tulisan, opini dan juga merupakan dokumentasi untuk saya pribadi ketika sedang belajar atau membagikan sesuatu.';
 
 export default function Blog({ posts }) {
   const secondaryText = useColorModeValue('gray.700', 'gray.400');
@@ -50,7 +51,7 @@ export default function Blog({ posts }) {
       <Container>
         <Box pb={5} pt={2}>
           <Heading as="h1" fontSize="5xl" letterSpacing="tight" my={5}>
-            Blog.
+            Tulisan.
           </Heading>
           <Text color={secondaryText} lineHeight="tall">
             Halaman ini berisi tulisan, opini dan juga merupakan dokumentasi

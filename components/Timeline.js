@@ -46,12 +46,12 @@ const FullTimeLine = () => (
       2019
     </Heading>
     <List>
-      <TimelineStep title="3rd Place at Diskominfo Karawang Competition 🏅">
+      <TimelineStep title="Juara III Kompetisi Diskominfo Karawang 🏅">
         Berkolaborasi dengan tim sebagai Frontend developer. Menciptakan sebuah
         inovasi baru dengan membangun sebuah sistem "Smart City" berbasis
         website.
       </TimelineStep>
-      <TimelineStep title="Got BNSP Certified 🎉">
+      <TimelineStep title="Partisipan Sertifikasi BNSP 🎉">
         Sebagai Web developer
       </TimelineStep>
     </List>
@@ -64,18 +64,20 @@ const Timeline = () => {
   return (
     <Box py={5}>
       <Heading as="h2" fontSize="4xl" letterSpacing="tight" mb={2}>
-        Timeline
+        Linimasa
       </Heading>
       <Heading as="h3" fontSize="2xl" mb={4} letterSpacing="lighter">
         2020
       </Heading>
       <List>
-        <TimelineStep title="Landed First Internship 👨🏼‍💻">
-          Merupakan 3 bulan yang sangat berharga. Bersama orang-orang hebat
-          di&nbsp;<CustomLink href="http://jiwalu.id">Jiwalu Studio</CustomLink>
+        <TimelineStep title="Magang Pertama 👨🏼‍💻">
+          Mengembangkan aplikasi ERP bersama orang-orang hebat di&nbsp;
+          <CustomLink href="http://jiwalu.id">Jiwalu Studio</CustomLink> dan
+          belajar banyak hal yang tidak saya dapatkan di bangku Perkuliahan.
         </TimelineStep>
-        <TimelineStep title="Fallin' in Love with Flutter 🎴">
-          Pada awalnya hanya sekedar mencoba-coba, hingga akhirnya jatuh cinta.
+        <TimelineStep title="Jatuh cinta pada Flutter 🎴">
+          Pada awalnya hanya sekedar mencoba-coba, hingga akhirnya kecanduan
+          mempelajarinya.
         </TimelineStep>
       </List>
       {isShowingFullTimeline ? (
@@ -90,7 +92,7 @@ const Timeline = () => {
           onClick={() => showFullTimeline(true)}
           rightIcon={<ChevronDownIcon />}
         >
-          See More
+          Selengkapnya
         </Button>
       )}
     </Box>
