@@ -1,5 +1,8 @@
 import { extendTheme } from '@chakra-ui/react';
 
+const systemFonts =
+  '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"';
+
 const theme = extendTheme({
   config: {
     initialColorMode: 'dark',
@@ -7,8 +10,10 @@ const theme = extendTheme({
   },
 
   fonts: {
-    heading: 'Inter',
-    body: 'Inter'
+    body: `Inter, ${systemFonts}`,
+    heading: `Inter, ${systemFonts}`,
+    mono:
+      'Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace, monospace'
   },
 
   fontWeights: {
