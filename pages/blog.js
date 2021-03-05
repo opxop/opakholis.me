@@ -1,19 +1,21 @@
-import BlogPost from '@/components/BlogPost';
-import Container from '@/components/Container';
-import { Search2Icon } from '@chakra-ui/icons';
+import { NextSeo } from 'next-seo';
+import { useState } from 'react';
 import {
   Box,
   Flex,
-  Heading,
+  Text,
   Input,
+  Heading,
   InputGroup,
   InputRightElement,
-  Text,
   useColorModeValue
 } from '@chakra-ui/react';
-import { getAllFilesFrontMatter } from 'lib/mdx';
-import { NextSeo } from 'next-seo';
-import { useState } from 'react';
+
+import { Search2Icon } from '@chakra-ui/icons';
+
+import { getAllFilesFrontMatter } from '@/lib/mdx';
+import BlogPost from '@/components/BlogPost';
+import Container from '@/components/Container';
 
 const url = 'https://opakholis.me/blog';
 const title = 'Tulisan Opa Kholis Majid';

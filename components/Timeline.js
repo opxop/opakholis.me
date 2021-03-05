@@ -1,18 +1,18 @@
-import { CheckIcon } from '@/styles/icons';
-import { ChevronDownIcon } from '@chakra-ui/icons';
+import { useState } from 'react';
 import {
   Box,
+  Flex,
+  List,
+  Text,
+  Stack,
   Button,
   Divider,
-  Flex,
   Heading,
-  List,
   ListItem,
-  Stack,
-  Text,
   useColorModeValue
 } from '@chakra-ui/react';
-import { useState } from 'react';
+import { ChevronDownIcon } from '@chakra-ui/icons';
+import { CheckIcon } from '@/styles/icons';
 
 import { CustomLink } from './MDXComponents';
 

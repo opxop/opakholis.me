@@ -1,15 +1,17 @@
+import Link from 'next/link';
+import {
+  Box,
+  Text,
+  Button,
+  Heading,
+  useColorModeValue
+} from '@chakra-ui/react';
+
 import Container from '@/components/Container';
 import ProjectCard from '@/components/ProjectCard';
 import Timeline from '@/components/Timeline';
+
 import { ReactIcon } from '@/styles/icons';
-import {
-  Box,
-  Button,
-  Heading,
-  Text,
-  useColorModeValue
-} from '@chakra-ui/react';
-import Link from 'next/link';
 
 const Index = () => {
   const secondaryText = useColorModeValue('gray.700', 'gray.400');
