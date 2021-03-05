@@ -1,11 +1,5 @@
 import { NextSeo } from 'next-seo';
-import {
-  Box,
-  Text,
-  Heading,
-  Divider,
-  useColorModeValue
-} from '@chakra-ui/react';
+import { Box, Text, Heading, useColorModeValue } from '@chakra-ui/react';
 
 import Container from '@/components/Container';
 import { CustomLink } from '@/components/MDXComponents';
@@ -48,7 +42,6 @@ export default function UsesLayout({ children }) {
         listed on&nbsp;
         <CustomLink href="https://uses.tech">uses.tech</CustomLink>"
       </Text>
-      <Divider orientation="horizontal" my={6} />
     </Container>
   );
 }

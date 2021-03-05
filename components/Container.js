@@ -4,6 +4,7 @@ import {
   Box,
   Flex,
   Button,
+  Divider,
   IconButton,
   useColorMode,
   useColorModeValue
@@ -42,40 +43,41 @@ const Container = ({ children }) => {
           onClick={toggleColorMode}
         />
         <Box>
-          <NextLink href="/blog" passHref>
-            <Button
-              as="a"
-              variant={pathname.startsWith('/blog') ? 'solid' : 'ghost'}
-              p={[2, 4]}
-              mx={1}
-            >
-              Blog
-            </Button>
-          </NextLink>
-          <NextLink href="/about" passHref>
-            <Button
-              as="a"
-              variant={pathname.startsWith('/about') ? 'solid' : 'ghost'}
-              p={[2, 4]}
-              mx={1}
-            >
-              About
-            </Button>
-          </NextLink>
           <NextLink href="/" passHref>
             <Button
               as="a"
               variant={pathname === '/' ? 'solid' : 'ghost'}
-              p={[2, 4]}
-              mx={1}
+              px={[2, 3]}
+              mr={1}
             >
               Home
+            </Button>
+          </NextLink>
+
+          <NextLink href="/about" passHref>
+            <Button
+              as="a"
+              variant={pathname.startsWith('/about') ? 'solid' : 'ghost'}
+              px={[2, 3]}
+              mr={1}
+            >
+              About
+            </Button>
+          </NextLink>
+          <NextLink href="/blog" passHref>
+            <Button
+              as="a"
+              variant={pathname.startsWith('/blog') ? 'solid' : 'ghost'}
+              px={[2, 3]}
+            >
+              Blog
             </Button>
           </NextLink>
         </Box>
       </Flex>
       <Box as="main" maxW="768px" w="100%" px={8} mx="auto">
         {children}
+        <Divider orientation="horizontal" my={8} />
         <NowPlaying />
       </Box>
       <Footer />

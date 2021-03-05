@@ -1,12 +1,5 @@
 import { parseISO, format } from 'date-fns';
-import {
-  Box,
-  Text,
-  Badge,
-  Divider,
-  Heading,
-  useColorModeValue
-} from '@chakra-ui/react';
+import { Box, Text, Badge, Heading, useColorModeValue } from '@chakra-ui/react';
 
 import BlogSeo from '@/components/BlogSeo';
 import Container from '@/components/Container';
@@ -54,7 +47,6 @@ export default function BlogLayout({ children, frontMatter }) {
         </Box>
       )}
       {children}
-      <Divider orientation="horizontal" mt={12} mb={6} />
     </Container>
   );
 }
