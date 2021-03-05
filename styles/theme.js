@@ -8,14 +8,12 @@ const theme = extendTheme({
     initialColorMode: 'dark',
     useSystemColorMode: false
   },
-
   fonts: {
     body: `Inter, ${systemFonts}`,
     heading: `Inter, ${systemFonts}`,
     mono:
       'Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace, monospace'
   },
-
   fontWeights: {
     normal: 400,
     medium: 600,
