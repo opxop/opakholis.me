@@ -1,3 +1,4 @@
+import NextLink from 'next/link';
 import {
   Box,
   Kbd,
