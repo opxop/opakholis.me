@@ -1,60 +1,53 @@
-import { useState } from 'react';
-import { NextSeo } from 'next-seo';
-import {
-  Box,
-  Text,
-  Flex,
-  Input,
-  Heading,
-  InputGroup,
-  InputRightElement,
-  useColorModeValue
-} from '@chakra-ui/react';
-
 import BlogPost from '@/components/BlogPost';
 import Container from '@/components/Container';
-import { Search2Icon } from '@chakra-ui/icons';
-import { getAllFilesFrontMatter } from 'lib/mdx';
+import {Search2Icon} from '@chakra-ui/icons';
+import {
+  Box,
+  Flex,
+  Heading,
+  Input,
+  InputGroup,
+  InputRightElement,
+  Text,
+  useColorModeValue
+} from '@chakra-ui/react';
+import {getAllFilesFrontMatter} from 'lib/mdx';
+import {NextSeo} from 'next-seo';
+import {useState} from 'react';
 
 const url = 'https://opakholis.me/blog';
 const title = 'Tulisan Opa Kholis Majid';
 const description =
-  'Halaman ini berisi tulisan, opini dan juga merupakan dokumentasi untuk saya pribadi ketika sedang belajar atau membagikan sesuatu.';
+    'Halaman ini berisi tulisan, opini dan juga merupakan dokumentasi untuk saya pribadi ketika sedang belajar atau membagikan sesuatu.';
 
-export default function Blog({ posts }) {
+export default function Blog({posts}) {
   const secondaryText = useColorModeValue('gray.700', 'gray.400');
   const [searchValue, setSearchValue] = useState('');
-  const filteredBlogPosts = posts
-    .sort(
-      (a, b) =>
-        Number(new Date(b.publishedAt)) - Number(new Date(a.publishedAt))
-    )
-    .filter(
-      (frontMatter) =>
-        frontMatter.title.toLowerCase().includes(searchValue.toLowerCase()) ||
-        frontMatter.summary.toLowerCase().includes(searchValue.toLowerCase())
-    );
+  const filteredBlogPosts =
+      posts
+          .sort((a, b) => Number(new Date(b.publishedAt)) -
+                          Number(new Date(a.publishedAt)))
+          .filter((frontMatter) => frontMatter.title.toLowerCase().includes(
+                                       searchValue.toLowerCase()) ||
+                                   frontMatter.summary.toLowerCase().includes(
+                                       searchValue.toLowerCase()));
 
   return (
     <>
       <NextSeo
-        title={title}
-        description={description}
-        canonical={url}
-        openGraph={{
-          url,
-          title,
-          description
-        }}
-      />
+  title = {title} description = {description} canonical = {url} openGraph =
+  {
+    { url, title, description }
+  } />
 
       <Container>
         <Box pb={5} pt={2}>
           <Heading as="h1" fontSize="5xl" letterSpacing="tight" my={5}>
             Tulisan.
-          </Heading>
-          <Text color={secondaryText} lineHeight="tall">
-            Halaman ini berisi tulisan, opini dan juga merupakan dokumentasi
+          </Heading >
+      <Text color = {secondaryText} lineHeight = "tall">Halaman ini berisi
+          tulisan,
+  opini dan juga merupakan dokumentasi
             untuk saya pribadi ketika sedang belajar atau membagikan sesuatu.
             Enjoy your reading!
           </Text>
@@ -89,5 +82,5 @@ export default function Blog({ posts }) {
 export async function getStaticProps() {
   const posts = await getAllFilesFrontMatter('blog');
 
-  return { props: { posts } };
+  return {props : {posts}};
 }

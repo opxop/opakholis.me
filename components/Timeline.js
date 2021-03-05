@@ -1,26 +1,27 @@
-import { useState } from 'react';
+import {CheckIcon} from '@/styles/icons';
+import {ChevronDownIcon} from '@chakra-ui/icons';
 import {
   Box,
-  Flex,
-  List,
-  Text,
-  Stack,
   Button,
   Divider,
+  Flex,
   Heading,
+  List,
   ListItem,
+  Stack,
+  Text,
   useColorModeValue
 } from '@chakra-ui/react';
-import { ChevronDownIcon } from '@chakra-ui/icons';
-import { CheckIcon } from '@/styles/icons';
-import { CustomLink } from './MDXComponents';
+import {useState} from 'react';
+
+import {CustomLink} from './MDXComponents';
 
 const YearDivider = () => {
   const border = useColorModeValue('gray.200', 'gray.600');
-  return <Divider borderColor={border} my={5} w="100%" />;
+  return <Divider borderColor = {border} my = {5} w = "100%" />;
 };
 
-const TimelineStep = ({ title, children }) => {
+const TimelineStep = ({title, children}) => {
   const secondaryText = useColorModeValue('gray.700', 'gray.400');
   return (
     <ListItem>
@@ -84,11 +85,10 @@ const Timeline = () => {
         <FullTimeLine />
       ) : (
         <Button
-          display="block"
-          my={4}
-          mx="auto"
-          fontWeight="medium"
-          variant="ghost"
+          display = "block"
+          my = {4} mx = "auto"
+          fontWeight = "medium"
+          variant = "ghost"
           onClick={() => showFullTimeline(true)}
           rightIcon={<ChevronDownIcon />}
         >
