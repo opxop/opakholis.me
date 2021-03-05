@@ -1,6 +1,6 @@
-const title = 'Opa Kholis Majid – Frontend developer.';
+const title = 'Opa Kholis Majid — Frontend developer.';
 const description =
-  'A frontend developer based in Indonesia who enjoys building & exploring amazing stuff on web.';
+  'Seseorang yang menyebut dirinya sebagai Frontend developer—yang mana sekarang sedang senang ber-eksplorasi dengan Linux distribution dan Open-source Software.';
 
 const SEO = {
   title,
