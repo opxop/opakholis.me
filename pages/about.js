@@ -1,8 +1,7 @@
-import { NextSeo } from 'next-seo';
-import { Text, Heading, Box, useColorModeValue } from '@chakra-ui/react';
-
 import Container from '@/components/Container';
 import { CustomLink } from '@/components/MDXComponents';
+import { Box, Heading, Text, useColorModeValue } from '@chakra-ui/react';
+import { NextSeo } from 'next-seo';
 
 const url = 'https://opakholis.me/about';
 const title = 'Tentang Opa Kholis Majid';
@@ -28,23 +27,28 @@ const About = () => {
             </Text>
             <Text color={secondaryText} lineHeight="tall" py={3}>
               Terlepas dari OSS, ketertarikan utama saya adalah segala sesuatu
-              yang berhubungan dengan <s>ngodomf</s> pemrograman dan
-              pengembangan perangkat lunak. Saat ini saya menggunakan NodeJs dan
-              library React sebagai stack utama, kadang juga khilaf pada mobile
+              yang berhubungan dengan<s>ngodomf</s> pemrograman dan pengembangan
+              perangkat lunak. Saat ini saya menggunakan NodeJs dan library
+              React sebagai stack utama, kadang juga khilaf pada mobile
               development dengan menggunakan Framework Flutter. ~ehhe.
             </Text>
             <Text color={secondaryText} lineHeight="tall" py={3}>
               Sebagaimana pada manusia umumnya, saya tidak sepenuhnya
-              mengahabiskan waktu di depan teks editor. selain ngoding saya juga
+              mengahabiskan waktu di depan teks editor.selain ngoding saya juga
               suka membaca buku, mendengarkan musik, menonton film
               jejepangan—anime dan dorama.
             </Text>
 
             <Text color={secondaryText} lineHeight="tall" py={3}>
               Jangan sungkan untuk&nbsp;
-              <CustomLink href="/contact">menyapa saya</CustomLink> khususnya
-              melalui surat elektronik, karena saya senang berkomunikasi dan
-              khususnya berkenalan dengan orang baru.
+              <CustomLink
+                href="/contact
+      "
+              >
+                menyapa saya
+              </CustomLink>{' '}
+              khususnya melalui surat elektronik, karena saya senang
+              berkomunikasi dan khususnya berkenalan dengan orang baru.
             </Text>
 
             <Text color={secondaryText} lineHeight="tall" py={3}>

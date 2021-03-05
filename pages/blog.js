@@ -1,20 +1,19 @@
-import { useState } from 'react';
-import { NextSeo } from 'next-seo';
-import {
-  Box,
-  Text,
-  Flex,
-  Input,
-  Heading,
-  InputGroup,
-  InputRightElement,
-  useColorModeValue
-} from '@chakra-ui/react';
-
 import BlogPost from '@/components/BlogPost';
 import Container from '@/components/Container';
 import { Search2Icon } from '@chakra-ui/icons';
+import {
+  Box,
+  Flex,
+  Heading,
+  Input,
+  InputGroup,
+  InputRightElement,
+  Text,
+  useColorModeValue
+} from '@chakra-ui/react';
 import { getAllFilesFrontMatter } from 'lib/mdx';
+import { NextSeo } from 'next-seo';
+import { useState } from 'react';
 
 const url = 'https://opakholis.me/blog';
 const title = 'Tulisan Opa Kholis Majid';
@@ -41,11 +40,7 @@ export default function Blog({ posts }) {
         title={title}
         description={description}
         canonical={url}
-        openGraph={{
-          url,
-          title,
-          description
-        }}
+        openGraph={{ url, title, description }}
       />
 
       <Container>

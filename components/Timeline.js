@@ -1,18 +1,19 @@
-import { useState } from 'react';
+import { CheckIcon } from '@/styles/icons';
+import { ChevronDownIcon } from '@chakra-ui/icons';
 import {
   Box,
-  Flex,
-  List,
-  Text,
-  Stack,
   Button,
   Divider,
+  Flex,
   Heading,
+  List,
   ListItem,
+  Stack,
+  Text,
   useColorModeValue
 } from '@chakra-ui/react';
-import { ChevronDownIcon } from '@chakra-ui/icons';
-import { CheckIcon } from '@/styles/icons';
+import { useState } from 'react';
+
 import { CustomLink } from './MDXComponents';
 
 const YearDivider = () => {
