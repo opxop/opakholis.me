@@ -25,7 +25,7 @@ const About = () => {
             </Text>
             <Text color={secondaryText} lineHeight="tall" my={4}>
               Jika kamu ingin berkomunikasi dengan saya, saya cukup aktif di{' '}
-              <CustomLink href="https://t.me/hi_pluie/">Telegram</CustomLink>.
+              <CustomLink href="https://t.me/opakholis/">Telegram</CustomLink>.
               Bisa juga berkirim pesan lewat surat elektronik saya di{' '}
               <CustomLink href="mailto:hi@opakholis.me">
                 hi@opakholis.me.

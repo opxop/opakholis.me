@@ -6,12 +6,7 @@ import {
   useColorModeValue
 } from '@chakra-ui/react';
 
-import {
-  MailIcon,
-  GithubIcon,
-  TwitterIcon,
-  LinkedinIcon
-} from '@/styles/icons';
+import { MailIcon, GithubIcon, TwitterIcon } from '@/styles/icons';
 
 const Footer = () => {
   const secondaryText = useColorModeValue('gray.700', 'gray.400');
@@ -31,15 +26,6 @@ const Footer = () => {
           <IconButton
             aria-label="Github"
             icon={<GithubIcon boxSize={5} />}
-            size="lg"
-            color="gray.500"
-            variant="ghost"
-          />
-        </Link>
-        <Link href="https://www.linkedin.com/in/opakholis" isExternal>
-          <IconButton
-            aria-label="LinkedIn"
-            icon={<LinkedinIcon boxSize={5} />}
             size="lg"
             color="gray.500"
             variant="ghost"
