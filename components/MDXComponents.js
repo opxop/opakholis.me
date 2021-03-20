@@ -1,7 +1,4 @@
-import 'react-medium-image-zoom/dist/styles.css';
-
 import NextLink from 'next/link';
-import Zoom from 'react-medium-image-zoom';
 import {
   Box,
   Kbd,
