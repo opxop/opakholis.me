@@ -125,33 +125,9 @@ const Tick = () => {
   );
 };
 
-const ImageZoom = (props) => {
-  const overlayBgColorStart = useColorModeValue(
-    'rgba(255, 255, 255, 0.1)',
-    'rgba(23, 25, 35, 0.1)'
-  );
-  const overlayBgColorEnd = useColorModeValue(
-    'rgba(255, 255, 255, 0.95)',
-    'rgba(23, 25, 35, 0.95)'
-  );
-
+const Img = (props) => {
   return (
-    <Zoom
-      overlayBgColorStart={overlayBgColorStart}
-      overlayBgColorEnd={overlayBgColorEnd}
-      zoomMargin={50}
-    >
-      <Image
-        w={1200}
-        h={[165, 250, 300]}
-        objectFit="cover"
-        rounded="sm"
-        {...props}
-        src={props.src}
-        alt={props.alt}
-        fallbackSrc={props.src}
-      />
-    </Zoom>
+    <Image {...props} src={props.src} alt={props.alt} fallbackSrc={props.src} />
   );
 };
 
@@ -166,7 +142,7 @@ const MDXComponents = {
   ul: (props) => <Box as="ul" pt={2} pl={4} ml={2} {...props} />,
   li: (props) => <Box as="li" pb={1} {...props} />,
   br: (props) => <Box height="24px" {...props} />,
-  img: ImageZoom,
+  img: Img,
   a: CustomLink,
   blockquote: Quote,
   kbd: Kbd,
