@@ -32,9 +32,8 @@ export default function AdviceMe() {
             Pesan untuk Opa.
           </Heading>
           <Text color={secondaryText} lineHeight="tall">
-            Tinggalkan pesan apa saja yang menurut kamu pantas - keluh kesah,
-            pendapat, informasi, atau bahkan nasihat untuk{' '}
-            <b>Opa Kholis Majid</b>.
+            Halaman ini dibuat untuk menampung segala keluh kesah, pendapat,
+            informasi, atau bahkan nasihat untuk <b>Opa Kholis Majid</b>.
           </Text>
           <AdviceForm />
           {data ? (

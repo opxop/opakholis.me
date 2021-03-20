@@ -49,19 +49,10 @@ export default function AdviceForm() {
 
   return (
     <Box p={6} my={6} bgColor="blackAlpha.50" borderWidth="1px" rounded="md">
-      <Heading fontSize="2xl">Bergabung</Heading>
-      <Text my={2}>
-        Tidak hanya untuk opa, pesan Kamu juga akan terlihat oleh pengunjung
-        lain.
-      </Text>
-
+      <Heading fontSize="2xl">👏 Surprise me!</Heading>
+      <Text my={2}>Tinggalkan pesan apa saja yang menurut kamu pantas.</Text>
       {auth.user ? (
-        <InputGroup
-          as="form"
-          size="md"
-          mt={6}
-          onSubmit={handleSubmit(onSubmit)}
-        >
+        <InputGroup as="form" mt={4} onSubmit={handleSubmit(onSubmit)}>
           <Input
             name="text"
             type="text"
@@ -77,7 +68,7 @@ export default function AdviceForm() {
           </InputRightElement>
         </InputGroup>
       ) : (
-        <Flex alignItems="center" flexDirection={['column', 'row']}>
+        <Flex flexDirection={['column', 'row']} justifyContent="start">
           <Button
             m={2}
             onClick={(e) => auth.signinWithGithub()}
