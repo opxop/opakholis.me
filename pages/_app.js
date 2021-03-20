@@ -6,6 +6,8 @@ import { MDXProvider } from '@mdx-js/react';
 import { DefaultSeo } from 'next-seo';
 import NextNprogress from 'nextjs-progressbar';
 
+import { AuthProvider } from '@/lib/firebase/auth';
+
 import MDXComponents from '@/components/MDXComponents';
 import Fonts from '@/styles/font-face';
 import themes from '@/styles/theme';
@@ -44,18 +46,20 @@ const GlobalStyle = ({ children }) => {
 const App = ({ Component, pageProps }) => {
   return (
     <ChakraProvider theme={themes}>
-      <Fonts />
-      <MDXProvider components={MDXComponents}>
+      <AuthProvider>
+        <Fonts />
         <NextNprogress
           color="linear-gradient(to right, #7928CA, #FF0080)"
           startPosition={0.3}
           stopDelayMs={200}
           height="4"
         />
-        <GlobalStyle />
-        <DefaultSeo {...SEO} />
-        <Component {...pageProps} />
-      </MDXProvider>
+        <MDXProvider components={MDXComponents}>
+          <GlobalStyle />
+          <DefaultSeo {...SEO} />
+          <Component {...pageProps} />
+        </MDXProvider>
+      </AuthProvider>
     </ChakraProvider>
   );
 };
