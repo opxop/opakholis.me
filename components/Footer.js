@@ -49,6 +49,9 @@ const Footer = () => {
         <Link mx={2} color={secondaryText} href="/now">
           /now
         </Link>
+        <Link mx={2} color={secondaryText} href="/advice">
+          /advice
+        </Link>
       </Flex>
     </Box>
   );
