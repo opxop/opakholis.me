@@ -2,15 +2,14 @@ import { useForm } from 'react-hook-form';
 import { mutate } from 'swr';
 import {
   Box,
-  Button,
-  Divider,
   Flex,
-  Heading,
-  Input,
-  InputGroup,
-  InputRightElement,
   Text,
-  useToast
+  Input,
+  Button,
+  Heading,
+  useToast,
+  InputGroup,
+  InputRightElement
 } from '@chakra-ui/react';
 
 import { useAuth } from '@/lib/firebase/auth';
@@ -77,7 +76,6 @@ export default function AdviceForm() {
             <GithubIcon mr={2} />
             Login dengan Github
           </Button>
-          <Divider orientation="vertical" />
           <Button
             m={2}
             onClick={(e) => auth.signinWithGoogle()}

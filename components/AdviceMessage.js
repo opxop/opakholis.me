@@ -8,7 +8,7 @@ export default function AdviceMessage({ advices }) {
         <Box key={advice.createdAt} py={2}>
           <Text my={1}>{advice.text}</Text>
           <Text fontSize="small" color="gray.400">
-            {format(parseISO(advice.createdAt), 'PPpp')}
+            {format(parseISO(advice.createdAt), 'PP • p')}
           </Text>
         </Box>
       ))}
