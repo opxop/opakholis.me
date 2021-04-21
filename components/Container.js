@@ -14,9 +14,8 @@ import { MoonIcon, SunIcon } from '@chakra-ui/icons';
 import Footer from './Footer';
 import NowPlaying from './NowPlaying';
 
-const Container = ({ children }) => {
+export default function Container({ children }) {
   const { pathname } = useRouter();
-
   const { colorMode, toggleColorMode } = useColorMode();
   const backgroundNavbar = useColorModeValue('white', 'gray.900');
 
@@ -47,7 +46,7 @@ const Container = ({ children }) => {
             <Button
               as="a"
               variant={pathname === '/' ? 'solid' : 'ghost'}
-              px={[2, 3]}
+              px={[4, 5]}
               mr={1}
             >
               Home
@@ -58,7 +57,7 @@ const Container = ({ children }) => {
             <Button
               as="a"
               variant={pathname.startsWith('/about') ? 'solid' : 'ghost'}
-              px={[2, 3]}
+              px={[4, 5]}
               mr={1}
             >
               About
@@ -68,7 +67,7 @@ const Container = ({ children }) => {
             <Button
               as="a"
               variant={pathname.startsWith('/blog') ? 'solid' : 'ghost'}
-              px={[2, 3]}
+              px={[4, 5]}
             >
               Blog
             </Button>
@@ -83,6 +82,4 @@ const Container = ({ children }) => {
       <Footer />
     </>
   );
-};
-
-export default Container;
+}
