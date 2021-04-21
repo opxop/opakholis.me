@@ -7,7 +7,7 @@ import { CustomLink } from '@/components/MDXComponents';
 const url = 'https://opakholis.me/contact';
 const title = 'Mari Ngobrol! — Opa Kholis Majid';
 
-const About = () => {
+export default function About() {
   const secondaryText = useColorModeValue('gray.700', 'gray.400');
   return (
     <>
@@ -36,6 +36,4 @@ const About = () => {
       </Container>
     </>
   );
-};
-
-export default About;
+}

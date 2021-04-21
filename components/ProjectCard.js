@@ -8,29 +8,21 @@ import {
   useColorModeValue
 } from '@chakra-ui/react';
 
-const ProjectCard = ({ title, description, href, children }) => {
+export default function ProjectCard({ title, description, href, children }) {
   const secondaryText = useColorModeValue('gray.700', 'gray.400');
   const borderCard = useColorModeValue('gray.200', 'gray.600');
   const backgroundCard = useColorModeValue('gray.100', 'gray.800');
 
   return (
     <Box my={5}>
-      <Link
-        href={href}
-        _hover={{
-          textDecoration: 'none'
-        }}
-        isExternal
-      >
+      <Link href={href} isExternal _hover={{ textDecoration: 'none' }}>
         <Flex
           align="center"
           border="1px solid"
           borderColor={borderCard}
           borderRadius={4}
           transition=".5s ease-in-out"
-          _hover={{
-            background: `${backgroundCard}`
-          }}
+          _hover={{ background: `${backgroundCard}` }}
           p={4}
         >
           {children}
@@ -46,6 +38,4 @@ const ProjectCard = ({ title, description, href, children }) => {
       </Link>
     </Box>
   );
-};
-
-export default ProjectCard;
+}
