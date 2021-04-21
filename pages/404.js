@@ -1,4 +1,4 @@
-import NextLink from 'next/link';
+import Link from 'next/link';
 import { NextSeo } from 'next-seo';
 import {
   Box,
@@ -41,11 +41,11 @@ export default function Error() {
             check that URL?
           </Text>
           <Flex mt={2} mb={6} justifyContent="center">
-            <NextLink href="/" passHref>
+            <Link href="/" passHref>
               <Button as="a" p={[5, 6]} fontWeight="bold">
                 Kembali ke Home
               </Button>
-            </NextLink>
+            </Link>
           </Flex>
         </Box>
       </Container>

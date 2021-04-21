@@ -1,7 +1,7 @@
+import Link from 'next/link';
 import {
-  Box,
-  Link,
   VStack,
+  HStack,
   IconButton,
   useColorModeValue
 } from '@chakra-ui/react';
@@ -13,7 +13,7 @@ export default function Footer() {
 
   return (
     <VStack as="footer" mb={5} mt={2} spacing={0}>
-      <Box>
+      <HStack spacing={1}>
         <Icon
           href="https://twitter.com/opakholis"
           ariaLabel="Twitter"
@@ -29,19 +29,19 @@ export default function Footer() {
           ariaLabel="Email"
           icon={<MailIcon boxSize={5} />}
         />
-      </Box>
+      </HStack>
 
-      <Box>
-        <Link mx={2} color={secondaryText} href="/uses">
-          /uses
+      <HStack spacing={3} color={secondaryText}>
+        <Link href="/uses">
+          <a>/uses</a>
         </Link>
-        <Link mx={2} color={secondaryText} href="/now">
-          /now
+        <Link href="/now">
+          <a>/now</a>
         </Link>
-        <Link mx={2} color={secondaryText} href="/advice">
-          /advice
+        <Link href="/advice">
+          <a>/advice</a>
         </Link>
-      </Box>
+      </HStack>
     </VStack>
   );
 }

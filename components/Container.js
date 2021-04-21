@@ -1,4 +1,4 @@
-import NextLink from 'next/link';
+import Link from 'next/link';
 import { useRouter } from 'next/router';
 import {
   Box,
@@ -42,36 +42,39 @@ export default function Container({ children }) {
           onClick={toggleColorMode}
         />
         <Box>
-          <NextLink href="/" passHref>
+          <Link href="/">
             <Button
               as="a"
+              cursor="pointer"
               variant={pathname === '/' ? 'solid' : 'ghost'}
               px={[4, 5]}
               mr={1}
             >
               Home
             </Button>
-          </NextLink>
+          </Link>
 
-          <NextLink href="/about" passHref>
+          <Link href="/about">
             <Button
               as="a"
+              cursor="pointer"
               variant={pathname.startsWith('/about') ? 'solid' : 'ghost'}
               px={[4, 5]}
               mr={1}
             >
               About
             </Button>
-          </NextLink>
-          <NextLink href="/blog" passHref>
+          </Link>
+          <Link href="/blog">
             <Button
               as="a"
+              cursor="pointer"
               variant={pathname.startsWith('/blog') ? 'solid' : 'ghost'}
               px={[4, 5]}
             >
               Blog
             </Button>
-          </NextLink>
+          </Link>
         </Box>
       </Flex>
       <Box as="main" maxW="768px" w="100%" px={8} mx="auto">
