@@ -31,7 +31,6 @@ const CustomLink = (props) => {
       </NextLink>
     );
   }
-
   return (
     <Link
       textDecor="underline"
@@ -46,6 +45,7 @@ const CustomLink = (props) => {
     />
   );
 };
+
 const DocsHeading = (props) => (
   <Heading
     css={{
