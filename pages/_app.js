@@ -36,6 +36,9 @@ const GlobalStyle = ({ children }) => {
             min-height: 100vh;
             background: ${colorMode === 'light' ? 'white' : '#171923'};
           }
+          .next__image {
+            border-radius: 6px;
+          }
         `}
       />
       {children}

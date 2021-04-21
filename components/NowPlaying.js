@@ -1,9 +1,9 @@
+import Image from 'next/image';
 import useSWR from 'swr';
 import {
   Box,
   Link,
   Text,
-  Image,
   Stack,
   Skeleton,
   SkeletonText,
@@ -29,12 +29,13 @@ const NowPlaying = () => {
         p={2}
         w="300px"
       >
-        <Skeleton isLoaded={data}>
+        <Skeleton isLoaded={data} h="60px" w="60px" rounded={6}>
           <Image
             alt="Spotify"
-            height="60px"
-            width="60px"
-            borderRadius={6}
+            height={60}
+            width={60}
+            objectFit="cover"
+            className="next__image"
             src={data?.albumImageUrl || '/static/images/placeholder.jpg'}
           />
         </Skeleton>
@@ -42,7 +43,7 @@ const NowPlaying = () => {
           isLoaded={data}
           noOfLines={2}
           spacing={4}
-          ml={4}
+          ml={2}
           w="160px"
         >
           <Stack

@@ -1,4 +1,5 @@
 import NextLink from 'next/link';
+import Image from 'next/image';
 import {
   Box,
   Kbd,
@@ -6,7 +7,6 @@ import {
   Text,
   Link,
   Alert,
-  Image,
   Heading,
   useColorModeValue
 } from '@chakra-ui/react';
@@ -74,7 +74,7 @@ const DocsHeading = (props) => (
         <Box
           aria-label="anchor"
           as="a"
-          color="blue.500"
+          color="#7928CA"
           fontWeight="normal"
           outline="none"
           _focus={{
@@ -122,12 +122,6 @@ const Tick = () => {
   );
 };
 
-const Img = (props) => {
-  return (
-    <Image {...props} src={props.src} alt={props.alt} fallbackSrc={props.src} />
-  );
-};
-
 const MDXComponents = {
   h1: (props) => <DocsHeading as="h1" fontSize="4xl" {...props} />,
   h2: (props) => <DocsHeading as="h2" fontSize="3xl" {...props} />,
@@ -139,7 +133,7 @@ const MDXComponents = {
   ul: (props) => <Box as="ul" pt={2} pl={4} ml={2} {...props} />,
   li: (props) => <Box as="li" pb={1} {...props} />,
   br: (props) => <Box height="24px" {...props} />,
-  img: Img,
+  Image,
   a: CustomLink,
   blockquote: Quote,
   kbd: Kbd,
