@@ -1125,7 +1125,7 @@
   dependencies:
     "@chakra-ui/utils" "1.6.0"
 
-"@chakra-ui/icons@^1.0.8":
+"@chakra-ui/icons@^1.0.11":
   version "1.0.11"
   resolved "https://registry.yarnpkg.com/@chakra-ui/icons/-/icons-1.0.11.tgz#9cc1eda007c8296160b70a9e4299bb67ff34be7f"
   integrity sha512-ALnrGxpHceY8u05q1YqGVZM3jdC8CEBrWH59RVfExj5Uqf0AHfty5vhiOmFEAhF5vyhXTqkwRURiu2DebIDcyQ==
@@ -1284,7 +1284,7 @@
   dependencies:
     "@chakra-ui/utils" "^1.5.1"
 
-"@chakra-ui/react@^1.4.2":
+"@chakra-ui/react@^1.5.2":
   version "1.5.2"
   resolved "https://registry.yarnpkg.com/@chakra-ui/react/-/react-1.5.2.tgz#559312b16022ed2435631facf39500e76ea56a29"
   integrity sha512-/n4HVYiM+QCPjaApz/OmKmPXE4YakuY5dsVfcbXNZrHVGm83bjz1d9Uhg+yvvE061SEK17iNkz2T3PHEJEk96A==
@@ -4476,7 +4476,7 @@ next-seo@^4.15.0:
   resolved "https://registry.yarnpkg.com/next-seo/-/next-seo-4.24.0.tgz#7c0447da00b8574dcda5c6979771a7f6efd24f55"
   integrity sha512-9VQXfXAelhE+hAWzJ4azigQaW3FPX0kU0eYKFQXKsQjgY7AWtukjRGXls0oSIk8khhDJwmCt46EwsO9n5DDW6Q==
 
-next@^10.1.2:
+next@^10.1.3:
   version "10.1.3"
   resolved "https://registry.yarnpkg.com/next/-/next-10.1.3.tgz#e26e8371343a42bc2ba9be5cb253a7d324d03673"
   integrity sha512-8Jf38F+s0YcXXkJGF5iUxOqSmbHrey0fX5Epc43L0uwDKmN2jK9vhc2ihCwXC1pmu8d2m/8wfTiXRJKGti55yw==
@@ -4532,10 +4532,10 @@ next@^10.1.2:
     vm-browserify "1.1.2"
     watchpack "2.1.1"
 
-nextjs-progressbar@^0.0.7:
-  version "0.0.7"
-  resolved "https://registry.yarnpkg.com/nextjs-progressbar/-/nextjs-progressbar-0.0.7.tgz#265ec3fa0127ed2fda0ae1f3f85c99d3673dd28e"
-  integrity sha512-SGV97ZbriOXxtKdBmugiPsV0YaFBOV4EuuCXrCGTt9O0UNiL75wbCJvMXk1rBa7KmgeBZojMZRPxnUFfI9lkZA==
+nextjs-progressbar@^0.0.9:
+  version "0.0.9"
+  resolved "https://registry.yarnpkg.com/nextjs-progressbar/-/nextjs-progressbar-0.0.9.tgz#ac0ae5734cde5806f6ffd6fbc18ac90178c4ba89"
+  integrity sha512-t7bsQOIE09lY25AL+zS3GMhSX4bCgdosuJ+1aG4EOpzHSAxY3zfY4PKncilWT5fdcbbyo/iM//KKN79psgpZXw==
   dependencies:
     nprogress "^0.2.0"
 
@@ -4980,14 +4980,14 @@ react-clientside-effect@^1.2.2:
   dependencies:
     "@babel/runtime" "^7.12.13"
 
-react-dom@17.0.1:
-  version "17.0.1"
-  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-17.0.1.tgz#1de2560474ec9f0e334285662ede52dbc5426fc6"
-  integrity sha512-6eV150oJZ9U2t9svnsspTMrWNyHc6chX0KzDeAOXftRa8bNeOKTTfCJ7KorIwenkHd2xqVTBTCZd79yk/lx/Ug==
+react-dom@^17.0.2:
+  version "17.0.2"
+  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-17.0.2.tgz#ecffb6845e3ad8dbfcdc498f0d0a939736502c23"
+  integrity sha512-s4h96KtLDUQlsENhMn1ar8t2bEa+q/YAtj8pPPdIjPDGBDIVNsrD9aXNWqspUe6AzKCIG0C1HZZLqLV7qpOBGA==
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
-    scheduler "^0.20.1"
+    scheduler "^0.20.2"
 
 react-fast-compare@3.2.0:
   version "3.2.0"
@@ -5049,10 +5049,10 @@ react-style-singleton@^2.1.0:
     invariant "^2.2.4"
     tslib "^1.0.0"
 
-react@17.0.1:
-  version "17.0.1"
-  resolved "https://registry.yarnpkg.com/react/-/react-17.0.1.tgz#6e0600416bd57574e3f86d92edba3d9008726127"
-  integrity sha512-lG9c9UuMHdcAexXtigOZLX8exLWkW0Ku29qPRU8uhF2R9BN96dLCt0psvzPLlHc5OWkgymP3qwTRgbnw5BKx3w==
+react@^17.0.2:
+  version "17.0.2"
+  resolved "https://registry.yarnpkg.com/react/-/react-17.0.2.tgz#d0b5cc516d29eb3eee383f75b62864cfb6800037"
+  integrity sha512-gnhPt75i/dq/z3/6q/0asP78D0u592D5L1pd7M8P+dck6Fu/jJeL6iVVK23fptSUZj8Vjf++7wXA8UNclGQcbA==
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
@@ -5325,7 +5325,7 @@ safe-buffer@~5.1.0, safe-buffer@~5.1.1:
   resolved "https://registry.yarnpkg.com/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
   integrity sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
 
-scheduler@^0.20.1:
+scheduler@^0.20.2:
   version "0.20.2"
   resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.20.2.tgz#4baee39436e34aa93b4874bddcbf0fe8b8b50e91"
   integrity sha512-2eWfGgAqqWFGqtdMmcL5zCMK1U8KlXv8SQFGglL3CEtd0aDVDWgeF/YoCmvln55m5zSk3J/20hTaSBeSObsQDQ==
