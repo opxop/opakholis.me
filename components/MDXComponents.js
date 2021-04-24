@@ -1,5 +1,8 @@
+/** @jsxRuntime classic /
+/* @jsx jsx */
 import NextLink from 'next/link';
 import Image from 'next/image';
+import { jsx } from '@emotion/react';
 import {
   Box,
   Kbd,
@@ -113,6 +116,21 @@ const Quote = (props) => {
   );
 };
 
+const Caption = (props) => {
+  const color = useColorModeValue('gray.500', 'gray.400');
+  return (
+    <Text
+      as="span"
+      fontSize="sm"
+      fontStyle="italic"
+      color={color}
+      display="table"
+      mx="auto"
+      {...props}
+    />
+  );
+};
+
 const Tick = () => {
   const color = useColorModeValue('gray.300', 'gray.700');
   return (
@@ -128,12 +146,11 @@ const MDXComponents = {
   h3: (props) => <DocsHeading as="h3" fontSize="2xl" {...props} />,
   h4: (props) => <DocsHeading as="h4" fontSize="xl" {...props} />,
   h5: (props) => <DocsHeading as="h5" fontSize="lg" {...props} />,
-  p: (props) => <Text as="p" mt={5} lineHeight="tall" {...props} />,
-  ol: (props) => <Box as="ol" pt={2} pl={4} ml={2} {...props} />,
-  ul: (props) => <Box as="ul" pt={2} pl={4} ml={2} {...props} />,
-  li: (props) => <Box as="li" pb={1} {...props} />,
+  p: (props) => <Text as="p" mt={5} lineHeight="taller" {...props} />,
   br: (props) => <Box height="24px" {...props} />,
   Image,
+  Caption,
+  CustomLink,
   a: CustomLink,
   blockquote: Quote,
   kbd: Kbd,
@@ -146,7 +163,14 @@ const MDXComponents = {
       borderRadius="md"
       {...props}
     />
-  )
+  ),
+  ol: (props) => (
+    <Box as="ol" lineHeight="taller" pt={2} pl={4} ml={2} {...props} />
+  ),
+  ul: (props) => (
+    <Box as="ul" lineHeight="taller" pt={2} pl={4} ml={2} {...props} />
+  ),
+  li: (props) => <Box as="li" lineHeight="taller" pb={1} {...props} />
 };
 
 export { CustomLink };
