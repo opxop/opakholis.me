@@ -7,7 +7,7 @@ import { DateIcon, TimeIcon } from '@/styles/icons';
 
 export default function BlogLayout({ children, frontMatter }) {
   const secondaryText = useColorModeValue('gray.700', 'gray.400');
-  const bg = useColorModeValue('gray.200', 'gray.700');
+  const bg = useColorModeValue('gray.300', 'gray.600');
 
   return (
     <Container>
@@ -25,22 +25,19 @@ export default function BlogLayout({ children, frontMatter }) {
         </Text>
       </Box>
       {frontMatter.tags && (
-        <Box>
+        <Box mb={6}>
           {frontMatter.tags.map((topic, i) => {
             return (
               <Badge
                 key={i}
-                rounded="sm"
-                p={(2, '5px')}
+                p={(3, 2)}
                 mr={3}
-                mb={3}
-                fontWeight="normal"
+                variant="subtle"
                 textTransform="lowercase"
-                variant="outline"
                 transition=".5s ease-in-out"
                 _hover={{ bg: `${bg}`, cursor: 'pointer' }}
               >
-                #{topic}
+                {topic}
               </Badge>
             );
           })}
