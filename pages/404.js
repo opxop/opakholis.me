@@ -11,7 +11,9 @@ import {
 
 import Container from '@/components/Container';
 
-const title = '404 - Opa Kholis Majid';
+const title = '404 — Opa Kholis Majid';
+const description =
+  "Why show a generic 404 when I can make it sound mysterious? It seems you've found something that used to exist, or you spelled something wrong.";
 
 export default function Error() {
   const secondaryText = useColorModeValue('gray.700', 'gray.400');
@@ -19,8 +21,10 @@ export default function Error() {
     <>
       <NextSeo
         title={title}
+        description={description}
         openGraph={{
-          title
+          title,
+          description
         }}
       />
 
@@ -43,7 +47,7 @@ export default function Error() {
           <Flex mt={2} mb={6} justifyContent="center">
             <Link href="/" passHref>
               <Button as="a" p={[5, 6]} fontWeight="bold">
-                Kembali ke Home
+                Back to Home
               </Button>
             </Link>
           </Flex>

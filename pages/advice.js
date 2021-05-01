@@ -15,7 +15,9 @@ import AdviceMessage from '@/components/AdviceMessage';
 import Fetcher from '@/lib/fetcher';
 
 const url = 'https://opakholis.me/advice';
-const title = 'Pesanmu | Opa Kholis Majid';
+const title = 'Pesanmu — Opa Kholis Majid';
+const description =
+  'Halaman ini dibuat untuk menampung segala keluh kesah, pendapat, informasi, atau bahkan nasihat untuk Opa Kholis Majid.';
 
 export default function AdviceMe() {
   const secondaryText = useColorModeValue('gray.700', 'gray.400');
@@ -25,7 +27,12 @@ export default function AdviceMe() {
 
   return (
     <>
-      <NextSeo title={title} canonical={url} openGraph={{ url, title }} />
+      <NextSeo
+        title={title}
+        description={description}
+        canonical={url}
+        openGraph={{ url, title, description }}
+      />
       <Container>
         <Box pn={5} pt={2}>
           <Heading as="h1" fontSize="5xl" letterSpacing="tight" my={5}>

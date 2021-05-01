@@ -18,7 +18,7 @@ import BlogPost from '@/components/BlogPost';
 import Container from '@/components/Container';
 
 const url = 'https://opakholis.me/blog';
-const title = 'Tulisan Opa Kholis Majid';
+const title = 'Blog — Opa Kholis Majid';
 const description =
   'Halaman ini berisi tulisan, opini dan juga merupakan dokumentasi untuk saya pribadi ketika sedang belajar atau membagikan sesuatu.';
 

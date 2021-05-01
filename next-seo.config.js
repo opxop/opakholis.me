@@ -5,11 +5,13 @@ const description =
 const SEO = {
   title,
   description,
-  canonical: 'https://opakholis.me',
+  canonical: 'https://opakholis.me/',
+  noindex: false,
   openGraph: {
     type: 'website',
     locale: 'id_ID',
-    url: 'https://opakholis.me',
+    site_name: 'Opa Kholis Majid',
+    url: 'https://opakholis.me/',
     title,
     description,
     images: [
