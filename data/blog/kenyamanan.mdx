@@ -15,33 +15,33 @@ tags: ['techie']
     priority
   />
   <Caption>
-    Photo by
+    Photo by&nbsp;
     <CustomLink href="https://unsplash.com/@cookiethepom">
-      &nbsp;Cookie the Pom
-    </CustomLink> on
+      Cookie the Pom
+    </CustomLink> on&nbsp;
     <CustomLink href="https://unsplash.com/photos/siNDDi9RpVY">
-      &nbsp;Unsplash
+      Unsplash
     </CustomLink>
   </Caption>
 </div>
 
-Setelah sekian lama saya banyak menghabiskan waktu sebagai [_Distro Hopping_](https://embeddedinventor.com/distro-hopping-what-why-how-explained/), akhirnya memberanikan diri untuk menggunakan Distribusi Linux (Distro) dengan Window Manager Standalone.
+Setelah sekian lama menghabiskan waktu sebagai [_Distro Hopping_](https://embeddedinventor.com/distro-hopping-what-why-how-explained/), kini memberanikan diri untuk menggunakan Distribusi Linux (dibaca: Distro) dengan Window Manager Standalone.
 
 # Arch. Why?
 
-Saya setuju turuan Debian (atau spesifiknya Ubuntu) adalah pilihan terbaik apabila menginginkan distro dengan _hardware compability_ yang hampir tidak ada masalah, tampilan _user-friendly_, aplikasi yang kestabilannya sangat tinggi, dan segalanya sudah disiapkan matang-matang oleh distributor. Jagoan saya dulu adalah Linux Mint XFCE dan KDE Neon, semuanya hampir tidak ada masalah teknis yang saya temukan disana.
+Saya setuju turuan Debian (atau spesifiknya Ubuntu) adalah pilihan terbaik apabila menginginkan Distro dengan _hardware compability_ yang hampir tidak ada masalah, tampilan _user-friendly_, aplikasi yang kestabilannya sangat tinggi, dan segalanya sudah disiapkan matang-matang oleh distributor. Jagoan saya dulu adalah Linux Mint XFCE dan KDE Neon, semuanya hampir tidak ada kendala teknis yang saya temukan disana.
 
-Karena faktor penasaran dan pengetahuan saya tentang Linux, perilaku saya dalam menggunakan Sistem Operasi pun berubah. Banyak ketidakpuasan dan masalah sepele yang mengganggu pikiran saya, dari aplikasi yang tidak tersedia dan mengharuskan _compile_ sendiri hingga penggunaan yang menjadi sangat kompleks (mengerjakan banyak 1 tugas dalam satu waktu) mengakibatkan resource memory sangat terbebani.
+Karena faktor penasaran dan pengetahuan saya tentang Linux, perilaku saya dalam menggunakan Sistem Operasi pun berubah. Banyak ketidakpuasan dan hal-hal sepele yang mengganggu pikiran, dari aplikasi yang tidak tersedia dan mengharuskan _compile_ sendiri hingga penggunaan yang menjadi sangat kompleks (mengerjakan banyak 1 tugas dalam satu waktu) mengakibatkan resource memory sangat terbebani.
 
 Beruntungnya Arch menyelesaikan semua masalah tersebut, terlebih ada [AUR Package](https://aur.archlinux.org/) yang hampir semua package-package open source ada disana hahaha.
 
-Hingga akhirnya saya menemukan distro Archlabs, yang merupakan turunan dari Arch. Alasan saya lebih memilih turunannya karena tidak ingin dipusingkan oleh konfigurasi dasar, seperti mengatur user management, soundcard, network, display dan lain sebagainya yang saya rasa akan cukup memakan banyak waktu. Saya sengaja tetap menggunakan Systemd dibandingkan dengan Runit/openRC yang sedang banyak dibicarakan oleh teman-teman ~/.dotfiles, karena tidak ada alasan khusus bagi saya untuk menggunakannya. Dan (lagi) saya tidak ingin dipusingkan oleh perbedaan syntax antara masing-masing init systems tersebut.
+Hingga akhirnya saya menemukan Distro Archlabs, yang merupakan turunan dari Arch. Alasan saya lebih memilih turunannya karena tidak ingin dipusingkan oleh konfigurasi dasar, seperti mengatur user management, soundcard, network, display dan lain sebagainya yang saya rasa akan cukup memakan banyak waktu. Saya sengaja tetap menggunakan Systemd dibandingkan dengan Runit/openRC yang sedang banyak dibicarakan oleh teman-teman ~/.dotfiles, karena tidak ada alasan khusus bagi saya untuk menggunakannya. Dan (lagi) saya tidak ingin dipusingkan oleh perbedaan syntax antara masing-masing init systems tersebut.
 
 # Window Manager
 
-Keputusan saya dalam memilih Window Manager bukan hanya kebetulan semata seperti menemukan rupiah di pinggiran jalan, tentunya saya melakukan riset terlebih dahulu _\*ehm_ untuk mencari referensi di banyaknya sumber yang berada di Internet. Karena saya tidak ingin _ricing from scratch_, maka menentukan Window Manager pun tidak terlepas dengan distro yang akan digunakan, yakni Archlabs. Archlabs secara default sudah menyertakan i3wm dalam default Window Manager-nya.
+Keputusan saya dalam memilih Window Manager bukan hanya kebetulan semata seperti menemukan rupiah di pinggir jalan, tentunya saya melakukan riset terlebih dahulu _\*ehm_ untuk mencari referensi dari banyaknya sumber yang berada di Internet.
 
-Saya tidak ingin membahas Window Manager secara detail, dan diantara banyaknya yang dapat dikonsumsi, saya memutuskan menggunakan [i3wm](https://i3wm.org/).
+Saya tidak ingin membahas Window Manager secara detail, dan diantara banyaknya yang dapat dikonsumsi, saya memutuskan menggunakan [i3wm](https://i3wm.org/). Karena saya tidak ingin _ricing from scratch_, maka menentukan Window Manager pun tidak terlepas dengan Distro yang akan digunakan, yakni Archlabs. Archlabs secara default sudah menyertakan i3wm dalam default Window Manager-nya.
 
 i3wm merupakan Window Manager paling cocok untuk pemula bagi saya, dokumentasi yang lengkap sangat memudahkan saya dalam melakukan konfigurasi.
 
@@ -64,7 +64,7 @@ Pertama `WS1`, semua pekerjaan yang dapat diakses oleh terminal saya biarkan ber
 
 Terakhir `WS6` - `WS9` yang saya gunakan ketika dual monitor saja. Seringnya digunakan untuk code review atau membuka browser (lagi) untuk debugging project web, karena menyebalkan untuk berpindah-pindah workspace untuk tiap permenit, bukan?
 
-## Keybind adalah segalanya
+## Keybind adalah Segalanya
 
 Keybind atau keyboard shortcut menjadi kunci utama dalam Window Manager. Karena banyak hal-hal dasar yang tidak bisa dilakukan oleh mouse pada umumnya dan hanya menerima perintah-perintah dari keyboard shortcut saja. Sebagai contoh saya akan ilustrasikan dengan gambar diatas, kalau diperhatikan baik-baik dari ketiga terminal—yang menjalankan [fet.sh](https://github.com/6gk/fet.sh), [cava - Audio Visualizer](https://github.com/karlstav/cava), dan compile next.js project—tidak memiliki tombol/icon _minimize_, _maximize_, ataupun _close_ bukan? Disinilah keybind bekerja untuk menggantikan tugasnya.
 
