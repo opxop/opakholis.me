@@ -13,7 +13,7 @@ import {
 import fetcher from '@/lib/fetcher';
 import { SpotifyIcon } from '@/styles/icons';
 
-const NowPlaying = () => {
+export default function NowPlaying() {
   const { data } = useSWR('/api/now-playing', fetcher);
   const borderColor = useColorModeValue('gray.200', 'gray.700');
 
@@ -59,10 +59,10 @@ const NowPlaying = () => {
               whiteSpace="nowrap"
               overflow="hidden"
               textOverflow="ellipsis"
-              href={data?.songUrl}
+              href={data?.songUrl ?? 'https://open.spotify.com/'}
               isExternal
             >
-              {data && (data?.title || 'Not Playing')}
+              {data && (data?.title ?? 'Not Playing')}
             </Link>
             <Text
               color="gray.500"
@@ -71,7 +71,7 @@ const NowPlaying = () => {
               overflow="hidden"
               textOverflow="ellipsis"
             >
-              {data && (data?.artist || 'Spotify')}
+              {data && (data?.artist ?? 'Spotify')}
             </Text>
           </Stack>
         </SkeletonText>
@@ -79,5 +79,4 @@ const NowPlaying = () => {
       </Box>
     </Box>
   );
-};
-export default NowPlaying;
+}
