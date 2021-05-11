@@ -76,10 +76,6 @@ const Timeline = () => {
           <CustomLink href="http://jiwalu.id">Jiwalu Studio</CustomLink> dan
           belajar banyak hal yang tidak saya dapatkan di bangku Perkuliahan.
         </TimelineStep>
-        <TimelineStep title="Jatuh cinta pada Flutter 🎴">
-          Pada awalnya hanya sekedar mencoba-coba, hingga akhirnya kecanduan
-          mempelajarinya.
-        </TimelineStep>
       </List>
       {isShowingFullTimeline ? (
         <FullTimeLine />

@@ -19,9 +19,10 @@ export default function About() {
           </Heading>
           <Box>
             <Text color={secondaryText} lineHeight="tall">
-              Saya punya akun Instagram, Twitter, Facebook, Discord, Slack,{' '}
-              <strike>Reddit</strike>, bahkan Goodreads sekalipun, tapi jarang
-              sekali dibuka. Hanya ketika senggang saja.
+              Saya punya beberapa akun <b>Sosial Media</b> pada umumnya seperti
+              Instagram, Twitter, Facebook, Discord, <strike>Reddit</strike>,
+              Slack dan sejenisnya. Tapi jarang sekali dibuka. Hanya ketika
+              senggang saja.
             </Text>
             <Text color={secondaryText} lineHeight="tall" my={4}>
               Jika kamu ingin berkomunikasi dengan saya, saya cukup aktif di{' '}
