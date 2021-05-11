@@ -1,6 +1,7 @@
 import { NextSeo, ArticleJsonLd } from 'next-seo';
 
-const BlogSeo = ({ title, summary, publishedAt, url, image }) => {
+export default function BlogSeo({ title, summary, publishedAt, url, image }) {
+  const link = `https://opakholis.me/${url}`;
   const date = new Date(publishedAt).toISOString();
   const featuredImage = {
     url: `https://opakholis.me${image}`,
@@ -12,11 +13,11 @@ const BlogSeo = ({ title, summary, publishedAt, url, image }) => {
       <NextSeo
         title={`${title} — Opa Kholis Majid`}
         description={summary}
-        canonical={url}
+        canonical={link}
         openGraph={{
           type: 'article',
           article: { publishedTime: date },
-          url,
+          url: link,
           title,
           description: summary,
           images: [featuredImage]
@@ -31,10 +32,8 @@ const BlogSeo = ({ title, summary, publishedAt, url, image }) => {
         publisherLogo="/static/favicons/android-chrome-192x192.png"
         publisherName="Opa Kholis Majid"
         title={title}
-        url={url}
+        url={link}
       />
     </>
   );
-};
-
-export default BlogSeo;
+}
