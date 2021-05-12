@@ -9,40 +9,20 @@ import NextNprogress from 'nextjs-progressbar';
 import { AuthProvider } from '@/lib/firebase/auth';
 
 import MDXComponents from '@/components/MDXComponents';
-import Fonts from '@/styles/font-face';
-import themes from '@/styles/theme';
+
+import themes, { Fonts } from '@/styles/theme';
 import { prismDarkTheme, prismLightTheme } from '@/styles/prism';
 
 import SEO from '../next-seo.config';
 
-const GlobalStyle = ({ children }) => {
+const PrismTheme = () => {
   const { colorMode } = useColorMode();
   return (
-    <>
-      <Global
-        styles={css`
-          ${colorMode === 'light' ? prismLightTheme : prismDarkTheme};
-          ::selection {
-            background-color: #7928ca;
-            color: #fefefe;
-          }
-          html {
-            min-width: 360px;
-            scroll-behavior: smooth;
-          }
-          #__next {
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            background: ${colorMode === 'light' ? 'white' : '#171923'};
-          }
-          .next__image {
-            border-radius: 6px;
-          }
-        `}
-      />
-      {children}
-    </>
+    <Global
+      styles={css`
+        ${colorMode === 'light' ? prismLightTheme : prismDarkTheme};
+      `}
+    />
   );
 };
 
@@ -58,7 +38,7 @@ const App = ({ Component, pageProps }) => {
           height="4"
         />
         <MDXProvider components={MDXComponents}>
-          <GlobalStyle />
+          <PrismTheme />
           <DefaultSeo {...SEO} />
           <Component {...pageProps} />
         </MDXProvider>

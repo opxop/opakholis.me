@@ -1,12 +1,11 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import { ColorModeScript } from '@chakra-ui/react';
-
 import theme from '@/styles/theme';
 
 class MyDocument extends Document {
   render() {
     return (
-      <Html lang="id">
+      <Html>
         <Head>
           <link href="/static/favicons/favicon.ico" rel="shortcut icon" />
           <link href="/static/favicons/site.webmanifest" rel="manifest" />
