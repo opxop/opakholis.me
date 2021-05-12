@@ -21,5 +21,6 @@
   "dir": "ltr",
   "lang": "id_ID",
   "orientation": "portrait",
-  "start_url": "/"
+  "start_url": "/?source=pwa",
+  "scope": "/"
 }
