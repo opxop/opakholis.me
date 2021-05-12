@@ -1,15 +1,15 @@
-import hydrate from 'next-mdx-remote/hydrate';
+import { MDXRemote } from 'next-mdx-remote';
 
 import { getFileBySlug } from '@/lib/mdx';
 import NowLayout from '@/layouts/now';
 import MDXComponents from '@/components/MDXComponents';
 
 export default function Now({ mdxSource, frontMatter }) {
-  const content = hydrate(mdxSource, {
-    components: MDXComponents
-  });
-
-  return <NowLayout frontMatter={frontMatter}>{content}</NowLayout>;
+  return (
+    <NowLayout frontMatter={frontMatter}>
+      <MDXRemote {...mdxSource} components={MDXComponents} />
+    </NowLayout>
+  );
 }
 
 export async function getStaticProps() {

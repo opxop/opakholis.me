@@ -1,11 +1,17 @@
 const withPWA = require('next-pwa');
+const prod = process.env.NODE_ENV === 'production';
 
 module.exports = withPWA({
   pwa: {
+    disable: prod ? false : true,
     dest: 'public'
   },
   future: {
     webpack5: true
+  },
+  reactStrictMode: true,
+  experimental: {
+    turboMode: true
   },
   images: {
     domains: ['i.scdn.co']
