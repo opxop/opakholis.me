@@ -53,12 +53,10 @@ export default function AdviceForm() {
       {auth.user ? (
         <InputGroup as="form" mt={4} onSubmit={handleSubmit(onSubmit)}>
           <Input
-            name="text"
-            type="text"
+            isRequired
             variant="filled"
             placeholder="Tulisan Pesanmu..."
-            ref={register({ required: true })}
-            isRequired
+            {...register('text')}
           />
           <InputRightElement mr={1} w="5rem">
             <Button h="2rem" w="12rem" type="submit">
