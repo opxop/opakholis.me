@@ -17,14 +17,15 @@ const BlogPost = ({ title, summary, slug, publishedAt }) => {
     <NextLink href={`/blog/${slug}`}>
       <Link
         p="14px"
-        border="2px solid transparent"
+        border="3px solid transparent"
         _hover={{
           textDecoration: 'none',
           backgroundColor: bgHover,
-          borderRadius: 'sm'
+          borderRadius: 'sm',
+          transition: 'all 200ms ease-in-out'
         }}
         _active={{
-          border: '2px dashed',
+          border: '3px dashed',
           borderColor: 'gray.600'
         }}
       >
@@ -33,14 +34,14 @@ const BlogPost = ({ title, summary, slug, publishedAt }) => {
             justifyContent="space-between"
             flexDirection={['column', 'column', 'row']}
           >
-            <Heading size="md" as="h3" mb={[0, 1]} fontWeight="medium">
+            <Heading fontSize="lg" as="h3" mb={1} fontWeight="medium">
               {title}
             </Heading>
             <Text
               fontSize={['14px', 'normal']}
               color="gray.500"
               textAlign={['left', 'left', 'right']}
-              mb={[2, 2, 0]}
+              mb={[1, 0]}
             >
               {format(parseISO(publishedAt), 'MMM dd, yyyy')}
             </Text>

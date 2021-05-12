@@ -4,7 +4,6 @@ import {
   Box,
   Flex,
   Button,
-  Divider,
   IconButton,
   useColorMode,
   useColorModeValue
@@ -12,7 +11,6 @@ import {
 import { MoonIcon, SunIcon } from '@chakra-ui/icons';
 
 import Footer from './Footer';
-import NowPlaying from './NowPlaying';
 
 export default function Container({ children }) {
   const { pathname } = useRouter();
@@ -79,8 +77,6 @@ export default function Container({ children }) {
       </Flex>
       <Box as="main" maxW="768px" w="100%" px={8} mx="auto">
         {children}
-        <Divider orientation="horizontal" my={8} />
-        <NowPlaying />
       </Box>
       <Footer />
     </>

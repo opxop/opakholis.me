@@ -7,7 +7,6 @@ import { DateIcon, TimeIcon } from '@/styles/icons';
 
 export default function BlogLayout({ children, frontMatter }) {
   const secondaryText = useColorModeValue('gray.700', 'gray.400');
-  const bg = useColorModeValue('gray.300', 'gray.600');
 
   return (
     <Container>
@@ -32,10 +31,8 @@ export default function BlogLayout({ children, frontMatter }) {
                 key={i}
                 p={(3, 2)}
                 mr={3}
-                variant="subtle"
-                textTransform="lowercase"
+                variant="solid"
                 transition=".5s ease-in-out"
-                _hover={{ bg: `${bg}`, cursor: 'pointer' }}
               >
                 {topic}
               </Badge>

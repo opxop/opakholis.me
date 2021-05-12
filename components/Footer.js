@@ -2,17 +2,22 @@ import Link from 'next/link';
 import {
   VStack,
   HStack,
+  Divider,
   IconButton,
   useColorModeValue
 } from '@chakra-ui/react';
 
 import { MailIcon, GithubIcon, TwitterIcon } from '@/styles/icons';
 
+import NowPlaying from './NowPlaying';
+
 export default function Footer() {
   const secondaryText = useColorModeValue('gray.700', 'gray.400');
 
   return (
     <VStack as="footer" mb={5} mt={2} spacing={0}>
+      <Divider orientation="horizontal" my={8} />
+      <NowPlaying />
       <HStack spacing={1}>
         <Icon
           href="https://twitter.com/opakholis"

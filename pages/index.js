@@ -19,7 +19,7 @@ const Index = () => {
     <Container>
       <Box pb={5} pt={2}>
         <Heading as="h1" fontSize="5xl" letterSpacing="tight" my={5}>
-          Halo Semua!
+          Halo Semua.
         </Heading>
         <Text color={secondaryText} lineHeight="tall">
           Perkenalkan, nama saya Opa Kholis Majid. Seseorang yang menyebut
@@ -39,7 +39,7 @@ const Index = () => {
         </Heading>
         <ProjectCard
           title="React21"
-          description="Kumpulan project-project kecil yang saya pelajari dari internet. Dibangun diatas Library React.js dan di deploy menggunakan vercel."
+          description="Kumpulan project-project kecil yang dipelajari dari internet. Dibangun dengan Library React.js dan di deploy menggunakan vercel."
           href="https://react21.vercel.app"
         >
           <ReactIcon boxSize={12} mr={4} />

@@ -48,8 +48,8 @@ const FullTimeLine = () => (
     </Heading>
     <List>
       <TimelineStep title="Juara III Kompetisi Diskominfo Karawang 🏅">
-        Berkolaborasi dengan tim sebagai Frontend developer. Menciptakan sebuah
-        inovasi baru dengan membangun sebuah sistem "Smart City" berbasis
+        Berkolaborasi dengan tim sebagai Frontend developer untuk menciptakan
+        sebuah inovasi baru dengan membangun sebuah sistem "Smart City" berbasis
         website.
       </TimelineStep>
       <TimelineStep title="Partisipan Sertifikasi BNSP 🎉">

@@ -17,11 +17,7 @@ export default function UsesLayout({ children }) {
         title={title}
         description={description}
         canonical={url}
-        openGraph={{
-          url,
-          title,
-          description
-        }}
+        openGraph={{ url, title, description }}
       />
       <Container>
         <Box pb={5} pt={2}>
@@ -33,6 +29,7 @@ export default function UsesLayout({ children }) {
           </Text>
         </Box>
         {children}
+
         <Text
           color={secondaryText}
           mt={4}
@@ -40,11 +37,11 @@ export default function UsesLayout({ children }) {
           fontSize="sm"
           fontStyle="italic"
         >
-          This page is inspired by&nbsp;
+          "This page is inspired by&nbsp;
           <CustomLink href="https://sivers.org/">Derek Sivers</CustomLink>&nbsp;
           as&nbsp;
           <CustomLink href="https://nownownow.com/about">/now page </CustomLink>
-          &nbsp;movement.
+          &nbsp;movement."
         </Text>
       </Container>
     </>
