@@ -1,5 +1,6 @@
-import Link from 'next/link';
+import NextLink from 'next/link';
 import {
+  Link,
   VStack,
   HStack,
   Divider,
@@ -15,10 +16,10 @@ export default function Footer() {
   const secondaryText = useColorModeValue('gray.700', 'gray.400');
 
   return (
-    <VStack as="footer" mb={5} mt={2} spacing={0}>
+    <VStack as="footer" spacing={0} maxW="768px" w="100%" px={8} mx="auto">
       <Divider orientation="horizontal" my={8} />
       <NowPlaying />
-      <HStack spacing={1}>
+      <HStack spacing={2} pt={3}>
         <Icon
           href="https://twitter.com/opakholis"
           ariaLabel="Twitter"
@@ -36,16 +37,16 @@ export default function Footer() {
         />
       </HStack>
 
-      <HStack spacing={3} color={secondaryText}>
-        <Link href="/uses">
-          <a>/uses</a>
-        </Link>
-        <Link href="/now">
-          <a>/now</a>
-        </Link>
-        <Link href="/advice">
-          <a>/advice</a>
-        </Link>
+      <HStack spacing={5} color={secondaryText} pb={5}>
+        <NextLink href="/uses">
+          <Link _hover={{ color: 'white' }}>/uses</Link>
+        </NextLink>
+        <NextLink href="/now">
+          <Link _hover={{ color: 'white' }}>/now</Link>
+        </NextLink>
+        <NextLink href="/advice">
+          <Link _hover={{ color: 'white' }}>/advice</Link>
+        </NextLink>
       </HStack>
     </VStack>
   );
