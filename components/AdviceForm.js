@@ -1,15 +1,15 @@
 import { useForm } from 'react-hook-form';
 import { mutate } from 'swr';
 import {
-  Box,
-  Flex,
   Text,
   Input,
+  Stack,
   Button,
   Heading,
   useToast,
   InputGroup,
-  InputRightElement
+  InputRightElement,
+  useColorModeValue
 } from '@chakra-ui/react';
 
 import { useAuth } from '@/lib/firebase/auth';
@@ -20,6 +20,8 @@ import { GithubIcon, GoogleIcon } from '@/styles/icons';
 export default function AdviceForm() {
   const auth = useAuth();
   const toast = useToast();
+
+  const bgCard = useColorModeValue('gray.50', 'blackAlpha.50');
 
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = ({ text }) => {
@@ -47,7 +49,14 @@ export default function AdviceForm() {
   };
 
   return (
-    <Box p={6} my={6} bgColor="blackAlpha.50" borderWidth="1px" rounded="md">
+    <Stack
+      p={6}
+      my={6}
+      bgColor={bgCard}
+      borderWidth="2px"
+      rounded="md"
+      spacing={4}
+    >
       <Heading fontSize="2xl">👏 Surprise me!</Heading>
       <Text my={2}>Tinggalkan pesan apa saja yang menurut kamu pantas.</Text>
       {auth.user ? (
@@ -58,32 +67,24 @@ export default function AdviceForm() {
             placeholder="Tulisan Pesanmu..."
             {...register('text')}
           />
-          <InputRightElement mr={1} w="5rem">
-            <Button h="2rem" w="12rem" type="submit">
+          <InputRightElement w="4.5rem">
+            <Button h="1.75rem" size="sm" type="submit">
               Kirim
             </Button>
           </InputRightElement>
         </InputGroup>
       ) : (
-        <Flex flexDirection={['column', 'row']} justifyContent="start">
-          <Button
-            m={2}
-            onClick={(e) => auth.signinWithGithub()}
-            fontWeight="medium"
-          >
+        <Stack justifyContent="start" direction={['column', 'row']} spacing={4}>
+          <Button onClick={() => auth.signinWithGithub()} fontWeight="normal">
             <GithubIcon mr={2} />
             Login dengan Github
           </Button>
-          <Button
-            m={2}
-            onClick={(e) => auth.signinWithGoogle()}
-            fontWeight="medium"
-          >
+          <Button onClick={() => auth.signinWithGoogle()} fontWeight="normal">
             <GoogleIcon mr={2} />
             Login dengan Google
           </Button>
-        </Flex>
+        </Stack>
       )}
-    </Box>
+    </Stack>
   );
 }

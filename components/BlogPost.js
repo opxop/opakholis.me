@@ -18,14 +18,14 @@ const BlogPost = ({ title, summary, slug, publishedAt }) => {
       <Link
         p="14px"
         border="3px solid transparent"
+        transition="all .3s ease-in-out"
         _hover={{
           textDecoration: 'none',
           backgroundColor: bgHover,
-          borderRadius: 'sm',
-          transition: 'all 200ms ease-in-out'
+          borderRadius: 'sm'
         }}
         _active={{
-          border: '3px dashed',
+          borderStyle: 'dashed',
           borderColor: 'gray.600'
         }}
       >
