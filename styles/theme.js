@@ -39,24 +39,6 @@ const theme = extendTheme({
     normal: 400,
     medium: 600,
     bold: 700
-  },
-  components: {
-    Badge: {
-      baseStyle: {
-        fontWeight: 'normal',
-        textTransform: 'capitalize'
-      },
-      variants: {
-        solid: (props) => ({
-          bg: props.colorMode === 'light' ? 'gray.200' : 'gray.700',
-          color: props.colorMode === 'light' ? 'gray.800' : 'gray.300',
-          _hover: {
-            bg: props.colorMode === 'light' ? 'gray.300' : 'gray.600',
-            cursor: 'pointer'
-          }
-        })
-      }
-    }
   }
 });
 

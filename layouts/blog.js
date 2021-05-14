@@ -1,11 +1,21 @@
+import { useRouter } from 'next/router';
 import { parseISO, format } from 'date-fns';
-import { Box, Text, Badge, Heading, useColorModeValue } from '@chakra-ui/react';
+import {
+  Box,
+  Text,
+  Button,
+  HStack,
+  Heading,
+  useColorModeValue
+} from '@chakra-ui/react';
+import { ArrowBackIcon, ArrowUpIcon } from '@chakra-ui/icons';
 
 import BlogSeo from '@/components/BlogSeo';
 import Container from '@/components/Container';
 import { DateIcon, TimeIcon } from '@/styles/icons';
 
 export default function BlogLayout({ children, frontMatter }) {
+  const router = useRouter();
   const secondaryText = useColorModeValue('gray.700', 'gray.400');
 
   return (
@@ -24,23 +34,52 @@ export default function BlogLayout({ children, frontMatter }) {
         </Text>
       </Box>
       {frontMatter.tags && (
-        <Box mb={6}>
+        <HStack mb={6} spacing={3}>
           {frontMatter.tags.map((topic, i) => {
             return (
-              <Badge
+              <Button
                 key={i}
-                p={(3, 2)}
-                mr={3}
-                variant="solid"
-                transition=".5s ease-in-out"
+                size="sm"
+                fontWeight="normal"
+                variant="outline"
+                textTransform="capitalize"
               >
                 {topic}
-              </Badge>
+              </Button>
             );
           })}
-        </Box>
+        </HStack>
       )}
       {children}
+      <HStack justify="space-between" mt={8}>
+        <Btn
+          icon={<ArrowBackIcon />}
+          text="Back"
+          onClick={() => router.push('/blog')}
+        />
+        <Btn
+          icon={<ArrowUpIcon />}
+          text="Top"
+          onClick={() => window.scrollTo(0, 0)}
+        />
+      </HStack>
     </Container>
   );
 }
+
+const Btn = ({ text, onClick, icon }) => {
+  const normal = useColorModeValue('gray.500', 'gray.400');
+  const hover = useColorModeValue('gray.900', 'gray.100');
+  return (
+    <Button
+      onClick={onClick}
+      leftIcon={icon}
+      variant="unstyled"
+      color={normal}
+      fontWeight="normal"
+      _hover={{ color: hover }}
+    >
+      {text}
+    </Button>
+  );
+};
