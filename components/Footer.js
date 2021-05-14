@@ -14,6 +14,7 @@ import NowPlaying from './NowPlaying';
 
 export default function Footer() {
   const secondaryText = useColorModeValue('gray.700', 'gray.400');
+  const hoverText = useColorModeValue('black', 'white');
 
   return (
     <VStack as="footer" spacing={0} maxW="768px" w="100%" px={8} mx="auto">
@@ -39,13 +40,13 @@ export default function Footer() {
 
       <HStack spacing={5} color={secondaryText} pb={5}>
         <NextLink href="/uses">
-          <Link _hover={{ color: 'white' }}>/uses</Link>
+          <Link _hover={{ color: hoverText }}>/uses</Link>
         </NextLink>
         <NextLink href="/now">
-          <Link _hover={{ color: 'white' }}>/now</Link>
+          <Link _hover={{ color: hoverText }}>/now</Link>
         </NextLink>
         <NextLink href="/advice">
-          <Link _hover={{ color: 'white' }}>/advice</Link>
+          <Link _hover={{ color: hoverText }}>/advice</Link>
         </NextLink>
       </HStack>
     </VStack>
