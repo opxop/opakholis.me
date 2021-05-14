@@ -2,11 +2,10 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import {
   Box,
-  Flex,
+  HStack,
   Button,
   IconButton,
-  useColorMode,
-  useColorModeValue
+  useColorMode
 } from '@chakra-ui/react';
 import { MoonIcon, SunIcon } from '@chakra-ui/icons';
 
@@ -15,66 +14,43 @@ import Footer from './Footer';
 export default function Container({ children }) {
   const { pathname } = useRouter();
   const { colorMode, toggleColorMode } = useColorMode();
-  const backgroundNavbar = useColorModeValue('white', 'gray.900');
 
   return (
     <>
       <Box h="6px" bgGradient="linear(to-l, #7928CA, #FF0080)" />
-      <Flex
+      <HStack
         as="nav"
         pos="sticky"
         top="0"
-        zIndex="9"
-        justifyContent="space-between"
-        alignItems="center"
-        maxWidth="780px"
-        width="100%"
-        bg={backgroundNavbar}
         p={8}
         mx="auto"
-        my={[0, 8]}
+        mt={[0, 8]}
+        zIndex="99"
+        width="100%"
+        maxWidth="780px"
+        alignItems="center"
+        justifyContent="space-between"
+        bg={colorMode === 'dark' ? 'gray.900' : 'white'}
       >
         <IconButton
           aria-label="Toggle dark mode"
           icon={colorMode === 'dark' ? <SunIcon /> : <MoonIcon />}
           onClick={toggleColorMode}
         />
-        <Box>
-          <Link href="/">
-            <Button
-              as="a"
-              cursor="pointer"
-              variant={pathname === '/' ? 'solid' : 'ghost'}
-              px={[4, 5]}
-              mr={1}
-            >
-              Home
-            </Button>
-          </Link>
-
-          <Link href="/about">
-            <Button
-              as="a"
-              cursor="pointer"
-              variant={pathname.startsWith('/about') ? 'solid' : 'ghost'}
-              px={[4, 5]}
-              mr={1}
-            >
-              About
-            </Button>
-          </Link>
-          <Link href="/blog">
-            <Button
-              as="a"
-              cursor="pointer"
-              variant={pathname.startsWith('/blog') ? 'solid' : 'ghost'}
-              px={[4, 5]}
-            >
-              Blog
-            </Button>
-          </Link>
-        </Box>
-      </Flex>
+        <HStack spacing={3}>
+          <NavLink href="/" text="Home" isActive={pathname === '/'} />
+          <NavLink
+            href="/about"
+            text="About"
+            isActive={pathname.startsWith('/about')}
+          />
+          <NavLink
+            href="/blog"
+            text="Blog"
+            isActive={pathname.startsWith('/blog')}
+          />
+        </HStack>
+      </HStack>
       <Box as="main" maxW="768px" w="100%" px={8} mx="auto">
         {children}
       </Box>
@@ -82,3 +58,19 @@ export default function Container({ children }) {
     </>
   );
 }
+
+const NavLink = ({ text, href, isActive }) => {
+  return (
+    <Link href={href}>
+      <Button
+        as="a"
+        px={[4, 5]}
+        fontWeight="normal"
+        cursor="pointer"
+        variant={isActive ? 'solid' : 'ghost'}
+      >
+        {text}
+      </Button>
+    </Link>
+  );
+};
