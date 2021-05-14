@@ -9,7 +9,7 @@ const SEO = {
   noindex: false,
   openGraph: {
     type: 'website',
-    locale: 'id_ID',
+    locale: 'id',
     site_name: 'Opa Kholis Majid',
     url: 'https://opakholis.me/',
     title,

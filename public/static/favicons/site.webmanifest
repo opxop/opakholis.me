@@ -19,7 +19,7 @@
   "background_color": "#ffffff",
   "display": "standalone",
   "dir": "ltr",
-  "lang": "id_ID",
+  "lang": "id",
   "orientation": "portrait",
   "start_url": "/?source=pwa",
   "scope": "/"
