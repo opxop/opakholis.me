@@ -69,6 +69,7 @@ export default function AdviceForm() {
         <>
           <InputGroup as="form" mt={4} onSubmit={handleSubmit(onSubmit)}>
             <Input
+              pr="4.6rem"
               variant="filled"
               placeholder="Tulisan Pesanmu..."
               {...register('text', { required: true })}
