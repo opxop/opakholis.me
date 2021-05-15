@@ -23,7 +23,13 @@ export default function AdviceForm() {
 
   const bgCard = useColorModeValue('gray.50', 'blackAlpha.50');
 
-  const { register, handleSubmit, reset } = useForm();
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors }
+  } = useForm();
+
   const onSubmit = ({ text }) => {
     const newAdvice = {
       authorId: auth.user.uid,
@@ -60,19 +66,25 @@ export default function AdviceForm() {
       <Heading fontSize="2xl">👏 Surprise me!</Heading>
       <Text my={2}>Tinggalkan pesan apa saja yang menurut kamu pantas.</Text>
       {auth.user ? (
-        <InputGroup as="form" mt={4} onSubmit={handleSubmit(onSubmit)}>
-          <Input
-            isRequired
-            variant="filled"
-            placeholder="Tulisan Pesanmu..."
-            {...register('text')}
-          />
-          <InputRightElement w="4.5rem">
-            <Button h="1.75rem" size="sm" type="submit">
-              Kirim
-            </Button>
-          </InputRightElement>
-        </InputGroup>
+        <>
+          <InputGroup as="form" mt={4} onSubmit={handleSubmit(onSubmit)}>
+            <Input
+              variant="filled"
+              placeholder="Tulisan Pesanmu..."
+              {...register('text', { required: true })}
+            />
+            <InputRightElement w="4.5rem">
+              <Button h="1.75rem" size="sm" type="submit" colorScheme="twitter">
+                Kirim
+              </Button>
+            </InputRightElement>
+          </InputGroup>
+          {errors.text && (
+            <Text color="red.500" fontSize="sm">
+              Hey! kamu belum menuliskan pesan apapun.
+            </Text>
+          )}
+        </>
       ) : (
         <Stack justifyContent="start" direction={['column', 'row']} spacing={4}>
           <Button onClick={() => auth.signinWithGithub()} fontWeight="normal">
