@@ -1,3 +1,2 @@
 User-agent: *
-Disallow: /_next/
-Sitemap: https://opakholis.me/sitemap.xml
+Sitemap: https://opakholis.dev/sitemap.xml

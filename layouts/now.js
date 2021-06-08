@@ -4,7 +4,7 @@ import { Box, Text, Heading, useColorModeValue } from '@chakra-ui/react';
 import Container from '@/components/Container';
 import { CustomLink } from '@/components/MDXComponents';
 
-const url = 'https://opakholis.me/now';
+const url = 'https://opakholis.dev/now';
 const title = 'Now — Opa Kholis Majid';
 const description = 'What i am doing now.';
 

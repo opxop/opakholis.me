@@ -1,30 +1,14 @@
-# 🏠 My home in the another world
+# 🏠 Personal blogs and portfolio
 
-> My Personal Home Page, Blog, Portfolio built with Next.JS : https://opakholis.me
+> My Personal blogs and portfolio written with React (Next JS), Chakra UI, and Vercel : https://opakholis.dev
 
-[![Deploy to Vercel](https://vercel.com/button)](https://opakholis.me)
-
-### Ongoing Features
-
-- [x] Mobile friendly
-- [x] Portfolio / Timeline list
-- [x] Blog
-  - [x] Post (MDX)
-  - [x] Search bars
-  - [ ] Tag
-  - [x] Search by topics
-- [x] Dark mode
-- [ ] Comment System
-- [ ] SEO optimized
-- [ ] PWA
-- [ ] ~~Twitter/Youtube/etc Embed~~
-- [ ] Whats next ?
+[![Deploy to Vercel](https://vercel.com/button)](https://opakholis.dev)
 
 ## Running Locally
 
 ```bash
-$ git clone https://github.com/opxop/opakholis.me.git
-$ cd opakholis.me
+$ git clone https://github.com/opxop/portfolio.git
+$ cd portfolio
 $ yarn
 $ yarn dev
 ```
