@@ -10,7 +10,7 @@ import {
 import Container from '@/components/Container';
 import { CustomLink } from '@/components/MDXComponents';
 
-const url = 'https://opakholis.me/about';
+const url = 'https://opakholis.me/whoami';
 const title = 'Tentang — Opa Kholis Majid';
 
 export default function About() {
