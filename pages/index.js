@@ -26,7 +26,7 @@ const Index = () => {
           dirinya sebagai Frontend developer—yang mana sekarang sedang senang
           ber-eksplorasi dengan Linux distribution dan Open-source Software.
         </Text>
-        <Link href="/about" passHref>
+        <Link href="/whoami" passHref>
           <Button as="a" fontSize="sm" p={[6, 5]} my={5}>
             Selengkapnya tentang Opa
           </Button>

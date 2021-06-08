@@ -40,9 +40,9 @@ export default function Container({ children }) {
         <HStack spacing={3}>
           <NavLink href="/" text="Home" isActive={pathname === '/'} />
           <NavLink
-            href="/about"
+            href="/whoami"
             text="About"
-            isActive={pathname.startsWith('/about')}
+            isActive={pathname.startsWith('/whoami')}
           />
           <NavLink
             href="/blog"
