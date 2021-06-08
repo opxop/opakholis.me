@@ -1,16 +1,16 @@
 {
-  "name": "opakholis.me",
+  "name": "opakholis.dev",
   "description": "My personal website.",
   "version": "0.1.0",
   "author": {
     "name": "Opa Kholis Majid",
     "email": "opakholis.id@gmail.com",
-    "url": "https://opakholis.me"
+    "url": "https://opakholis.dev"
   },
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/opxop/opakholis.me.git"
+    "url": "git+https://github.com/opxop/portfolio.git"
   },
   "scripts": {
     "dev": "next dev",

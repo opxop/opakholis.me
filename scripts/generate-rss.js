@@ -5,9 +5,10 @@ const matter = require('gray-matter');
 
 async function generate() {
   const feed = new RSS({
-    title: 'Opa Kholis Majid',
-    site_url: 'https://opakholis.me',
-    feed_url: 'https://opakholis.me/feed.xml'
+    title: 'opakholis',
+    description: 'tulisan aneh',
+    site_url: 'https://opakholis.dev',
+    feed_url: 'https://opakholis.dev/feed.xml'
   });
 
   const posts = await fs.readdir(path.join(__dirname, '..', 'data', 'blog'));
@@ -21,7 +22,7 @@ async function generate() {
 
       feed.item({
         title: frontmatter.data.title,
-        url: 'https://opakholis.me/blog/' + name.replace(/\.mdx?/, ''),
+        url: 'https://opakholis.dev/blog/' + name.replace(/\.mdx?/, ''),
         date: frontmatter.data.publishedAt,
         description: frontmatter.data.summary
       });

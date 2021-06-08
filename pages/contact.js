@@ -4,7 +4,7 @@ import { Box, Heading, Text, useColorModeValue } from '@chakra-ui/react';
 import Container from '@/components/Container';
 import { CustomLink } from '@/components/MDXComponents';
 
-const url = 'https://opakholis.me/contact';
+const url = 'https://opakholis.dev/contact';
 const title = 'Mari Ngobrol! — Opa Kholis Majid';
 
 export default function About() {
@@ -28,8 +28,8 @@ export default function About() {
               Jika kamu ingin berkomunikasi dengan saya, saya cukup aktif di{' '}
               <CustomLink href="https://t.me/opakholis/">Telegram</CustomLink>.
               Bisa juga berkirim pesan lewat surat elektronik saya di{' '}
-              <CustomLink href="mailto:hi@opakholis.me">
-                hi@opakholis.me.
+              <CustomLink href="mailto:hi@opakholis.dev">
+                hi@opakholis.dev.
               </CustomLink>
             </Text>
           </Box>

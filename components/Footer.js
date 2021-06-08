@@ -32,7 +32,7 @@ export default function Footer() {
           icon={<GithubIcon boxSize={5} />}
         />
         <Icon
-          href="mailto:hi@opakholis.me"
+          href="mailto:hi@opakholis.dev"
           ariaLabel="Email"
           icon={<MailIcon boxSize={5} />}
         />

@@ -1,10 +1,10 @@
 import { NextSeo, ArticleJsonLd } from 'next-seo';
 
 export default function BlogSeo({ title, summary, publishedAt, url, image }) {
-  const link = `https://opakholis.me/${url}`;
+  const link = `https://opakholis.dev/${url}`;
   const date = new Date(publishedAt).toISOString();
   const featuredImage = {
-    url: `https://opakholis.me${image}`,
+    url: `https://opakholis.dev${image}`,
     alt: title
   };
 
