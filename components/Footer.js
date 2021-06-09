@@ -42,11 +42,11 @@ export default function Footer() {
         <NextLink href="/uses">
           <Link _hover={{ color: hoverText }}>/uses</Link>
         </NextLink>
+        <NextLink href="/advices">
+          <Link _hover={{ color: hoverText }}>/advices</Link>
+        </NextLink>
         <NextLink href="/now">
           <Link _hover={{ color: hoverText }}>/now</Link>
-        </NextLink>
-        <NextLink href="/advice">
-          <Link _hover={{ color: hoverText }}>/advice</Link>
         </NextLink>
       </HStack>
     </VStack>
