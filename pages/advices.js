@@ -12,9 +12,9 @@ import {
 import Container from '@/components/Container';
 import AdviceForm from '@/components/AdviceForm';
 import AdviceMessage from '@/components/AdviceMessage';
-import Fetcher from '@/lib/fetcher';
+import fetcher from '@/lib/fetcher';
 
-const url = 'https://opakholis.dev/advice';
+const url = 'https://opakholis.dev/advices';
 const title = 'Pesanmu — Opa Kholis Majid';
 const description =
   'Halaman ini dibuat untuk menampung segala keluh kesah, pendapat, informasi, atau bahkan nasihat untuk Opa Kholis Majid.';
@@ -23,7 +23,7 @@ export default function AdviceMe() {
   const secondaryText = useColorModeValue('gray.700', 'gray.400');
   const spinner = useColorModeValue('gray.900', 'white');
 
-  const { data } = useSWR('/api/advices', Fetcher);
+  const { data } = useSWR('/api/advices', fetcher);
 
   return (
     <>
