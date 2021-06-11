@@ -8,7 +8,7 @@ const Fonts = () => (
         font-family: 'Inter';
         font-style: normal;
         font-weight: 400;
-        font-display: swap;
+        font-display: optional;
         src: local(''),
           url('/fonts/inter-v3-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
           url('/fonts/inter-v3-latin-regular.woff') format('woff'), /* Modern Browsers */
@@ -21,7 +21,7 @@ const Fonts = () => (
         font-family: 'Inter';
         font-style: normal;
         font-weight: 500;
-        font-display: swap;
+        font-display: optional;
         src: local(''),
           url('/fonts/inter-v3-latin-500.woff2') format('woff2'), /* Super Modern Browsers */
           url('/fonts/inter-v3-latin-500.woff') format('woff'), /* Modern Browsers */
@@ -34,7 +34,7 @@ const Fonts = () => (
         font-family: 'Inter';
         font-style: normal;
         font-weight: 700;
-        font-display: swap;
+        font-display: optional;
         src: local(''),
           url('/fonts/inter-v3-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
           url('/fonts/inter-v3-latin-700.woff') format('woff'), /* Modern Browsers */
