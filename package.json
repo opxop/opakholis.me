@@ -14,6 +14,7 @@
   },
   "scripts": {
     "dev": "next dev",
+    "dev:watch": "next-remote-watch ./data/blog",
     "build": "next build",
     "start": "next start",
     "prettier": "prettier --write \"**/*.{html,js,json,md,mdx,yml}\""
@@ -32,9 +33,10 @@
     "framer-motion": "^4",
     "gray-matter": "^4.0.3",
     "mdx-prism": "^0.3.3",
-    "next": "^10.2.0",
+    "next": "latest",
     "next-mdx-remote": "^3.0.1",
     "next-pwa": "^5.2.21",
+    "next-remote-watch": "^1.0.0",
     "next-seo": "^4.24.0",
     "nextjs-progressbar": "^0.0.9",
     "react": "^17.0.2",
