@@ -27,7 +27,7 @@ const Index = () => {
           ber-eksplorasi dengan Linux distribution dan Open-source Software.
         </Text>
         <Link href="/whoami" passHref>
-          <Button as="a" fontSize="sm" p={[6, 5]} my={5}>
+          <Button as="a" fontSize="sm" my={5} variant="outline">
             Selengkapnya tentang Opa
           </Button>
         </Link>
