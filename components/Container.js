@@ -22,9 +22,9 @@ export default function Container({ children }) {
         as="nav"
         pos="sticky"
         top="0"
-        p={8}
+        p={(8, [4, 8])}
         mx="auto"
-        mt={[0, 8]}
+        mt={[2, 8]}
         zIndex="99"
         width="100%"
         maxWidth="780px"
@@ -51,7 +51,7 @@ export default function Container({ children }) {
           />
         </HStack>
       </HStack>
-      <Box as="main" maxW="768px" w="100%" px={8} mx="auto">
+      <Box as="main" maxW="768px" w="100%" px={[4, 8]} mx="auto">
         {children}
       </Box>
       <Footer />
