@@ -34,7 +34,7 @@ const Index = () => {
       </Box>
 
       <Box py={5}>
-        <Heading as="h2" fontSize="4xl" letterSpacing="tight" mb={5}>
+        <Heading as="h2" fontSize="3xl" letterSpacing="tight" mb={5}>
           Project Terbaru
         </Heading>
         <ProjectCard

@@ -4,6 +4,7 @@ import {
   Flex,
   List,
   Text,
+  Badge,
   Stack,
   Button,
   Divider,
@@ -28,7 +29,7 @@ const TimelineStep = ({ title, children }) => {
       <Stack ml={2} mb={4}>
         <Flex alignContent="flex-start">
           <CheckIcon mr={2} mt={1} color="whatsapp.500" />
-          <Heading as="h4" fontSize="lg" fontWeight="medium">
+          <Heading as="h4" fontSize="" fontWeight="medium">
             {title}
           </Heading>
         </Flex>
@@ -43,17 +44,20 @@ const TimelineStep = ({ title, children }) => {
 const FullTimeLine = () => (
   <>
     <YearDivider />
-    <Heading as="h3" fontSize="2xl" mb={4} letterSpacing="lighter">
+    <Heading as="h3" fontSize="xl" mb={4} letterSpacing="lighter">
       2019
     </Heading>
     <List>
-      <TimelineStep title="Juara III Kompetisi Diskominfo Karawang 🏅">
-        Berkolaborasi dengan tim sebagai Frontend developer untuk menciptakan
-        sebuah inovasi baru dengan membangun sebuah sistem "Smart City" berbasis
-        website.
+      <TimelineStep title="Kompetisi Diskominfo Karawang 🏅">
+        Berkolaborasi dengan tim sebagai Frontend developer dalam membangun
+        sebuah sistem "Smart City" berbasis website.
+        <br />
+        <Badge ariant="subtle" colorScheme="green" rounded="base">
+          Juara III
+        </Badge>
       </TimelineStep>
       <TimelineStep title="Partisipan Sertifikasi BNSP 🎉">
-        Sebagai Web developer
+        Sebagai Web developer.
       </TimelineStep>
     </List>
   </>
@@ -64,17 +68,20 @@ const Timeline = () => {
 
   return (
     <Box py={5}>
-      <Heading as="h2" fontSize="4xl" letterSpacing="tight" mb={2}>
+      <Heading as="h2" fontSize="3xl" letterSpacing="tight" mb={4}>
         Linimasa
       </Heading>
-      <Heading as="h3" fontSize="2xl" mb={4} letterSpacing="lighter">
+      <Heading as="h3" fontSize="xl" mb={4} letterSpacing="lighter">
         2020
       </Heading>
       <List>
-        <TimelineStep title="Magang Pertama 👨🏼‍💻">
-          Mengembangkan aplikasi ERP bersama orang-orang hebat di&nbsp;
-          <CustomLink href="http://jiwalu.id">Jiwalu Studio</CustomLink> dan
-          belajar banyak hal yang tidak saya dapatkan di bangku Perkuliahan.
+        <TimelineStep title="Full-stack Developer Intern 👨🏼‍💻">
+          Membangun aplikasi Human Resource Management System di&nbsp;
+          <CustomLink href="https://jiwalu.id">Jiwalu Studio</CustomLink>.
+          <br />
+          <Badge ariant="subtle" colorScheme="green" rounded="base">
+            CodeIgniter 3
+          </Badge>
         </TimelineStep>
       </List>
       {isShowingFullTimeline ? (
@@ -86,6 +93,7 @@ const Timeline = () => {
           mx="auto"
           fontWeight="medium"
           variant="ghost"
+          fontSize="sm"
           onClick={() => showFullTimeline(true)}
           rightIcon={<ChevronDownIcon />}
         >
