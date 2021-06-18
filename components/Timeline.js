@@ -75,7 +75,7 @@ const Timeline = () => {
         2020
       </Heading>
       <List>
-        <TimelineStep title="Full-stack Developer Intern 👨🏼‍💻">
+        <TimelineStep title="Full-Stack Developer Intern 👨🏼‍💻">
           Membangun aplikasi Human Resource Management System di&nbsp;
           <CustomLink href="https://jiwalu.id">Jiwalu Studio</CustomLink>.
           <br />
