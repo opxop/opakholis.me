@@ -5,7 +5,7 @@ import Container from '@/components/Container';
 import { CustomLink } from '@/components/MDXComponents';
 
 const url = 'https://opakholis.dev/now';
-const title = 'Now — Opa Kholis Majid';
+const title = 'Now - Opa Kholis Majid';
 const description = 'What i am doing now.';
 
 export default function UsesLayout({ children }) {

@@ -11,7 +11,7 @@ import Container from '@/components/Container';
 import { CustomLink } from '@/components/MDXComponents';
 
 const url = 'https://opakholis.dev/whoami';
-const title = 'Tentang — Opa Kholis Majid';
+const title = 'Tentang - Opa Kholis Majid';
 
 export default function About() {
   const secondaryText = useColorModeValue('gray.700', 'gray.400');

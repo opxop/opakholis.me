@@ -1,4 +1,4 @@
-const title = 'Opa Kholis Majid — Frontend developer.';
+const title = 'Opa Kholis Majid - Frontend developer.';
 const description =
   'Seseorang yang menyebut dirinya sebagai Frontend developer—yang mana sekarang sedang senang ber-eksplorasi dengan Linux distribution dan Open-source Software.';
 

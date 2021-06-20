@@ -15,7 +15,7 @@ import AdviceMessage from '@/components/AdviceMessage';
 import fetcher from '@/lib/fetcher';
 
 const url = 'https://opakholis.dev/advices';
-const title = 'Pesanmu — Opa Kholis Majid';
+const title = 'Pesanmu - Opa Kholis Majid';
 const description =
   'Halaman ini dibuat untuk menampung segala keluh kesah, pendapat, informasi, atau bahkan nasihat untuk Opa Kholis Majid.';
 

@@ -11,7 +11,7 @@ import {
 
 import Container from '@/components/Container';
 
-const title = '404 — Opa Kholis Majid';
+const title = '404 - Opa Kholis Majid';
 const description =
   "Why show a generic 404 when I can make it sound mysterious? It seems you've found something that used to exist, or you spelled something wrong.";
 
