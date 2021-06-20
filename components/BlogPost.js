@@ -34,7 +34,7 @@ const BlogPost = ({ title, summary, slug, publishedAt }) => {
             justifyContent="space-between"
             flexDirection={['column', 'column', 'row']}
           >
-            <Heading fontSize="lg" as="h3" mb={1} fontWeight="medium">
+            <Heading fontSize="md" as="h3" mb={1} fontWeight="medium">
               {title}
             </Heading>
             <Text
