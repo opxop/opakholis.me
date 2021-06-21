@@ -27,7 +27,7 @@ export default function About() {
             letterSpacing="tight"
             my={5}
           >
-            Tentang.
+            Tentang Opa.
           </Heading>
           <VStack
             color={secondaryText}
@@ -55,7 +55,7 @@ export default function About() {
               melalui surat elektronik, karena saya senang berkomunikasi dan
               khususnya berkenalan dengan orang baru.
             </Text>
-            <Text>Anyway, senag berkenalan denganmu!</Text>
+            <Text>Anyway, senang berkenalan denganmu!</Text>
           </VStack>
         </VStack>
       </Container>
