@@ -22,6 +22,7 @@ export default function AdviceForm() {
   const toast = useToast();
 
   const bgCard = useColorModeValue('gray.50', 'blackAlpha.50');
+  const secondaryText = useColorModeValue('gray.700', 'gray.400');
 
   const {
     register,
@@ -64,7 +65,9 @@ export default function AdviceForm() {
       spacing={4}
     >
       <Heading fontSize="2xl">👏 Surprise me!</Heading>
-      <Text my={2}>Tinggalkan pesan apa saja yang menurut kamu pantas.</Text>
+      <Text color={secondaryText} my={2}>
+        Tinggalkan pesan apa saja yang menurut kamu pantas.
+      </Text>
       {auth.user ? (
         <>
           <InputGroup as="form" mt={4} onSubmit={handleSubmit(onSubmit)}>

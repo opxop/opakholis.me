@@ -17,7 +17,7 @@ import fetcher from '@/lib/fetcher';
 const url = 'https://opakholis.dev/advices';
 const title = 'Pesanmu - Opa Kholis Majid';
 const description =
-  'Keluh kesah, pendapat, informasi, atau bahkan nasihat untuk Opa Kholis Majid.';
+  'Keluh kesah, pendapat, informasi, atau bahkan nasihat untuk Opa.';
 
 export default function AdviceMe() {
   const secondaryText = useColorModeValue('gray.700', 'gray.400');
@@ -35,7 +35,12 @@ export default function AdviceMe() {
       />
       <Container>
         <Box pn={5} pt={2}>
-          <Heading as="h1" fontSize="5xl" letterSpacing="tight" my={5}>
+          <Heading
+            as="h1"
+            fontSize={['4xl', '5xl']}
+            letterSpacing="tight"
+            my={5}
+          >
             Pesan untuk Opa.
           </Heading>
           <Text color={secondaryText} lineHeight="tall">
