@@ -1,30 +1,45 @@
 import { NextSeo } from 'next-seo';
-import { Box, Heading, Text, useColorModeValue } from '@chakra-ui/react';
+import { Text, Heading, VStack, useColorModeValue } from '@chakra-ui/react';
 
 import Container from '@/components/Container';
 import { CustomLink } from '@/components/MDXComponents';
 
 const url = 'https://opakholis.dev/contact';
-const title = 'Mari Ngobrol! - Opa Kholis Majid';
+const title = 'Kontak - Opa Kholis Majid';
+const description = 'Cara menghubungi Opa di internet';
 
 export default function About() {
   const secondaryText = useColorModeValue('gray.700', 'gray.400');
   return (
     <>
-      <NextSeo title={title} canonical={url} openGraph={{ url, title }} />
+      <NextSeo
+        title={title}
+        description={description}
+        canonical={url}
+        openGraph={{ url, title, description }}
+      />
       <Container>
-        <Box pb={5} pt={2}>
-          <Heading as="h1" fontSize="5xl" letterSpacing="tight" my={5}>
-            Mari Ngobrol.
+        <VStack pb={5} pt={2} alignItems="flex-start">
+          <Heading
+            as="h1"
+            fontSize={['4xl', '5xl']}
+            letterSpacing="tight"
+            my={5}
+          >
+            Mari Berkenalan.
           </Heading>
-          <Box>
-            <Text color={secondaryText} lineHeight="tall">
-              Saya punya beberapa akun <b>Sosial Media</b> pada umumnya seperti
+          <VStack
+            color={secondaryText}
+            spacing={3}
+            alignItems="flex-start"
+            lineHeight="tall"
+          >
+            <Text>
+              Saya punya beberapa akun Sosial Media pada umumnya seperti
               Instagram, Twitter, Facebook, Discord, <strike>Reddit</strike>,
-              Slack dan sejenisnya. Tapi jarang sekali dibuka. Hanya ketika
-              senggang saja.
+              Slack tapi jarang sekali dibuka.
             </Text>
-            <Text color={secondaryText} lineHeight="tall" my={4}>
+            <Text>
               Jika kamu ingin berkomunikasi dengan saya, saya cukup aktif di{' '}
               <CustomLink href="https://t.me/opakholis/">Telegram</CustomLink>.
               Bisa juga berkirim pesan lewat surat elektronik saya di{' '}
@@ -32,8 +47,13 @@ export default function About() {
                 hi@opakholis.dev.
               </CustomLink>
             </Text>
-          </Box>
-        </Box>
+            <Text>
+              Dan hei! jika kamu punya pendapat yang ingin disampaikan, jangan
+              sungkai untuk ditulis dan dikirim lewat{' '}
+              <CustomLink href="/advices">sini</CustomLink>.
+            </Text>
+          </VStack>
+        </VStack>
       </Container>
     </>
   );

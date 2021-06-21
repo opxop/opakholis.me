@@ -18,7 +18,7 @@ const Index = () => {
   return (
     <Container>
       <Box pb={5} pt={2}>
-        <Heading as="h1" fontSize="5xl" letterSpacing="tight" my={5}>
+        <Heading as="h1" fontSize={['4xl', '5xl']} letterSpacing="tight" my={5}>
           Halo Semua.
         </Heading>
         <Text color={secondaryText} lineHeight="tall">

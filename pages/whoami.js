@@ -1,27 +1,33 @@
 import { NextSeo } from 'next-seo';
-import {
-  Box,
-  Text,
-  Heading,
-  VStack,
-  useColorModeValue
-} from '@chakra-ui/react';
+import { Text, Heading, VStack, useColorModeValue } from '@chakra-ui/react';
 
 import Container from '@/components/Container';
 import { CustomLink } from '@/components/MDXComponents';
 
 const url = 'https://opakholis.dev/whoami';
 const title = 'Tentang - Opa Kholis Majid';
+const description =
+  'Saya sangat tertarik dengan dunia pemrograman dan Open-source Software. Saat ini sedang belajar tentang sisi Frontend dari platform web menggunakan bahasa pemrogramanan JavaScript serta UI Library React.Js.';
 
 export default function About() {
   const secondaryText = useColorModeValue('gray.700', 'gray.400');
   return (
     <>
-      <NextSeo title={title} canonical={url} openGraph={{ url, title }} />
+      <NextSeo
+        title={title}
+        description={description}
+        canonical={url}
+        openGraph={{ url, title, description }}
+      />
       <Container>
-        <Box pb={5} pt={2}>
-          <Heading as="h1" fontSize="5xl" letterSpacing="tight" my={5}>
-            Tentang Opa.
+        <VStack pb={5} pt={2} alignItems="flex-start">
+          <Heading
+            as="h1"
+            fontSize={['4xl', '5xl']}
+            letterSpacing="tight"
+            my={5}
+          >
+            Tentang.
           </Heading>
           <VStack
             color={secondaryText}
@@ -29,24 +35,19 @@ export default function About() {
             alignItems="flex-start"
             lineHeight="tall"
           >
-            <Text>Halo! Perkenalkan, nama saya Opa.</Text>
+            <Text>Halo semua, nama saya Opa Kholis Majid.</Text>
             <Text>
-              Seseorang yang menyebut dirinya sebagai Frontend developer—yang
-              mana sekarang sedang senang ber-eksplorasi dengan Linux
-              distribution dan Open-source Software.
-            </Text>
-            <Text>
-              Terlepas dari OSS, ketertarikan utama saya adalah segala sesuatu
-              yang berhubungan dengan <s>ngodomf</s> pemrograman dan
-              pengembangan perangkat lunak. Saat ini saya menggunakan NodeJs dan
-              library React sebagai stack utama, kadang juga khilaf pada mobile
-              development dengan menggunakan Framework Flutter. ~ehhe.
+              Saya sangat tertarik dengan dunia pemrograman dan Open-source
+              Software. Saat ini sedang belajar tentang sisi Frontend dari
+              platform web menggunakan bahasa pemrogramanan JavaScript serta UI
+              Library React.Js.
             </Text>
             <Text>
               Sebagaimana pada manusia umumnya, saya tidak sepenuhnya
-              mengahabiskan waktu di depan teks editor. Selain ngoding saya juga
-              suka membaca buku, mendengarkan musik, menonton film
-              jejepangan—anime dan dorama.
+              mengahabiskan waktu di depan <strike>teks editor</strike> IDE.
+              Selain ngoding saya juga suka membaca buku, manga dan tulisan
+              orang lain, menonton film jejepangan—anime dan dorama, dan
+              mendengarkan musik.
             </Text>
             <Text>
               Jangan sungkan untuk&nbsp;
@@ -54,9 +55,9 @@ export default function About() {
               melalui surat elektronik, karena saya senang berkomunikasi dan
               khususnya berkenalan dengan orang baru.
             </Text>
-            <Text>Ngomong-ngomong, selamat datang di rumah digital saya!</Text>
+            <Text>Anyway, senag berkenalan denganmu!</Text>
           </VStack>
-        </Box>
+        </VStack>
       </Container>
     </>
   );

@@ -22,10 +22,16 @@ export default function BlogLayout({ children, frontMatter }) {
     <Container>
       <BlogSeo url={frontMatter.slug} {...frontMatter} />
       <Box pb={5}>
-        <Heading as="h1" fontSize="5xl" letterSpacing="tight" mb={4}>
+        <Heading
+          as="h1"
+          fontSize={['3xl', '4xl', '5xl']}
+          letterSpacing="tight"
+          lineHeight="shorter"
+          mb={4}
+        >
           {frontMatter.title}
         </Heading>
-        <Text color={secondaryText}>
+        <Text color={secondaryText} fontSize={['14px', '16px']}>
           <DateIcon mx={1} mb={1} />
           {format(parseISO(frontMatter.publishedAt), 'MMMM dd, yyyy')}
           {` • `}
@@ -41,6 +47,7 @@ export default function BlogLayout({ children, frontMatter }) {
                 key={i}
                 size="sm"
                 fontWeight="normal"
+                fontSize={['12px', '14px']}
                 variant="outline"
                 textTransform="capitalize"
               >

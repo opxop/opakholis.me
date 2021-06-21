@@ -20,7 +20,7 @@ import Container from '@/components/Container';
 const url = 'https://opakholis.dev/blog';
 const title = 'Blog - Opa Kholis Majid';
 const description =
-  'Halaman ini berisi tulisan, opini dan juga merupakan dokumentasi untuk saya pribadi ketika sedang belajar atau membagikan sesuatu.';
+  'Tulisan, opini dan juga dokumentasi untuk saya pribadi ketika sedang belajar atau membagikan sesuatu.';
 
 export default function Blog({ posts }) {
   const secondaryText = useColorModeValue('gray.700', 'gray.400');
@@ -47,7 +47,12 @@ export default function Blog({ posts }) {
 
       <Container>
         <Box pb={5} pt={2}>
-          <Heading as="h1" fontSize="5xl" letterSpacing="tight" my={5}>
+          <Heading
+            as="h1"
+            fontSize={['4xl', '5xl']}
+            letterSpacing="tight"
+            my={5}
+          >
             Tulisan.
           </Heading>
           <Text color={secondaryText} lineHeight="tall">

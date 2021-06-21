@@ -21,11 +21,16 @@ export default function UsesLayout({ children }) {
       />
       <Container>
         <Box pb={5} pt={2}>
-          <Heading as="h1" fontSize="5xl" letterSpacing="tight" my={5}>
+          <Heading
+            as="h1"
+            fontSize={['4xl', '5xl']}
+            letterSpacing="tight"
+            my={5}
+          >
             What I Use.
           </Heading>
           <Text color={secondaryText}>
-            Although no one cares to ask me what I use 😂 but, here is a list of
+            Although no one cares to ask me what I use. but, here is a list of
             stuff that fits my daily routine and requirement.
           </Text>
         </Box>
