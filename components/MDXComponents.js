@@ -67,7 +67,7 @@ const DocsHeading = (props) => (
       '&[id]:hover a': { opacity: 1 }
     }}
     {...props}
-    mb="0.8em"
+    mb="0.3em"
     mt="2em"
   >
     {' '}
