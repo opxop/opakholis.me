@@ -27,7 +27,7 @@ export default function BlogLayout({ children, frontMatter }) {
           fontSize={['3xl', '4xl', '5xl']}
           letterSpacing="tight"
           lineHeight="shorter"
-          mb={4}
+          my={4}
         >
           {frontMatter.title}
         </Heading>
