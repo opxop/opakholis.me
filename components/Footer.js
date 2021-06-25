@@ -45,6 +45,14 @@ export default function Footer() {
         <NextLink href="/advices">
           <Link _hover={{ color: hoverText }}>/advices</Link>
         </NextLink>
+        <Link
+          _hover={{ color: hoverText }}
+          href="https://books.opakholis.dev"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          /books
+        </Link>
         <NextLink href="/now">
           <Link _hover={{ color: hoverText }}>/now</Link>
         </NextLink>
