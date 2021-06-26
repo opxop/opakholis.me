@@ -18,7 +18,6 @@ const description =
   'Tempat mempublikasikan sesuatu yang memang untuk dipublikasikan';
 
 export default function Pub({ data }) {
-  console.log(data);
   const secondaryText = useColorModeValue('gray.700', 'gray.400');
   return (
     <>
@@ -71,7 +70,6 @@ export const getStaticProps = async () => {
 
   if (!data) return { notFound: true };
 
-  console.log(data);
   return {
     props: { data },
     revalidate: 1
