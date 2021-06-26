@@ -11,7 +11,7 @@ import Container from '@/components/Container';
 import ProjectCard from '@/components/ProjectCard';
 import Timeline from '@/components/Timeline';
 
-import { NotionIcon, ReactIcon } from '@/styles/icons';
+import { Notion, React } from '@/styles/icons';
 
 const Index = () => {
   const secondaryText = useColorModeValue('gray.700', 'gray.400');
@@ -42,14 +42,14 @@ const Index = () => {
           description="Kumpulan project sederhana yang dipelajari dari internet. Dibangun dengan Library React.js dan di deploy menggunakan vercel."
           href="https://react21.vercel.app"
         >
-          <ReactIcon boxSize={12} mr={4} />
+          <React boxSize={12} mr={4} />
         </ProjectCard>
         <ProjectCard
           title="Bookshelves"
           description='Saya tidak suka menyimpan buku fisik. Sebagai gantinya saya membuat "Rak Buku" dengan memanfaatkan Notion sebagai database.'
           href="https://books.opakholis.dev"
         >
-          <NotionIcon boxSize={12} mr={4} />
+          <Notion boxSize={12} mr={4} />
         </ProjectCard>
       </Box>
       <Timeline />

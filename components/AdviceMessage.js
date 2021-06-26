@@ -4,7 +4,7 @@ import { Box, Flex, IconButton, Text } from '@chakra-ui/react';
 
 import { useAuth } from '@/lib/firebase/auth';
 import { deleteAdvice } from '@/lib/firebase/db';
-import { TrashIcon } from '@/styles/icons';
+import { Trash } from '@/styles/icons';
 
 export function ButtonAdvice({ id }) {
   const onDelete = () => {
@@ -25,7 +25,7 @@ export function ButtonAdvice({ id }) {
       size="sm"
       aria-label="Delete advice"
       onClick={onDelete}
-      icon={<TrashIcon boxSize={4} />}
+      icon={<Trash boxSize={4} />}
     />
   );
 }

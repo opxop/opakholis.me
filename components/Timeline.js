@@ -13,7 +13,7 @@ import {
   useColorModeValue
 } from '@chakra-ui/react';
 import { ChevronDownIcon } from '@chakra-ui/icons';
-import { CheckIcon } from '@/styles/icons';
+import { Check } from '@/styles/icons';
 
 import { CustomLink } from './MDXComponents';
 
@@ -28,7 +28,7 @@ const TimelineStep = ({ title, children }) => {
     <ListItem>
       <Stack ml={2} mb={4}>
         <Flex alignContent="flex-start">
-          <CheckIcon mr={2} mt={1} color="whatsapp.500" />
+          <Check mr={2} mt={1} color="whatsapp.500" />
           <Heading as="h4" fontSize="" fontWeight="medium">
             {title}
           </Heading>

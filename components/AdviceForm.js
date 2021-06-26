@@ -15,7 +15,7 @@ import {
 import { useAuth } from '@/lib/firebase/auth';
 import { createAdvice } from '@/lib/firebase/db';
 
-import { GithubIcon, GoogleIcon } from '@/styles/icons';
+import { Github, Google } from '@/styles/icons';
 
 export default function AdviceForm() {
   const auth = useAuth();
@@ -92,11 +92,11 @@ export default function AdviceForm() {
       ) : (
         <Stack justifyContent="start" direction={['column', 'row']} spacing={4}>
           <Button onClick={() => auth.signinWithGithub()} fontWeight="normal">
-            <GithubIcon mr={2} />
+            <Github mr={2} />
             Login dengan Github
           </Button>
           <Button onClick={() => auth.signinWithGoogle()} fontWeight="normal">
-            <GoogleIcon mr={2} />
+            <Google mr={2} />
             Login dengan Google
           </Button>
         </Stack>

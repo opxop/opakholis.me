@@ -8,7 +8,7 @@ import {
   useColorModeValue
 } from '@chakra-ui/react';
 
-import { MailIcon, GithubIcon, TwitterIcon } from '@/styles/icons';
+import { Mail, Github, Twitter } from '@/styles/icons';
 
 import NowPlaying from './NowPlaying';
 
@@ -24,17 +24,17 @@ export default function Footer() {
         <Icon
           href="https://twitter.com/opakholis"
           ariaLabel="Twitter"
-          icon={<TwitterIcon boxSize={5} />}
+          icon={<Twitter boxSize={5} />}
         />
         <Icon
           href="https://github.com/opxop"
           ariaLabel="Github"
-          icon={<GithubIcon boxSize={5} />}
+          icon={<Github boxSize={5} />}
         />
         <Icon
           href="mailto:hi@opakholis.dev"
           ariaLabel="Email"
-          icon={<MailIcon boxSize={5} />}
+          icon={<Mail boxSize={5} />}
         />
       </HStack>
 

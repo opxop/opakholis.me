@@ -11,7 +11,7 @@ import {
 } from '@chakra-ui/react';
 
 import fetcher from '@/lib/fetcher';
-import { SpotifyIcon } from '@/styles/icons';
+import { Spotify } from '@/styles/icons';
 
 export default function NowPlaying() {
   const { data } = useSWR('/api/now-playing', fetcher);
@@ -75,7 +75,7 @@ export default function NowPlaying() {
             </Text>
           </Stack>
         </SkeletonText>
-        <SpotifyIcon ml="auto" mt={1} />
+        <Spotify ml="auto" mt={1} />
       </Box>
     </Box>
   );

@@ -12,7 +12,7 @@ import { ArrowBackIcon, ArrowUpIcon } from '@chakra-ui/icons';
 
 import BlogSeo from '@/components/BlogSeo';
 import Container from '@/components/Container';
-import { DateIcon, TimeIcon } from '@/styles/icons';
+import { Date, Time } from '@/styles/icons';
 
 export default function BlogLayout({ children, frontMatter }) {
   const router = useRouter();
@@ -32,10 +32,10 @@ export default function BlogLayout({ children, frontMatter }) {
           {frontMatter.title}
         </Heading>
         <Text color={secondaryText} fontSize={['14px', '16px']}>
-          <DateIcon mx={1} mb={1} />
+          <Date mx={1} mb={1} />
           {format(parseISO(frontMatter.publishedAt), 'MMMM dd, yyyy')}
           {` • `}
-          <TimeIcon mx={1} mb={1} />
+          <Time mx={1} mb={1} />
           {frontMatter.readingTime.text}
         </Text>
       </Box>

@@ -1,7 +1,7 @@
 import { createIcon } from '@chakra-ui/react';
 
-export const NextjsIcon = createIcon({
-  displayName: 'NextjsIcon',
+export const Nextjs = createIcon({
+  displayName: 'Nextjs',
   path: (
     <g fill="currentColor">
       <path d="M4.5 4.5l.405-.293A.5.5 0 0 0 4 4.5h.5zm3 9.5A6.5 6.5 0 0 1 1 7.5H0A7.5 7.5 0 0 0 7.5 15v-1zM14 7.5A6.5 6.5 0 0 1 7.5 14v1A7.5 7.5 0 0 0 15 7.5h-1zM7.5 1A6.5 6.5 0 0 1 14 7.5h1A7.5 7.5 0 0 0 7.5 0v1zm0-1A7.5 7.5 0 0 0 0 7.5h1A6.5 6.5 0 0 1 7.5 1V0zM5 12V4.5H4V12h1zm-.905-7.207l6.5 9l.81-.586l-6.5-9l-.81.586zM10 4v6h1V4h-1z" />
@@ -10,8 +10,8 @@ export const NextjsIcon = createIcon({
   viewBox: '0 0 15 15'
 });
 
-export const ReactIcon = createIcon({
-  displayName: 'ReactIcon',
+export const React = createIcon({
+  displayName: 'React',
   path: (
     <g
       fillRule="evenodd"
@@ -26,8 +26,8 @@ export const ReactIcon = createIcon({
   viewBox: '0 0 122.88 109.43'
 });
 
-export const ProgateIcon = createIcon({
-  displayName: 'ProgateIcon',
+export const Progate = createIcon({
+  displayName: 'Progate',
   path: (
     <g
       fill="none"
@@ -42,8 +42,8 @@ export const ProgateIcon = createIcon({
   viewBox: '0 0 384 502'
 });
 
-export const TwitterIcon = createIcon({
-  displayName: 'TwitterIcon',
+export const Twitter = createIcon({
+  displayName: 'Twitter',
   path: (
     <g
       fill="none"
@@ -57,8 +57,8 @@ export const TwitterIcon = createIcon({
   )
 });
 
-export const LinkedinIcon = createIcon({
-  displayName: 'LinkedinIcon',
+export const Linkedin = createIcon({
+  displayName: 'Linkedin',
   path: (
     <g
       fill="none"
@@ -75,8 +75,8 @@ export const LinkedinIcon = createIcon({
   viewBox: '0 0 24 24'
 });
 
-export const GithubIcon = createIcon({
-  displayName: 'GithubIcon',
+export const Github = createIcon({
+  displayName: 'Github',
   path: (
     <g
       fill="none"
@@ -91,7 +91,7 @@ export const GithubIcon = createIcon({
   viewBox: '0 0 24 24'
 });
 
-export const GoogleIcon = createIcon({
+export const Google = createIcon({
   displayName: 'Google',
   path: (
     <g>
@@ -116,8 +116,8 @@ export const GoogleIcon = createIcon({
   viewBox: '0 0 533.5 544.3'
 });
 
-export const MailIcon = createIcon({
-  displayName: 'MailIcon',
+export const Mail = createIcon({
+  displayName: 'Mail',
   path: (
     <g
       fill="none"
@@ -132,8 +132,8 @@ export const MailIcon = createIcon({
   )
 });
 
-export const SpotifyIcon = createIcon({
-  displayName: 'SpotifyIcon',
+export const Spotify = createIcon({
+  displayName: 'Spotify',
   path: (
     <g fill="#1ED760" strokeLinecap="round" strokeLinejoin="round">
       <path d="m83.996 0.277c-46.249 0-83.743 37.493-83.743 83.742 0 46.251 37.494 83.741 83.743 83.741 46.254 0 83.744-37.49 83.744-83.741 0-46.246-37.49-83.738-83.745-83.738l0.001-0.004zm38.404 120.78c-1.5 2.46-4.72 3.24-7.18 1.73-19.662-12.01-44.414-14.73-73.564-8.07-2.809 0.64-5.609-1.12-6.249-3.93-0.643-2.81 1.11-5.61 3.926-6.25 31.9-7.291 59.263-4.15 81.337 9.34 2.46 1.51 3.24 4.72 1.73 7.18zm10.25-22.805c-1.89 3.075-5.91 4.045-8.98 2.155-22.51-13.839-56.823-17.846-83.448-9.764-3.453 1.043-7.1-0.903-8.148-4.35-1.04-3.453 0.907-7.093 4.354-8.143 30.413-9.228 68.222-4.758 94.072 11.127 3.07 1.89 4.04 5.91 2.15 8.976v-0.001zm0.88-23.744c-26.99-16.031-71.52-17.505-97.289-9.684-4.138 1.255-8.514-1.081-9.768-5.219-1.254-4.14 1.08-8.513 5.221-9.771 29.581-8.98 78.756-7.245 109.83 11.202 3.73 2.209 4.95 7.016 2.74 10.733-2.2 3.722-7.02 4.949-10.73 2.739z" />
@@ -142,8 +142,8 @@ export const SpotifyIcon = createIcon({
   viewBox: '0 0 168 168'
 });
 
-export const CheckIcon = createIcon({
-  displayName: 'CheckIcon',
+export const Check = createIcon({
+  displayName: 'Check',
   path: (
     <g
       fill="none"
@@ -158,8 +158,8 @@ export const CheckIcon = createIcon({
   )
 });
 
-export const TimeIcon = createIcon({
-  displayName: 'TimeIcon',
+export const Time = createIcon({
+  displayName: 'Time',
   path: (
     <g
       fill="none"
@@ -175,8 +175,8 @@ export const TimeIcon = createIcon({
   viewBox: '0 0 24 24'
 });
 
-export const DateIcon = createIcon({
-  displayName: 'DateIcon',
+export const Date = createIcon({
+  displayName: 'Date',
   path: (
     <g
       fill="none"
@@ -192,7 +192,7 @@ export const DateIcon = createIcon({
   viewBox: '0 0 24 24'
 });
 
-export const TrashIcon = createIcon({
+export const Trash = createIcon({
   displayName: 'Trash',
   path: (
     <g
@@ -209,7 +209,7 @@ export const TrashIcon = createIcon({
   viewBox: '0 0 24 24'
 });
 
-export const NotionIcon = createIcon({
+export const Notion = createIcon({
   displayName: 'Notion',
   path: (
     <g fill="currentColor">
