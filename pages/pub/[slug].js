@@ -1,17 +1,35 @@
+import { useRouter } from 'next/router';
 import slugify from 'slugify';
+import { NextSeo } from 'next-seo';
 import { NotionRenderer } from 'react-notion';
+
 import Container from '@/components/Container';
 
 import styles from './pub.module.scss';
 import 'react-notion/src/styles.css';
 
-export default function Pub({ page }) {
+export default function Pub({ table, page }) {
+  const router = useRouter();
+  const { slug } = router.query;
+
+  const url = `https://opakholis.dev/pub/${slug}`;
+  const title = `Publikasi - ${table?.title}`;
+  const description = `${table?.genre}`;
+
   return (
-    <Container>
-      <div className={styles.post}>
-        {page && <NotionRenderer blockMap={page} />}
-      </div>
-    </Container>
+    <>
+      <NextSeo
+        title={title}
+        description={description}
+        canonical={url}
+        openGraph={{ url, title, description }}
+      />
+      <Container>
+        <div className={styles.post}>
+          {page && <NotionRenderer blockMap={page} />}
+        </div>
+      </Container>
+    </>
   );
 }
 
