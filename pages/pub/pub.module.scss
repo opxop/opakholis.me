@@ -1,0 +1,30 @@
+.post {
+  h1,
+  h2 {
+    text-align: center;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 700;
+  }
+
+  p {
+    text-align: justify;
+    text-justify: inter-word;
+  }
+
+  ol,
+  ul,
+  p {
+    line-height: 1.6;
+  }
+
+  li {
+    padding-bottom: 0;
+  }
+}
