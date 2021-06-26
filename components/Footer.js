@@ -38,7 +38,12 @@ export default function Footer() {
         />
       </HStack>
 
-      <HStack spacing={5} color={secondaryText} pb={5}>
+      <HStack
+        spacing={5}
+        color={secondaryText}
+        pb={5}
+        fontSize={['sm', 'initial']}
+      >
         <NextLink href="/uses">
           <Link _hover={{ color: hoverText }}>/uses</Link>
         </NextLink>
