@@ -1,17 +1,23 @@
-import { NotionRenderer } from 'react-notion';
 import slugify from 'slugify';
-
-import 'react-notion/src/styles.css';
-
+import { NotionRenderer } from 'react-notion';
 import Container from '@/components/Container';
 
+import styles from './pub.module.scss';
+import 'react-notion/src/styles.css';
+
 export default function Pub({ page }) {
-  return <Container>{page && <NotionRenderer blockMap={page} />}</Container>;
+  return (
+    <Container>
+      <div className={styles.post}>
+        {page && <NotionRenderer blockMap={page} />}
+      </div>
+    </Container>
+  );
 }
 
 export const getStaticPaths = async () => {
   const res = await fetch(
-    `https://notion-api.splitbee.io/v1/table/257ab1e2ab9b4430b9f030882b89e475`
+    `https://notion-api.splitbee.io/v1/table/${NOTION_DATABASE}`
   );
   const data = await res.json();
 
@@ -27,7 +33,7 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async (context) => {
   const res = await fetch(
-    `https://notion-api.splitbee.io/v1/table/257ab1e2ab9b4430b9f030882b89e475`
+    `https://notion-api.splitbee.io/v1/table/${NOTION_DATABASE}`
   );
   const data = await res.json();
 
