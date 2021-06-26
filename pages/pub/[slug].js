@@ -17,13 +17,13 @@ export default function Pub({ page }) {
 
 export const getStaticPaths = async () => {
   const res = await fetch(
-    `https://notion-api.splitbee.io/v1/table/${NOTION_DATABASE}`
+    `https://notion-api.splitbee.io/v1/table/${process.env.NOTION_DATABASE}`
   );
   const data = await res.json();
 
   const paths = data
-    .filter((table) => table.Status === 'Published')
-    .map((b) => `/pub/${slugify(b.Title, { lower: true })}`);
+    .filter((table) => table.status === 'Published')
+    .map((b) => `/pub/${slugify(b.title, { lower: true })}`);
 
   return {
     paths,
@@ -33,14 +33,14 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async (context) => {
   const res = await fetch(
-    `https://notion-api.splitbee.io/v1/table/${NOTION_DATABASE}`
+    `https://notion-api.splitbee.io/v1/table/${process.env.NOTION_DATABASE}`
   );
   const data = await res.json();
 
   if (!data) return { notFound: true };
 
   const { slug } = context.params;
-  const table = data.find((b) => slugify(b.Title, { lower: true }) === slug);
+  const table = data.find((b) => slugify(b.title, { lower: true }) === slug);
 
   const pageRes = await fetch(
     `https://notion-api.splitbee.io/v1/page/${table.id}`
