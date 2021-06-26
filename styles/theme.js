@@ -27,6 +27,9 @@ const theme = extendTheme({
       },
       '.next__image': {
         borderRadius: '6px'
+      },
+      '.notion': {
+        color: mode('gray.700', 'white')(props)
       }
     })
   },
