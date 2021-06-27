@@ -6,6 +6,7 @@ import {
   Text,
   Link,
   Badge,
+  HStack,
   Heading,
   useColorModeValue
 } from '@chakra-ui/react';
@@ -44,16 +45,24 @@ export default function Pub({ data }) {
           {data.map(({ title, date, id }) => {
             const slug = slugify(title, { lower: true });
             return (
-              <Box key={id} display="flex" justifyContent="space-between">
-                <Badge variant="outline" py={1} px={2} ml={1}>
+              <HStack key={id} alignItems="center" w="100%">
+                <Badge variant="outline" mr={[2, 5]}>
                   {date}
                 </Badge>
-                <NextLink href={`pub/${slug}`}>
-                  <Link>
-                    <Text>{title}</Text>
-                  </Link>
-                </NextLink>
-              </Box>
+                <Box flex="1" w={['75%', '85%', '100%']}>
+                  <NextLink href={`pub/${slug}`}>
+                    <Link>
+                      <Text
+                        textOverflow="ellipsis"
+                        whiteSpace="nowrap"
+                        overflow="hidden"
+                      >
+                        {title}
+                      </Text>
+                    </Link>
+                  </NextLink>
+                </Box>
+              </HStack>
             );
           })}
         </Box>
