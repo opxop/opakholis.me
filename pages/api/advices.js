@@ -1,6 +1,6 @@
 import db from '@/lib/firebase/firebase-admin';
 
-export default async (_, res) => {
+export default async function handler(_, res) {
   const snapshot = await db.collection('advices').get();
   const advices = [];
 
@@ -9,4 +9,4 @@ export default async (_, res) => {
   });
 
   res.status(200).json({ advices });
-};
+}

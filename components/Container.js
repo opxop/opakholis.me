@@ -61,7 +61,7 @@ export default function Container({ children }) {
 
 const NavLink = ({ text, href, isActive }) => {
   return (
-    <Link href={href}>
+    <Link href={href} passHref>
       <Button
         as="a"
         px={[4, 5]}
