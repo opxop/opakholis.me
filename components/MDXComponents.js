@@ -1,5 +1,4 @@
-/** @jsxRuntime classic /
-/* @jsx jsx */
+/* eslint-disable react/display-name */
 import NextLink from 'next/link';
 import Image from 'next/image';
 import { jsx } from '@emotion/react';
