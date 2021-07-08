@@ -31,6 +31,12 @@ class MyDocument extends Document {
             href="/static/favicons/safari-pinned-tab.svg"
             rel="mask-icon"
           />
+          <script
+            async
+            defer
+            data-website-id="16e5d288-8427-4ad4-ac36-2072c966dcd0"
+            src="https://a.opakholis.dev/umami.js"
+          />
         </Head>
         <body>
           <ColorModeScript initialColorMode={theme.config.initialColorMode} />
