@@ -3,9 +3,6 @@ const prod = process.env.NODE_ENV === 'production';
 
 module.exports = withPWA({
   reactStrictMode: true,
-  experimental: {
-    turboMode: true
-  },
   images: {
     domains: ['i.scdn.co']
   },
