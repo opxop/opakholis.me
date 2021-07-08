@@ -7,6 +7,7 @@ import {
   IconButton,
   useColorModeValue
 } from '@chakra-ui/react';
+import { ExternalLinkIcon } from '@chakra-ui/icons';
 
 import { Mail, Github, Twitter } from '@/styles/icons';
 
@@ -51,12 +52,13 @@ export default function Footer() {
           <Link _hover={{ color: hoverText }}>/advices</Link>
         </NextLink>
         <Link
+          display="inline-flex"
+          justifyItems="center"
           _hover={{ color: hoverText }}
           href="https://books.opakholis.dev"
-          target="_blank"
-          rel="noopener noreferrer"
+          isExternal
         >
-          /books
+          /books <ExternalLinkIcon h={3.5} w={3.5} ml="1px" />
         </Link>
         <NextLink href="/now">
           <Link _hover={{ color: hoverText }}>/now</Link>
