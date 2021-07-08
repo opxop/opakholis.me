@@ -35,7 +35,8 @@ const App = ({ Component, pageProps }) => {
           color="linear-gradient(to right, #7928CA, #FF0080)"
           startPosition={0.3}
           stopDelayMs={200}
-          height="4"
+          height={4}
+          showOnShallow={true}
         />
         <MDXProvider components={MDXComponents}>
           <PrismTheme />
